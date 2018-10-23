@@ -1,0 +1,12 @@
+<div class="unit-nav">
+  <div class="unit-nav-label">Tutorials:</div>
+  <ul class="dxb303-nav-list">
+  {% for tutorial in site.data.tutorials %}
+    <li>
+      <a href="{{ site.url }}{{ site.baseurl }}/tutorials/{{ tutorial.dir }}">
+        {{ tutorial.num }}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
