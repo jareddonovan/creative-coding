@@ -1,10 +1,10 @@
 # Creative Coding
 
-Curriculum for an introductory programming unit aimed at Designers. 
+An Introduction to Programming for Designers.
 
 [Live Site](https://awarua.github.io/creative-coding/)
 
-## Set up
+## Local Setup
 
 * Clone the repository
 * Install ruby ()
