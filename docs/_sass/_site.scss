@@ -1,0 +1,70 @@
+$bbBlue: rgb(14, 72, 127);
+$unitMap: #e8edff;
+$weekHighlight: #547bfc;
+$unitMapHeader: #b9c9fe;
+$disabled: #eeeeee;
+
+/* Styles for tutorial navigation links */
+
+div.unit-nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+div.unit-nav-label {
+  float: left;
+  display: block;
+  width: auto;
+  font-weight: lighter;
+  font-size: 10pt;
+  line-height: 40px;
+  margin-right: 8px;
+}
+
+ul.dxb303-nav-list {
+  height: auto;
+  list-style: none;
+  margin-left: 66px;
+  margin-bottom: 20px;
+
+  li {
+    display: inline;
+
+    a {
+      font-weight: lighter;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: $unitMapHeader;
+      color: $bbBlue;
+      margin: 0 4px 6px 0;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+    a.dxb303-disabled, a.dxb303-current-week.disabled {
+      background: $disabled;
+      color: silver;
+      cursor: not-allowed;
+    }
+
+    a.dxb303-disabled:hover {
+      background: $disabled;
+      color: silver;
+    }
+
+    a:hover {
+      background: $bbBlue;
+      color: white;			
+      text-decoration: none;
+    }
+
+    a.dxb303-current-week {
+      background: $weekHighlight;
+      color: white;
+    }
+  }
+}
