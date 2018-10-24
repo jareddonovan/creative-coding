@@ -1,38 +1,51 @@
 - dir: tut01
   num: 1
+  enabled: true
 
 - dir: tut02
   num: 2
+  enabled: false
 
 - dir: tut03
   num: 3
+  enabled: false
 
 - dir: tut04
   num: 4
+  enabled: false
 
 - dir: tut05
   num: 5
+  enabled: false
 
 - dir: tut06
   num: 6
+  enabled: false
 
 - dir: tut07
   num: 7
+  enabled: false
 
 - dir: tut08
   num: 8
+  enabled: false
 
 - dir: tut09
   num: 9
+  enabled: false
 
 - dir: tut10
   num: 10
+  enabled: false
 
 - dir: tut11
   num: 11
+  enabled: false
 
 - dir: tut12
   num: 12
+  enabled: false
 
 - dir: tut13
   num: 13
+  enabled: false

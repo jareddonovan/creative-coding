@@ -1,5 +1,5 @@
 ---
 title: Tutorials
-layout: page
+layout: tutorial
 add_to_nav: true
 ---

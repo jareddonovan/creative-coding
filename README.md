@@ -14,3 +14,10 @@ An Introduction to Programming for Designers.
 * Run command ```bundle exec jekyll serve```
 * The website should be available on http://localhost:4000/creative-coding/
 
+## TODO
+
+* Tutorial 1
+  * [ ] Remove references to class-specific stuff.
+  * [ ] Link to hello p5js video
+  * [ ] Provide instructions on how to p5js editor.
+  * [ ] Add image for hello.p5js.org website.
