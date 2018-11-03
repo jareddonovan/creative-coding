@@ -3,7 +3,7 @@ title: "Tutorial 1: Hello p5js" layout: tutorial
 ---
 
 <p class="lead">
-  The aim of this tutorial is to get you familiar with the p5js programming 
+  The aim of this tutorial is to get you familiar with the p5js programming
   environment and for you to be able to produce your first programming 'sketch'
   with p5js
 </p>
