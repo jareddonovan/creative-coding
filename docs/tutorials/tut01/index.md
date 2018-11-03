@@ -1,6 +1,5 @@
 ---
-title: "Tutorial 1: Hello p5js"
-layout: tutorial
+title: "Tutorial 1: Hello p5js" layout: tutorial
 ---
 
 <p class="lead">
@@ -9,13 +8,13 @@ layout: tutorial
   with p5js
 </p>
 
-### What is p5js?
+## P5js is a Creative Coding library for JavaScript
 
 P5js is a javascript library for creative coding.
 
 <!-- Idea for a 'what is' introductory interactive -->
 
-### Watch the Hello p5js video
+## Watch the Hello p5js video
 
 This short [interactive video](http://hello.p5js.org/) gives an introduction to
 the p5 project from Lauren McCarthy and Dan Shiffman. Notice how the graphics in
@@ -31,16 +30,23 @@ click around and explore how things work!
 </div>
 -->
 
-### Sign up for an account on the p5js web editor:
+## Sign up for an account on the p5js web editor
 
 * <https://editor.p5js.org/>
 
-### (Optional) Download an editor so you can code locally
+## Your first p5js sketch: World's simplest drawing program
+
+* Draw an ellipse
+* Change the colour
+* Make the ellipse follow the mouse
+* Show mouse coordinates when mouse is pressed
+
+## (Optional) Download an editor so you can code locally
 
 * Visual Studio Code
 * Atom
 * SublimeText
 
-### Check out these other resources for learning to code
+## Check out these other resources for learning to code
 
 * [resources]({{site.baseurl}}/resources)
