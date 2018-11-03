@@ -3,8 +3,8 @@ title: "Tutorial 1: Hello p5js" layout: tutorial
 ---
 
 <p class="lead">
-  The aim of this tutorial is to get you familiar with the p5js programming
-  environment. You will also write your first programming 'sketch' with p5js.
+  The aim of this tutorial is to get you familiar with the p5js library.
+  You will also write your first programming 'sketch' with p5js.
 </p>
 
 ## P5js helps you do creative coding in JavaScript
