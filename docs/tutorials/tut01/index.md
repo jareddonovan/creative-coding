@@ -1,5 +1,6 @@
 ---
-title: "Tutorial 1: Hello p5js" layout: tutorial
+title: "Tutorial 1: Hello p5js"
+layout: tutorial
 ---
 
 <p class="lead">

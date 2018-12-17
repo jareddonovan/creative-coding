@@ -4,7 +4,7 @@
 
 - dir: tut02
   num: 2
-  enabled: false
+  enabled: true
 
 - dir: tut03
   num: 3
