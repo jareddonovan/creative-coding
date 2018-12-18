@@ -16,7 +16,7 @@
 
 - dir: tut05
   num: 5
-  enabled: false
+  enabled: true
 
 - dir: tut06
   num: 6
