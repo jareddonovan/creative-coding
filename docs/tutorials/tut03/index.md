@@ -20,23 +20,27 @@ tutorial and examples web site:
 
 ### Examples
 
-* [Iteration example](http://processing.org/examples/widthheight.html):
+* [Iteration example](https://p5js.org/examples/structure-width-and-height.html):
   makes a nice weave effect
-* [Iteration](http://processing.org/examples/widthheight.html)
-* [Embedded Iteration](http://processing.org/examples/embeddediteration.html)
-* [Conditionals 1](http://processing.org/examples/conditionals1.html)
-* [Conditionals 2](http://processing.org/examples/conditionals2.html)
-* [Logical Operators](http://processing.org/examples/logicaloperators.html)
-* [Random Function](http://processing.org/examples/random.html)
-* [Advanced grid with 3D objects](http://processing.org/examples/mixturegrid.html%20)
+* [Embedded Iteration](https://p5js.org/examples/control-embedded-iteration.html)
+* [Conditionals 1](https://p5js.org/examples/control-conditionals-1.html)
+* [Conditionals 2](https://p5js.org/examples/control-conditionals-2.html)
+* [Logical Operators](https://p5js.org/examples/control-logical-operators.html)
+* [Random Function](https://p5js.org/examples/math-random.html)
+<!-- * [Advanced grid with 3D objects](http://processing.org/examples/mixturegrid.html) -->
 
+<!--
 ### Advanced examples From generative design text
 
 * <http://www.generative-gestaltung.de/1/P_2_3_6_01>
 * <http://www.generative-gestaltung.de/1/P_2_3_6_02>
+-->
 
+<!--
 ### Processing tutorials
 
 * [Anatomy of a Program](http://processing.org/tutorials/anatomy/)
 * [2D Transformations](http://processing.org/tutorials/transform2d/)
 * [Trigonometry Primer](http://processing.org/tutorials/trig/)
+
+-->
