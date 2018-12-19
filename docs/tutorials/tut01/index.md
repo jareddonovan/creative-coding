@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 1: Hello p5js"
+title: "Tutorial 1: Hello p5.js"
 layout: tutorial
 ---
 
