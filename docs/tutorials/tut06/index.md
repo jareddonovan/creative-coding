@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 6:"
+title: "Tutorial 6: Fonts, Text and Time"
 layout: tutorial
 ---
 

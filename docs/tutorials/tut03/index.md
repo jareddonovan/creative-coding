@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 3: Patterns"
+title: "Tutorial 3: Making Patterns"
 layout: tutorial
 ---
 
@@ -27,6 +27,7 @@ tutorial and examples web site:
 * [Conditionals 2](https://p5js.org/examples/control-conditionals-2.html)
 * [Logical Operators](https://p5js.org/examples/control-logical-operators.html)
 * [Random Function](https://p5js.org/examples/math-random.html)
+
 <!-- * [Advanced grid with 3D objects](http://processing.org/examples/mixturegrid.html) -->
 
 <!--

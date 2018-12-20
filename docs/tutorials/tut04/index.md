@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 4:"
+title: "Tutorial 4: Working with Bitmaps"
 layout: tutorial
 ---
 
@@ -18,19 +18,21 @@ The following examples show the basics of loading and displaying images.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="load and display image" name="load_display_image" example_dir="online-examples" link="https://processing.org/examples/loaddisplayimage.html" caption="Loads and displays an image." %}
+{% include p5_editor_link.html name="Load an image" screenshot="images/load_display_image-screenshot.png" editor_link="https://p5js.org/examples/image-load-and-display-image.html" caption="Loads and displays an image." %}
 
-{% include captioned_card.html name="background_image" example_dir="online-examples" link="https://processing.org/examples/backgroundimage.html" caption="Shows the quickest way to load and display a background image." %}
+{% include p5_editor_link.html name="Background image" screenshot="images/background_image-screenshot.png" editor_link="https://p5js.org/examples/image-background-image.html" caption="Shows the quickest way to load and display a background image." %}
 
-{% include captioned_card.html name="transparency" example_dir="online-examples" link="https://processing.org/examples/transparency.html" caption="Shows how to work with transparency with images." %}
+{% include p5_editor_link.html name="Transparency" screenshot="images/transparency-screenshot.png" editor_link="https://p5js.org/examples/image-transparency.html" caption="Shows how to work with transparency with images." %}
 
-{% include captioned_card.html name="alphamask" example_dir="online-examples" link="https://processing.org/examples/alphamask.html" caption="Shows how to create and use an alphamask" %}
+{% include p5_editor_link.html name="Alphamask" screenshot="images/alphamask-screenshot.png" editor_link="https://p5js.org/examples/image-alpha-mask.html" caption="Shows how to create and use an alphamask." %}
 
-{% include captioned_card.html name="create_image" example_dir="online-examples" link="https://processing.org/examples/createimage.html" caption="Shows how to create an image from scratch, that you can draw into. This one creates a gradient." %}
+{% include p5_editor_link.html name="Create image" screenshot="images/create_image-screenshot.png" editor_link="https://p5js.org/examples/image-create-image.html" caption="Shows how to create an image from scratch, that you can draw into. This one creates a gradient." %}
 
-{% include captioned_card.html name="pointillism" example_dir="online-examples" link="https://processing.org/examples/pointillism.html" caption="A pleasing effect from randomly drawing ellipses over an image." %}
+{% include p5_editor_link.html name="Pointillism" screenshot="images/pointillism-screenshot.png" editor_link="https://p5js.org/examples/image-pointillism.html" caption="A pleasing effect from randomly drawing ellipses over an image." %}
 
 </ul>
+
+<!-- TODO: The following examples need porting from Processing to p5.js
 
 ## Animation with bitmap examples
 
@@ -44,6 +46,10 @@ bitmap images stored in an array.
 {% include captioned_card.html title="Animated Sprite" name="AnimatedSprite" example_dir="online-examples" link="https://processing.org/examples/animatedsprite.html" caption="A simple animation follows the mouse position." %}
 
 </ul>
+
+-->
+
+<!-- TODO: The following examples need porting from Processing to p5.js 
 
 ## Image processing examples
 
@@ -61,11 +67,19 @@ inputs such as 3D position.
 
 {% include captioned_card.html title="Edge Detection (Advanced)" name="EdgeDetection" example_dir="online-examples" link="https://processing.org/examples/edgedetection.html"	caption="Uses a high-pass filter to sharpen an image." %}
 
+-->
+
+<!-- TODO: The following examples are still on the processing site, but I can't find where they're linked...
+
 {% include captioned_card.html title="Zoom (Advanced 3D)" name="Zoom" example_dir="online-examples" link="https://processing.org/examples/zoom.html" caption="Displays a 3D image, where the heights of lines depend on colors from an image." %}
 
 {% include captioned_card.html title="Explode (Advanced)" name="Explode" example_dir="online-examples" link="https://processing.org/examples/explode.html" caption="Mouse controls zoom level. Zoom amount depends on color of pixels in image." %}
 
 </ul>
+
+-->
+
+<!-- TODO: SVG is not implemented in p5.js. See discussion on this issue thread: https://github.com/processing/p5.js/issues/458
 
 ## Working with SVG images
 
@@ -87,6 +101,8 @@ like Illustrator or Inkscape to produce SVG images.
 
 </ul>
 
+-->
+
 ## Tutor examples
 
 Below are some further examples that your tutors may go through with you.
@@ -96,11 +112,11 @@ You can also explore how these work yourself.
 
 <ul class="code-list">
 
-{% include captioned_card.html name="butterfly" example_dir="tutor-examples" caption="An example of cutting up and recombining an image for a magnification effect." %}
+{% include p5_editor_link.html name="Butterfly" screenshot="images/butterfly-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/ryagE2_xN" caption="An example of cutting up and recombining an image for a magnification effect." %}
 
-{% include captioned_card.html name="butterfly_random" example_dir="tutor-examples" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
+{% include p5_editor_link.html name="Butterfly random" screenshot="images/butterfly_random-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
 
-{% include captioned_card.html name="butterfly_sort" title="butterfly sorted" example_dir="tutor-examples" link_to_web_version=true caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %}
+{% include p5_editor_link.html name="Butterfly sort" screenshot="images/butterfly_sort-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %}
 
 </ul>
 
@@ -108,13 +124,13 @@ You can also explore how these work yourself.
 
 <ul class="code-list">
 
-{% include captioned_card.html name="chomp" example_dir="tutor-examples" caption="An animation example, which shows photos of a face chomping." %}
+{% include p5_editor_link.html name="Face looking animation" screenshot="images/face_looking_animation-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/rJu_vnugE" caption="An animation of a face looking around." %}
 
-{% include captioned_card.html name="face_looking_animation" example_dir="tutor-examples" caption="Another animation example. A face looking around." %}
-
-{% include captioned_card.html name="face_looking_mouse" example_dir="tutor-examples" link_to_web_version=true caption="A variation on the face looking example, where the face follows the mouse." %}
+{% include p5_editor_link.html name="Face looking mouse" screenshot="images/face_looking_mouse-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/ryXLu3dxE" caption="A variation on the face looking example, where the face follows the mouse." %}
 
 </ul>
+
+<!-- TODO: Rework pointilism variations into a more structured tutorial that guides students on how to adapt
 
 ## Pointillism variations
 
@@ -130,9 +146,13 @@ You can also explore how these work yourself.
 
 </ul>
 
-## Combining images
+-->
+
+## Advanced example
 
 <ul class="code-list">
+
+<!-- TODO: Rework old examples from Gavin Sade.
 
 {% include captioned_card.html name="exquisiteCorpse" example_dir="tutor-examples" caption="Draws a random head, body, and tail. Change with 'a', 's', 'd' keys." %}
 
@@ -140,9 +160,13 @@ You can also explore how these work yourself.
 
 {% include captioned_card.html  name="painterly" example_dir="tutor-examples" caption="Another Brad / Ange mashup." %}
 
-{% include captioned_card.html  name="click_divide" title="click divide (advanced)" example_dir="tutor-examples" caption="A more advanced example, which uses objects (we cover these later in the semester). Click and move the mouse to reveal a face." %}
+-->
+
+{% include p5_editor_link.html name="Click divide" screenshot="images/click_divide-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/BJps92OlE" caption="A more advanced example, which uses objects (we cover these later in the semester). Click and move the mouse to reveal a face." %}
 
 </ul>
+
+<!-- TODO: Neither of the following tutorials are 'ported' to p5.js yet.
 
 ## Further tutorials
 
@@ -150,6 +174,7 @@ The following online tutorials go into more depth on how to work with pixel
 data and also how to use two dimensional arrays.
 
 <ul class="code-list">
+
   <li>
     <a class="title-link" target="_blank" href="https://processing.org/tutorials/pixels/">
       Pixels Tutorial
@@ -159,6 +184,7 @@ data and also how to use two dimensional arrays.
     </a>
     A detailed tutorial on how to work with pixels in images.
   </li>
+
   <li>
     <a class="title-link" target="_blank" href="https://processing.org/tutorials/2darray/">
       2D Array Tutorial
@@ -168,4 +194,7 @@ data and also how to use two dimensional arrays.
     </a>
     A detailed tutorial on how to work with two dimensional arrays.
   </li>
+
 </ul>
+
+-->
