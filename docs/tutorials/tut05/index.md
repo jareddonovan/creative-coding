@@ -52,9 +52,9 @@ There example below shows how to load and play a sound.
 
 <ul class="code-list">
 
-{% include p5_editor_link.html name="Load and play a sound" screenshot="images/load-play-sound-screenshot.png" editor_link="http://p5js.org/examples/sound-load-and-play-sound.html" caption="Loads and plays a sound file when the user clicks the mouse" %}
+{% include example_card.html name="Load and play a sound" thumb="images/load-play-sound-screenshot.png" link="http://p5js.org/examples/sound-load-and-play-sound.html" caption="Loads and plays a sound file when the user clicks the mouse" %}
 
-{% include p5_editor_link.html name="Playback rate" screenshot="images/playback-rate-thumb.png" editor_link="http://p5js.org/examples/sound-playback-rate.html" caption="Mouse position adjusts the playback speed and volume of a looping sound file." %}
+{% include example_card.html name="Playback rate" thumb="images/playback-rate-thumb.png" link="http://p5js.org/examples/sound-playback-rate.html" caption="Mouse position adjusts the playback speed and volume of a looping sound file." %}
 
 </ul>
 
@@ -90,15 +90,15 @@ interesting interactive works. Spend some time on these ones.
 
 <ul class="code-list">
 
-{% include p5_editor_link.html name="Monitor audio input" screenshot="images/audio-input-screenshot.png" editor_link="https://p5js.org/reference/#/p5.AudioIn" caption="Uses microphone input to move an ellipse." %}
+{% include example_card.html name="Monitor audio input" thumb="images/audio-input-screenshot.png" link="https://p5js.org/reference/#/p5.AudioIn" caption="Uses microphone input to move an ellipse." %}
 
-{% include p5_editor_link.html name="Measure amplitude" screenshot="images/measure-amplitude-thumb.png" editor_link="https://p5js.org/examples/sound-measuring-amplitude.html" caption="Changes the size of an ellipse based on the volume of a looping audio file." %}
+{% include example_card.html name="Measure amplitude" thumb="images/measure-amplitude-thumb.png" link="https://p5js.org/examples/sound-measuring-amplitude.html" caption="Changes the size of an ellipse based on the volume of a looping audio file." %}
 
-{% include p5_editor_link.html name="Beat detection" screenshot="images/beat-detection-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/BkBnH1qlN" caption="Plays a file and tries to draw an ellipse on the beat." %}
+{% include example_card.html name="Beat detection" thumb="images/beat-detection-thumb.png" link="https://editor.p5js.org/awarua/sketches/BkBnH1qlN" caption="Plays a file and tries to draw an ellipse on the beat." %}
 
-{% include p5_editor_link.html name="Draw waveform" screenshot="images/draw-sound-waveform-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/HJ1-WRFeV" caption="Plays a sound file and draws the waveform for the sound." %}
+{% include example_card.html name="Draw waveform" thumb="images/draw-sound-waveform-thumb.png" link="https://editor.p5js.org/awarua/sketches/HJ1-WRFeV" caption="Plays a sound file and draws the waveform for the sound." %}
 
-{% include p5_editor_link.html name="FFT analysis" screenshot="images/play-a-file-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/B1jGusKe4" caption="Plays a file and draws circles based on the frequencies of the sound." %}
+{% include example_card.html name="FFT analysis" thumb="images/play-a-file-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1jGusKe4" caption="Plays a file and draws circles based on the frequencies of the sound." %}
 
 <!-- TODO: I *think* it should be possible to achieve something similar in 
            p5.sound, but will need more time to figure it out...
@@ -198,7 +198,7 @@ The following example is from the lecture
 
 -->
 
-{% include p5_editor_link.html name="chirporchestra" screenshot="images/chirporchestra-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/HyRUMW9x4" caption="(Advanced) Example shown in the lecture of how you can create a basic grid sequencer in p5.js." %}
+{% include example_card.html name="chirporchestra" thumb="images/chirporchestra-thumb.png" link="https://editor.p5js.org/awarua/sketches/HyRUMW9x4" caption="(Advanced) Example shown in the lecture of how you can create a basic grid sequencer in p5.js." %}
 
 </ul>
 

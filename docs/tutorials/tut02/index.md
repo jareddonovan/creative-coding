@@ -57,8 +57,8 @@ you might aim for in the 'Active Drawing' activity.
 
 <ul class="code-list">
 
-{% include p5_editor_link.html name="draw_01" screenshot="images/draw_01-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/ryGDmZHxN" caption="First active drawing example" %}
+{% include example_card.html name="draw_01" thumb="images/draw_01-screenshot.png" link="https://editor.p5js.org/awarua/sketches/ryGDmZHxN" caption="First active drawing example" %}
 
-{% include p5_editor_link.html name="draw_02" screenshot="images/draw_02-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/SJdLDGHxE" caption="Second active drawing example" %}
+{% include example_card.html name="draw_02" thumb="images/draw_02-screenshot.png" link="https://editor.p5js.org/awarua/sketches/SJdLDGHxE" caption="Second active drawing example" %}
 
 </ul>

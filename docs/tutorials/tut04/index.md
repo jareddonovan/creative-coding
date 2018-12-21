@@ -18,17 +18,17 @@ The following examples show the basics of loading and displaying images.
 
 <ul class="code-list">
 
-{% include p5_editor_link.html name="Load an image" screenshot="images/load_display_image-screenshot.png" editor_link="https://p5js.org/examples/image-load-and-display-image.html" caption="Loads and displays an image." %}
+{% include example_card.html name="Load an image" thumb="images/load_display_image-screenshot.png" link="https://p5js.org/examples/image-load-and-display-image.html" caption="Loads and displays an image." %}
 
-{% include p5_editor_link.html name="Background image" screenshot="images/background_image-screenshot.png" editor_link="https://p5js.org/examples/image-background-image.html" caption="Shows the quickest way to load and display a background image." %}
+{% include example_card.html name="Background image" thumb="images/background_image-screenshot.png" link="https://p5js.org/examples/image-background-image.html" caption="Shows the quickest way to load and display a background image." %}
 
-{% include p5_editor_link.html name="Transparency" screenshot="images/transparency-screenshot.png" editor_link="https://p5js.org/examples/image-transparency.html" caption="Shows how to work with transparency with images." %}
+{% include example_card.html name="Transparency" thumb="images/transparency-screenshot.png" link="https://p5js.org/examples/image-transparency.html" caption="Shows how to work with transparency with images." %}
 
-{% include p5_editor_link.html name="Alphamask" screenshot="images/alphamask-screenshot.png" editor_link="https://p5js.org/examples/image-alpha-mask.html" caption="Shows how to create and use an alphamask." %}
+{% include example_card.html name="Alphamask" thumb="images/alphamask-screenshot.png" link="https://p5js.org/examples/image-alpha-mask.html" caption="Shows how to create and use an alphamask." %}
 
-{% include p5_editor_link.html name="Create image" screenshot="images/create_image-screenshot.png" editor_link="https://p5js.org/examples/image-create-image.html" caption="Shows how to create an image from scratch, that you can draw into. This one creates a gradient." %}
+{% include example_card.html name="Create image" thumb="images/create_image-screenshot.png" link="https://p5js.org/examples/image-create-image.html" caption="Shows how to create an image from scratch, that you can draw into. This one creates a gradient." %}
 
-{% include p5_editor_link.html name="Pointillism" screenshot="images/pointillism-screenshot.png" editor_link="https://p5js.org/examples/image-pointillism.html" caption="A pleasing effect from randomly drawing ellipses over an image." %}
+{% include example_card.html name="Pointillism" thumb="images/pointillism-screenshot.png" link="https://p5js.org/examples/image-pointillism.html" caption="A pleasing effect from randomly drawing ellipses over an image." %}
 
 </ul>
 
@@ -112,11 +112,12 @@ You can also explore how these work yourself.
 
 <ul class="code-list">
 
-{% include p5_editor_link.html name="Butterfly" screenshot="images/butterfly-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/ryagE2_xN" caption="An example of cutting up and recombining an image for a magnification effect." %}
+{% include example_card.html name="Butterfly" thumb="images/butterfly-screenshot.png" link="https://editor.p5js.org/awarua/sketches/ryagE2_xN" caption="An example of cutting up and recombining an image for a magnification effect." %}
 
-{% include p5_editor_link.html name="Butterfly random" screenshot="images/butterfly_random-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
+{% include example_card.html name="Butterfly random" thumb="images/butterfly_random-screenshot.png" link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
 
-{% include p5_editor_link.html name="Butterfly sort" screenshot="images/butterfly_sort-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %}
+{% include example_card.html name="Butterfly sort" thumb="images/butterfly_sort-screenshot.png"
+link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %}
 
 </ul>
 
@@ -124,9 +125,9 @@ You can also explore how these work yourself.
 
 <ul class="code-list">
 
-{% include p5_editor_link.html name="Face looking animation" screenshot="images/face_looking_animation-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/rJu_vnugE" caption="An animation of a face looking around." %}
+{% include example_card.html name="Face looking animation" thumb="images/face_looking_animation-screenshot.png" link="https://editor.p5js.org/awarua/sketches/rJu_vnugE" caption="An animation of a face looking around." %}
 
-{% include p5_editor_link.html name="Face looking mouse" screenshot="images/face_looking_mouse-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/ryXLu3dxE" caption="A variation on the face looking example, where the face follows the mouse." %}
+{% include example_card.html name="Face looking mouse" thumb="images/face_looking_mouse-screenshot.png" link="https://editor.p5js.org/awarua/sketches/ryXLu3dxE" caption="A variation on the face looking example, where the face follows the mouse." %}
 
 </ul>
 
@@ -162,7 +163,7 @@ You can also explore how these work yourself.
 
 -->
 
-{% include p5_editor_link.html name="Click divide" screenshot="images/click_divide-screenshot.png" editor_link="https://editor.p5js.org/awarua/sketches/BJps92OlE" caption="A more advanced example, which uses objects (we cover these later in the semester). Click and move the mouse to reveal a face." %}
+{% include example_card.html name="Click divide" thumb="images/click_divide-screenshot.png" link="https://editor.p5js.org/awarua/sketches/BJps92OlE" caption="A more advanced example, which uses objects (we cover these later in the semester). Click and move the mouse to reveal a face." %}
 
 </ul>
 
