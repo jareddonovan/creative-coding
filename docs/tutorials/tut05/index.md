@@ -177,10 +177,10 @@ with the Minim library. You should build on the examples presented above to
 make something which involves sound and image for Assignment 1. Examples of
 the kinds of sketches you might make are:
 
-* A sample player triggered by mouse and key interaction, which also changes 
+* A sample player triggered by mouse and keyboard interaction, which also changes
   images
 * A sound responsive work using microphone input - volume changing image
-* A sound responsive work using digital audio input - volume, beat or FFT data 
+* A sound responsive work using digital audio input - volume, beat or FFT data
   changing image
 * A sound-synthesis experiment.
 
