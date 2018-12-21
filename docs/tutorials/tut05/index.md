@@ -4,10 +4,10 @@ layout: tutorial
 ---
 
 <p class="lead">
-  In this week’s tutorial, we'll learn how to load and play sound files from
-  within Processing. We’ll use the properties of sound to control how we
-  draw images to the screen. The outcomes of the in-class activity will form
-  part of the Assignment 1 submission.
+  In this week’s tutorial, we'll learn how to make sound with p5.js.
+  We’ll use the properties of sound to control how we draw images to the
+  screen. The outcomes of the in-class activity will form part of the
+  Assignment 1 submission.
 </p>
 
 ## Before you start
@@ -20,108 +20,69 @@ layout: tutorial
 
 ## External libraries in p5.js
 
-In this tutorial we'll use an external library. A library is a collection of
+<!-- TODO: Add a diagram of how p5.js relates to javascript / html / css -->
+
+In this tutorial we'll use the p5sound library. A library is a collection of
 code that extends the functionality of p5.js. Libraries can help with adding
 user interface elements, connecting to external sensors, and even with machine
 learning tasks.
 
 A collection of the most popular libraries is here:
-[processing.org/reference/libraries/](https://processing.org/reference/libraries/)
+[http://p5js.org/libraries/](http://p5js.org/libraries/)
 
-<p class="task">
-  <strong>Task:</strong> To extend p5.js's ability to work with sound, we
-  will be using p5 sound library. Refer to the links below for
-  information on how to add this to Processing and use it in your sketches.
-</p>
+We'll use the [p5.sound](http://p5js.org/reference/#/libraries/p5.sound)
+library, which gives us the ability to work with sound files and create sounds.
 
-* **[How to install a library](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library):**
-  Explains how to install an external library so you can use it in Processing.
-* **[Import](https://processing.org/reference/import.html):**
-  Documents the `import` syntax you use to add a library to your sketch.
-* **[Minim](http://code.compartmental.net/tools/minim/):**
-  Home page for the `Minim` library, which is what we'll be using in this
-  week's tutorial.
-* **[Minim documentation](http://code.compartmental.net/minim/):**
-  (Extensive) documentation for the Minim library.
-
-Most libraries for Processing come with a set of example Processing sketches
-that show how to use them in Processing. Once you have installed Minim,
-you should be able to access these examples from Processing as follows:
-
-* From the `File` menu, select `Examples...`
-* A window titled `Java Examples` will open up.
-* Scroll to the bottom and you will see a folder called
-  `contributed libraries`.
-* Inside that should be the Minim examples.
-
-![Minim Examples]({{site.baseurl}}{{page.url}}images/processing-examples-dialog.png)
+The p5 online editor adds a link to the p5.sound library automatically. If you
+are working locally, you may need to add it by hand. This
+[link has instructions how](http://p5js.org/libraries/#using-a-library).
 
 <p class="info">
-  <strong>Info:</strong> The Minim library is fully featured and does
+  <strong>Info:</strong> The p5.sound library is and does
   far more than we want to cover for this week's tutorial. If you are a
   beginning student, don't feel intimidated. Focus on the following examples
-  and you will learn all you need to know about Minim. But if you are a more
-  advanced student, you should also feel free to look further into the Minim
+  and you will learn all you need to know. But if you are a more
+  advanced student, feel free to look further into the
   documentation and examples.
 </p>
 
-## 1) Loading and playing a sound
+## Loading and playing a sound
 
-There're two sketches, to look at. Download the zips of these and run them
-locally to see how they work.
-
-<ul class="code-list">
- {% include captioned_card.html title="Sample Player" name="samplePlayer" example_dir="online-examples" do_not_link=true caption="Loads a sound into memory and plays on a key event. Good for sound effects and other short UI or game sounds" %}
-
-</ul>
-
-This example uses the `loadSample` function to load a sound file as a sample.
-The `trigger` function triggers the sample when the user presses the right key.
+There example below shows how to load and play a sound.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="Play a File" name="PlayAFile" example_dir="online-examples" do_not_link=true caption="Streams a sound file from its location. Good for longer audio tracks, loops etc. This example also draws the waveform by reading values from the audioBuffer. Like reading pixel colors from a bitmap." %}
+{% include p5_editor_link.html name="Load and play a sound" screenshot="images/load-play-sound-screenshot.png" editor_link="http://p5js.org/examples/sound-load-and-play-sound.html" caption="Loads and plays a sound file when the user clicks the mouse" %}
+
+{% include p5_editor_link.html name="Playback rate" screenshot="images/playback-rate-thumb.png" editor_link="http://p5js.org/examples/sound-playback-rate.html" caption="Mouse position adjusts the playback speed and volume of a looping sound file." %}
 
 </ul>
-
-This example uses the `loadFile` function to load a sound file for playback.
-It then uses the `play` function to start the file playing. Adapted from the
-`PlayAFile` example supplied with Minim.
 
 <div class="task">
   <strong>Task:</strong>
   <ul>
     <li>
-      Compare the examples above with the examples they're based on to
-      see what was changed (sources are listed in top comments).
+      Try loading and playing your own audio file.
     </li>
     <li>
-      Notice the use of the <code>map</code> function to scale up the value of
-      the <code>l</code> and <code>r</code> variables. Can you change the range
-      that maps to?
-    </li>
-    <li>
-      Try drawing other shapes instead of ellipses in the for loop to see what
-      happens.
+      Try changing the playback rate, volume, etc.
     </li>
   </ul>
 </div>
 
-### Minim playback functions
+### Playback functions in p5.sound
 
-* **[Load File](http://code.compartmental.net/minim/minim_method_loadfile.html):**
-  Documentation for the `loadFile` function. Loads the requested file into
-  an `AudioPlayer` object.
-* **[Play](http://code.compartmental.net/minim/audioplayer_method_play.html):**
-  Documentation for the `play` function. Starts playback from the current
-  position.
-* **[Loop](http://code.compartmental.net/minim/audioplayer_method_loop.html):**
-  Documentation for the `loop` function. Set the `AudioPlayer` to loop some
-  number of times.
-* **[Pause](http://code.compartmental.net/minim/audioplayer_method_pause.html):**
-  Documentation for the `pause` function. Pauses playback.
+* **[loadSound](http://p5js.org/reference/#/p5.SoundFile/loadSound):**
+  Documentation for the `loadSound` function. Loads the requested file into
+  a `p5.soundFile` object from the specified path.
+* **[play](http://p5js.org/reference/#/p5.SoundFile/play):**
+  Starts playback on the sound file.
+* **[loop](http://p5js.org/reference/#/p5.SoundFile/loop):**
+  Set the `p5.soundFile` to loop. Adjust how long and how fast it loops.
+* **[pause](http://p5js.org/reference/#/p5.SoundFile/pause):**
+  Pauses playback of a sound file.
 
-## 2) Getting information from sounds
+## Getting information from sounds
 
 The following three sketches show how to measure sound information - either
 from microphone input, or from a sample playing. This is a great way to make
@@ -129,11 +90,22 @@ interesting interactive works. Spend some time on these ones.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="Monitor Audio Input" name="MonitorAudioInput" example_dir="online-examples" do_not_link=true caption="Monitors the volume from the microphone input and uses this to draw a simple ellipse at the bottom of the screen." %}
+{% include p5_editor_link.html name="Monitor audio input" screenshot="images/audio-input-screenshot.png" editor_link="https://p5js.org/reference/#/p5.AudioIn" caption="Uses microphone input to move an ellipse." %}
 
-{% include captioned_card.html title="Sound Energy Beat Detection" name="SoundEnergyBeatDetection" example_dir="online-examples" do_not_link=true caption="A nice method to make an interaction from an audio file. Have a close look at it." %}
+{% include p5_editor_link.html name="Measure amplitude" screenshot="images/measure-amplitude-thumb.png" editor_link="https://p5js.org/examples/sound-measuring-amplitude.html" caption="Changes the size of an ellipse based on the volume of a looping audio file." %}
 
-{% include captioned_card.html title="Frequency Energy Beat Detection" name="FrequencyEnergyBeatDetection" example_dir="online-examples" do_not_link=true caption="This is a more complex example for the advanced students. It also uses text which we've not seen yet" %}
+{% include p5_editor_link.html name="Beat detection" screenshot="images/beat-detection-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/BkBnH1qlN" caption="Plays a file and tries to draw an ellipse on the beat." %}
+
+{% include p5_editor_link.html name="Draw waveform" screenshot="images/draw-sound-waveform-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/HJ1-WRFeV" caption="Plays a sound file and draws the waveform for the sound." %}
+
+{% include p5_editor_link.html name="FFT analysis" screenshot="images/play-a-file-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/B1jGusKe4" caption="Plays a file and draws circles based on the frequencies of the sound." %}
+
+<!-- TODO: I *think* it should be possible to achieve something similar in 
+           p5.sound, but will need more time to figure it out...
+
+{% include p5_editor_link.html name="Frequency Energy beat detection" screenshot="images/fft-beat-detection-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/SyOwiJqxV" caption="Tries to identify beats at different frequencies in a sound file." %}
+
+-->
 
 </ul>
 
@@ -148,31 +120,28 @@ interesting interactive works. Spend some time on these ones.
       Adapt the code to generate more interesting visual output triggered
       by the sound.
     </li>
-    <li>
-      Note the use of the `ellipseMode` function in the 'Sound Energy Beat
-      Detection' example. What does this do?
-      (<a href="https://processing.org/reference/ellipseMode_.html">reference</a>)
-    </li>
   </ul>
 </div>
 
-### Minim sound information functions
+### Sound information functions
 
-* **[Position](http://code.compartmental.net/minim/audioplayer_method_position.html):**
-  Documentation for the `position` function. Returns the current position of
-  the "playhead" in milliseconds.
-* **[Level](http://code.compartmental.net/minim/audiobuffer_method_level.html):**
-  Documentation for the `level` function. Gets the current level of the buffer
+* **[currentTime](http://p5js.org/reference/#/p5.SoundFile/currentTime):**
+  Returns the current position of the "playhead" in seconds.
+* **[p5.Amplitude](http://p5js.org/reference/#/p5.Amplitude):**
+  Documentation for the `p5.Amplitude` object. Gets the current volume of a sound
+
+<!-- TODO: I don't think this is directly translateable
 * **[Waveforms](http://code.compartmental.net/minim/audiobuffer_method_get.html):**
   Documentation for the `get` function. Gets the i<sup>th</sup> sample in the
   buffer
+-->
 
-## 3) Creating and analyzing sound
+## Creating and analyzing sound
 
-The following two examples show how to synthesize and analyse sound in more
-complex ways. You are welcome to explore more complex examples if you're
-interested. A good place to start is in the `Synthesis` and `Analysis`
-sections of the Minim examples.
+The following two examples show how to synthesize and analyse sound. You are
+welcome to explore more complex examples if you're interested.
+
+<!-- TODO: Link to p5.sound functions for this
 
 <ul class="code-list">
 
@@ -181,6 +150,18 @@ sections of the Minim examples.
 {% include captioned_card.html title="Analyse Sound" name="AnalyzeSound" example_dir="online-examples" do_not_link=true caption="FFT = Fast Fourier Transform - which converts a time domain signal into frequency domain.  In short, makes those EQ graphics showing different frequency bands." %}
 
 </ul>
+
+-->
+
+* [Noise drum envelope](https://p5js.org/examples/sound-noise-drum-envelope.html)
+* [Note envelope](https://p5js.org/examples/sound-note-envelope.html)
+* [Oscillator frequency](https://p5js.org/examples/sound-oscillator-frequency.html)
+* [Frequency spectrum](https://p5js.org/examples/sound-frequency-spectrum.html)
+* [Mic threshold](https://p5js.org/examples/sound-mic-threshold.html)
+* [Filter low pass](https://p5js.org/examples/sound-filter-lowpass.html)
+* [Filter band pass](https://p5js.org/examples/sound-filter-bandpass.html)
+* [Frequency modulation](https://p5js.org/examples/sound-frequency-modulation.html)
+* [Amplitude modulation](https://p5js.org/examples/sound-amplitude-modulation.html)
 
 <p class="task">
   <strong>For the adventurous:</strong>
@@ -203,19 +184,25 @@ the kinds of sketches you might make are:
   changing image
 * A sound-synthesis experiment.
 
-## Examples from lecture
+## Example from lecture
 
-The following examples are from the lecture
+The following example is from the lecture
 
 <ul class="code-list">
+
+<!-- TODO: I'm not sure it's worth porting the following to p5.js
 
 {% include captioned_card.html name="simple_audio_input" example_dir="tutor-examples" do_not_link=true caption="A sketch which draws the current volume from the audio input." %}
 
 {% include captioned_card.html name="beat_grid" example_dir="tutor-examples" do_not_link=true caption="Adapted from the beat detection above. Uses a song to generate a pleasing visual pattern. This shows how you can adapt the simple examples above to generate more complex and interesting visual outputs." %}
 
-{% include captioned_card.html name="chirporchestra" example_dir="tutor-examples" do_not_link=true caption="(Advanced) Example shown in the lecture of how you can create a basic grid sequencer in Processing." %}
+-->
+
+{% include p5_editor_link.html name="chirporchestra" screenshot="images/chirporchestra-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/HyRUMW9x4" caption="(Advanced) Example shown in the lecture of how you can create a basic grid sequencer in p5.js." %}
 
 </ul>
+
+<!-- TODO: The Processing sound tutorial isn't ported to p5.js yet.
 
 ## Further tutorial
 
@@ -228,3 +215,5 @@ The following examples are from the lecture
     A detailed tutorial on the use of sound in Processing.
   </li>
 </ul>
+
+-->
