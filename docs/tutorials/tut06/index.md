@@ -5,11 +5,11 @@ layout: tutorial
 
 <p class="lead">
   In this week’s tutorial we'll work with Fonts and Text in
-  Processing and use Time as an input for your sketches. This is the last
+  p5.js and use time as an input for your sketches. This is the last
   in-class activity that'll form part of the assignment 1 submission. The
   sketch for this part of the assignment must
-  involve drawing some text to the screen and it must change over time, without
-  user input. You will learn some ways to do this in this tutorial.
+  involve drawing some text to the screen and it must change over time,
+  without user input. You will learn some ways to do this in this tutorial.
 </p>
 
 ## Text as data in p5.js
@@ -19,95 +19,62 @@ as data in Processing. Along with the other data types we've
 covered, you should now be familiar with code such as
 the following:
 
-{% highlight java linenos %}
-// Initialise a String and a char variable
-char c = 'h';
-String myString = "Hello World.";
+{% highlight javascript linenos %}
+// Initialize two strings.
+let c = 'h';
+let myString = "Hello World.";
 {% endhighlight %}
 
-The
-[`char`][1] data type is a primitive datatype in Processing. A
-[`char`][1] can store a single _character_ of text. The [`String`][2] class
-lets us store whole words and sentences --- _strings_ of characters.
+<!-- TODO: Revise this for JavaScript, need to check MDN -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String -->
 
-There're lots of uses for [`Strings`][2] and [`chars`][1] in Processing. For
-instance, when you load an image, you must tell Processing the name
+The [`String`][2] class in JavaScript lets us store single letters and whole
+words and sentences --- _strings_ of characters.
+
+There're lots of uses for [`Strings`][2] in p5.js. For
+instance, when you load an image, you must tell p5.js the name
 of the file you want to load. Or you might also use strings to print
-information to the console using the [`println()`][8] function.
+information to the console using the [`console.log()`][8] function.
 
-{% highlight java linenos %}
+{% highlight javascript linenos %}
 // Message to print
-String consoleMsg = "Hello from the console!";
-println(consoleMsg);
+let consoleMsg = "Hello from the console!";
+console.log(consoleMsg);
 {% endhighlight %}
 
-You can also display strings on the drawing canvas with the [`text()`][3]
+You can also display strings on the canvas with the [`text()`][3]
 function. To change the colour of the displayed text, use the [`fill()`][4]
 function. The listing below shows an example, along with output.
 
-{% highlight java linenos %}
-// Message we want to display
-String canvasMsg = "Hello Canvas!";
-
-text(canvasMsg, 10, 20);
-
-fill(0);
-text(canvasMsg, 10, 40);
-
-fill(255, 0, 0);
-text(canvasMsg, 10, 60);
-
-fill(255, 0, 0, 100);
-text(canvasMsg, 10, 80);
-{% endhighlight %}
-
-![Text function example output]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/text_function-screenshot.png)
+<script type="text/p5" src="./js/text-function.js" data-autoplay></script>
 
 <p class="info">
   <strong>Tip:</strong> Being able to draw text to the screen like this can be
-  helpful when you need to debug your sketches. Rather than scroll through output
-  from the
-  <a href="https://processing.org/reference/println_.html"
-    ><code class="highlighter-rouge">println()</code></a>
-  function, you can draw your messages on the screen. In the following example
-  the current location of the mouse is drawn to the screen.
+  helpful when you need to debug your sketches. Rather than scroll through output from `console.log` commands, you can draw your messages on the
+  screen. In the following example the current location of the mouse displays
+  next to the cursor.
 </p>
 
 <ul class="code-list">
 
-{% include captioned_card.html name="loctextfeedback" example_dir="tutor-examples" caption="Move text with mouse" %}
+{% include example_card.html name="Text location feedback" thumb="images/loctextfeedback-thumb.png" link="https://editor.p5js.org/awarua/sketches/By2gn8ol4" caption="Move text with mouse" %}
 
 </ul>
 
 ### Changing the display of text
 
-Apart from changing the colour of text, we can also change its size and alignment.
-For this, we use the [`textSize()`][5] and [`textAlign()`][6] functions. By
-default, text is left-aligned and 12px tall. The following listing and output
-shows how to use these functions.
+<!-- TODO: Check default size below -->
 
-{% highlight java linenos %}
-String message = "Changes";
+Apart from changing the colour of text, we can also change its size and
+alignment. For this, we use the [`textSize()`][5] and [`textAlign()`][6]
+functions. By default, text is left-aligned and 12px tall. The following
+example shows how to use these functions.
 
-size(150, 150);
-fill(0);
-stroke(255);
+<ul class="code-list">
 
-// Draw a line down the middle of the canvas.
-line(width / 2, 0, width / 2, height);
+{% include example_card.html name="Change text display" thumb="images/text_display-thumb.png" link="https://editor.p5js.org/awarua/sketches/Hyk2yPjeN" caption="Change alignment, size and position of text" %}
 
-text(message, width / 2, 35);
-
-textAlign(CENTER);
-textSize(24);
-text(message, width / 2, 75);
-
-textAlign(RIGHT);
-textSize(48);
-text(message, width / 2, 125);
-{% endhighlight %}
-
-![Text display functions example]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/text_display-screenshot.png)
+</ul>
 
 Below are two further examples. The first one demonstrates changing the visual
 properties of text. The second one is a basic demo of how to take text input
@@ -115,9 +82,9 @@ from a person and display it on the screen.
 
 <ul class="code-list">
 
-{% include captioned_card.html name="basic_words" example_dir="tutor-examples" caption="Create a font. Display words on the screen. Change visual properties" %}
+{% include example_card.html name="Basic words" thumb="images/basic_words-thumb.png" link="https://editor.p5js.org/awarua/sketches/HyQFEPoeV" caption="Display words on the screen. Change visual properties" %}
 
-{% include captioned_card.html name="message_buffer" example_dir="tutor-examples" link_to_web_version=true    caption="Reads keyboard input into a buffer, display text on screen" %}
+{% include example_card.html name="Message buffer" thumb="images/message_buffer-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1vCIDse4" caption="Reads keyboard input into a buffer, display text on screen" %}
 
 </ul>
 
@@ -198,6 +165,8 @@ text(message, width / 2, 75);
   functions described above.
 </p>
 
+<!-- TODO: The strings tutorial is not implemented in p5.js yet
+
 For more information, refer to the following tutorial from Dan Shiffman or check
 the [Procesing reference][10] typography functions.
 
@@ -214,6 +183,19 @@ the [Procesing reference][10] typography functions.
   </li>
 </ul>
 
+-->
+
+### Getting the outline of text
+
+<ul class="code-list">
+
+  {% include example_card.html name="Text outline" thumb="images/text-outline-thumb.png" link="https://p5js.org/reference/#/p5.Font/textToPoints" caption="Gets the outline of some text and distorts it." %}
+
+  {% include example_card.html name="Particle text" thumb="images/particle-text-thumb.png" link="https://editor.p5js.org/awarua/full/ryBpNdjeN" caption="A message is formed from a swarm of particles." %}
+
+</ul>
+
+
 ## Working with time
 
 There're several ways that we can make our sketches change over time.
@@ -221,36 +203,12 @@ There're several ways that we can make our sketches change over time.
 ### Counting frames
 
 One way to respond to time is to use the [`frameCount`][11] variable
-that Processing provides. This variable holds a counter of the number of
+that p5.js provides. This variable holds a counter of the number of
 frames shown so far. The following example demonstrates its use.
-
-{% highlight java linenos %}
-void setup(){
-  size(150, 150);
-
-  // Align text center both horizontally and vertically.
-  textAlign(CENTER, CENTER);
-  textSize(50);
-}
-
-void draw(){
-  // Calculate a colour for the background based on frameCount.
-  // Use the modulo operator to 'wrap around' at 255.
-  int bgColour = frameCount % 255;
-  background(bgColour);
-
-  // Calculate a fill opposite to the background.
-  int fillColour = 255 - bgColour;
-  fill(fillColour);
-
-  // Draw the frameCount at the center of the canvas.
-  text(frameCount, width / 2, 75);
-}
-{% endhighlight %}
 
 <ul class="code-list">
 
-{% include captioned_card.html name="frameCount" example_dir="tutor-examples" caption="Demonstrates how to use the frameCount variable." %}
+{% include example_card.html name="Frame counter" thumb="images/frameCount-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1fxbKslE" caption="Demonstrates how to use the frameCount variable." %}
 
 </ul>
 
@@ -483,7 +441,10 @@ but may be useful if you want to work with longer passages of text.
 [5]: https://processing.org/reference/textSize_.html
 [6]: https://processing.org/reference/textAlign_.html
 [7]: https://processing.org/reference/PFont.html
+
+<!-- The following should be the reference for 'console.log' -->
 [8]: https://processing.org/reference/println_.html
+
 [9]: https://processing.org/reference/loadFont_.html
 [10]: https://processing.org/reference
 [11]: https://processing.org/reference/frameCount.html

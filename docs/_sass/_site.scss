@@ -165,3 +165,8 @@ p.task, div.task {
   border-color: #C7C0EA;
 }
 
+/* Fix for p5-widget iframes */
+
+iframe {
+  margin-bottom: 1em;
+}

@@ -103,7 +103,7 @@ interesting interactive works. Spend some time on these ones.
 <!-- TODO: I *think* it should be possible to achieve something similar in 
            p5.sound, but will need more time to figure it out...
 
-{% include p5_editor_link.html name="Frequency Energy beat detection" screenshot="images/fft-beat-detection-thumb.png" editor_link="https://editor.p5js.org/awarua/sketches/SyOwiJqxV" caption="Tries to identify beats at different frequencies in a sound file." %}
+{% include example_card.html name="Frequency Energy beat detection" thumb="images/fft-beat-detection-thumb.png" link="https://editor.p5js.org/awarua/sketches/SyOwiJqxV" caption="Tries to identify beats at different frequencies in a sound file." %}
 
 -->
 
