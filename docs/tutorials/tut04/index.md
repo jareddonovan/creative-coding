@@ -115,7 +115,7 @@ You can also explore how these work yourself.
 
 {% include example_card.html name="Butterfly random" thumb="images/butterfly_random-screenshot.png" link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
 
-<!-- {% include example_card.html name="Butterfly sort" thumb="images/butterfly_sort-screenshot.png" link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %} -->
+<!-- {% include example_card.html name="Butterfly sort" thumb="images/butterfly_sort-screenshot.png" link="https://editor.p5js.org/awarua/sketches/AQUEnxA1u" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %} -->
 
 </ul>
 
