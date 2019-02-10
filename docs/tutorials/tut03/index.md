@@ -4,7 +4,7 @@ layout: tutorial
 ---
 
 <p class="lead">
-  In this week's tutorial we'll look at using Processing to create Patterns
+  In this week's tutorial we'll look at using p5js to create Patterns
   exploring foundational programming concept of iteration (looping and repeating).
   We'll add mouse and time as inputs to the sketch to vary the results. We'll
   also look at random and noise functions. The outcomes of the in class activity
