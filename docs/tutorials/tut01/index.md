@@ -38,34 +38,41 @@ The editor should look something like the following picture
 
 ![p5js web editor](./images/editor-p5js-parts.png)
 
-{% highlight javascript linenos %}
-function setup(){
+When you first open the editor, it will have some default code already filled
+in. If you press the `play` button, you will see what this default code does.
+You should see a grey square appear to the right of the code. This is the
+`canvas`, where p5js does most of its drawing. Try it now.
 
+We will go into more detail about what the different parts of the code do later.
+First, let's add something a bit more interesting.
+
+* Update the code by adding `ellipse(200, 200, 100);` on line 7, so it looks
+  like the following:
+
+{% highlight javascript linenos %}
+function setup() {
+  createCanvas(400, 400);
 }
 
-function draw(){
-
+function draw() {
+  background(220);
+  ellipse(200, 200, 100);
 }
 {% endhighlight %}
 
-The `setup` and `draw` funcitons are the 'skeleton' of a p5js program. 
+## Explaining the parts of the code
 
-The `setup` function is run once when the page first loads. It is used 
-to set up things such as create the canvas that p5.js will draw 
-onto and set its size, set how text should be formatted, define 
-what colours to use, and so on. 
+First, see if you can identify the two blocks of the code that define the
+`setup` and `draw` functions. These special functions are the 'skeleton' of a
+p5js program and pretty-much every p5js sketch you write will have them.
 
-The `draw` function runs over and over again as long as the sketch is 
-running. It controls how the sketch should evolve over time, through 
-things such as animations and other dynamic elements of the sketch.
+The `setup` function runs once when the page first loads. It's where you do
+things such as create the canvas that p5.js will draw onto, set text formatting,
+and the colours used for drawing shapes.
 
-
-As they are, these two functions don't do much, because we haven't added any 
-code to them yet. If you press the 'play' button at the top of the 
-screen, you should see **a white square appear on the right hand side
-of the page. **
-
-Let's add some code to the sketch to make it do something more interesting.
+The `draw` function runs over and over again as long as the sketch is running.
+It controls how the sketch should evolve over time, through things such as
+animations and other dynamic elements of the sketch.
 
 ## Your first p5js sketch: the world's simplest drawing program
 
