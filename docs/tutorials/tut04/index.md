@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 4: Working with Bitmaps"
+title: "Tutorial 4: Working with Images"
 layout: tutorial
 ---
 
