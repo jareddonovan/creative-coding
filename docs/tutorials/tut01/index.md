@@ -21,7 +21,7 @@ to the p5 project from Lauren McCarthy and Daniel Shiffman. Notice how the
 graphics in the video are interactive? That's all done with the p5 library.
 Make sure you click around and explore how it works!
 
-[![hello.p5js.org](./images/hello.p5js.org.png)](http://hello.p5js.org)
+[![hello.p5js.org](./images/hello-p5js-org.png)](http://hello.p5js.org)
 
 <!-- TODO: I'd like to embed the hello p5js video but it requires an extra click.
 <div class="video-container">
@@ -34,8 +34,9 @@ Make sure you click around and explore how it works!
 
 * <https://editor.p5js.org/>
 
+The editor should look something like the following picture
 
-In the editor, you should see the following code:
+![p5js web editor](./images/editor-p5js-parts.png)
 
 {% highlight javascript linenos %}
 function setup(){
