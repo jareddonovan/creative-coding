@@ -4,9 +4,8 @@ layout: tutorial
 ---
 
 <p class="lead">
-  In this week's tutorial we'll look at using Bitmaps and
-  Scalable Vector Graphic (SVG) files in Processing. We'll look at how we can
-  access the color of each pixel, how to slice up a bitmap to create
+  In this week's tutorial we'll look at using image files in p5js. We'll look at
+  how we can access the color of each pixel, how to slice up a bitmap to create
   new images. We'll use this to create animated "sprites" with image
   sequences. The outcomes of the in class activity will form part of the
   assignment 1 submission.
@@ -108,7 +107,7 @@ like Illustrator or Inkscape to produce SVG images.
 Below are some further examples that your tutors may go through with you.
 You can also explore how these work yourself.
 
-## Image chopping and sorting
+## Image chopping and shuffling
 
 <ul class="code-list">
 
@@ -116,7 +115,7 @@ You can also explore how these work yourself.
 
 {% include example_card.html name="Butterfly random" thumb="images/butterfly_random-screenshot.png" link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
 
-{% include example_card.html name="Butterfly sort" thumb="images/butterfly_sort-screenshot.png" link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %}
+<!-- {% include example_card.html name="Butterfly sort" thumb="images/butterfly_sort-screenshot.png" link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %} -->
 
 </ul>
 
