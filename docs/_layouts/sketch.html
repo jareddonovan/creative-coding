@@ -1,8 +1,15 @@
 <!DOCTYPE html><html><head>
+    <title>{{ page.title }}</title>
     <script src="{{ "/assets/js/p5.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/assets/js/p5.dom.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/assets/js/p5.sound.min.js" | prepend: site.baseurl }}"></script>
+    {% for script in page.scripts %}
+      <script src="{{ script }}"></script>
+    {% endfor %}
     <link rel="stylesheet" type="text/css" href="{{ "/css/sketch.css" | prepend: site.baseurl }}">
+    {% for style in page.styles %}
+      <link rel="stylesheet" type="text/css" href="{{ style }}">
+    {% endfor %}
     <meta charset="utf-8">
 
   </head>
