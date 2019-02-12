@@ -1,5 +1,6 @@
 ---
 title: "Tutorial 5: Sound and Image"
+tut_num: 5
 layout: tutorial
 ---
 

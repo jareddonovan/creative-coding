@@ -1,5 +1,6 @@
 ---
 title: "Tutorial 6: Fonts, Text and Time"
+tut_num: 6
 layout: tutorial
 ---
 

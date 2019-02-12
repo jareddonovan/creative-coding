@@ -1,5 +1,6 @@
 ---
 title: "Tutorial 2: Active Drawing"
+tut_num: 2
 layout: tutorial
 ---
 

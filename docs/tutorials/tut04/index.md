@@ -1,5 +1,6 @@
 ---
 title: "Tutorial 4: Working with Images"
+tut_num: 4
 layout: tutorial
 ---
 
