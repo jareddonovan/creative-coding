@@ -1,5 +1,6 @@
 ---
 title: "Tutorial 3: Making Patterns"
+tut_num: 3
 layout: tutorial
 ---
 
