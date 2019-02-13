@@ -6,6 +6,8 @@
     {% for script in page.scripts %}
       <script src="{{ script }}"></script>
     {% endfor %}
+    <script src="sketch.js"></script>
+
     <link rel="stylesheet" type="text/css" href="{{ "/css/sketch.css" | prepend: site.baseurl }}">
     {% for style in page.styles %}
       <link rel="stylesheet" type="text/css" href="{{ style }}">
@@ -14,5 +16,7 @@
 
   </head>
   <body>
-    <script src="sketch.js"></script>
+
+  {{ content }}
+
 </body></html>
