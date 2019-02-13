@@ -35,7 +35,7 @@ words and sentences --- _strings_ of characters.
 There're lots of uses for [`Strings`][2] in p5.js. For
 instance, when you load an image, you must tell p5.js the name
 of the file you want to load. Or you might also use strings to print
-information to the console using the [`console.log()`][8] function.
+information to the console using the [`console.log()`][3] function.
 
 {% highlight javascript linenos %}
 // Message to print
@@ -43,15 +43,16 @@ let consoleMsg = "Hello from the console!";
 console.log(consoleMsg);
 {% endhighlight %}
 
-You can also display strings on the canvas with the [`text()`][3]
-function. To change the colour of the displayed text, use the [`fill()`][4]
+You can also display strings on the canvas with the [`text()`][5]
+function. To change the colour of the displayed text, use the [`fill()`][6]
 function. The listing below shows an example, along with output.
 
-<script type="text/p5" src="./js/text-function.js" data-autoplay></script>
+<script type="text/p5" src="./js/text-function.js" data-autoplay data-height="350"></script>
 
 <p class="info">
   <strong>Tip:</strong> Being able to draw text to the screen like this can be
-  helpful when you need to debug your sketches. Rather than scroll through output from `console.log` commands, you can draw your messages on the
+  helpful when you need to debug your sketches. Rather than scroll through
+  output from [`console.log`][3] commands, you can draw your messages on the
   screen. In the following example the current location of the mouse displays
   next to the cursor.
 </p>
@@ -67,7 +68,7 @@ function. The listing below shows an example, along with output.
 <!-- TODO: Check default size below -->
 
 Apart from changing the colour of text, we can also change its size and
-alignment. For this, we use the [`textSize()`][5] and [`textAlign()`][6]
+alignment. For this, we use the [`textSize()`][7] and [`textAlign()`][8]
 functions. By default, text is left-aligned and 12px tall. The following
 example shows how to use these functions.
 
@@ -91,9 +92,38 @@ from a person and display it on the screen.
 
 ### Changing fonts
 
-The default font used by Processing is Lucida Sans Regular.
-To change to a different font, we need to do a little bit of work.
-First, we need to declare a [`PFont`][7] object that will hold information about
+P5js can display any font that your browser can show. By default, it uses a
+sans-serif font. You can change the font with the [`textFont()`][4] function in
+three different ways:
+
+The first way is by giving a generic font name such as, `serif`, `sans-serif`,
+or `monospace` to the [`textFont()`][4] function. The example below shows this.
+Notice that you can also set the size of the font with the second argument.
+
+<script type="text/p5" src="./js/change-font-1.js"
+  data-autoplay data-height="380" data-preview-width="250"></script>
+
+The second way is by giving the name of a font that is installed on your
+browser. If you do this, it is a good idea to use a
+[common font](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts),
+that is widely installed on other people's browsers.
+
+<script type="text/p5" src="./js/change-font-2.js"
+  data-autoplay data-height="380" data-preview-width="250"></script>
+
+The third way is to add a font-file to your sketch and load it into a
+[`p5.Font`][9] object.
+
+. The first way is to give it a string with the name of a 
+['web safe font'](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)
+that is installed on your browser.
+
+{% highlight java linenos %}
+textFont()
+{% endhighlight %}
+
+
+First, we need to declare a [`p5.Font`][9] object that will hold information about
 the font we want to display. Then we need to either create the font from one of
 the fonts installed on our computer or load it from file. The listing and sample
 output below shows how to create a font from one installed on the computer.
@@ -120,7 +150,7 @@ There's a potential problem with creating fonts in this way. If you run the sket
 on a different computer (e.g., your marker's) where the font
 isn't installed, it'll not display properly. To get around this, you can 
 include a font file in the data folder of your sketch and load it into a 
-[`PFont`][7] variable.
+[`p5.Font`][9] variable.
 
 There're two main ways to achieve this. The first is to use Processing's built in
 'createFont' tool.
@@ -134,9 +164,9 @@ options for it such as size. Set the options you want and click OK.
 
 ![Create Font Dialog]({{site.baseurl}}{{page.url}}images/create-font-dialog.png)
 
-Once you click OK, a [`.vlw`][9] file will be created inside the 'data' folder
+Once you click OK, a `.vlw` file will be created inside the 'data' folder
 of your sketch. Now you can use it in your sketch by loading it with the
-[`loadFont()`][9] function as shown in the following listing and output.
+[`loadFont()`][10] function as shown in the following listing and output.
 
 {% highlight java linenos %}
 // PFont variable will hold font information
@@ -169,7 +199,7 @@ text(message, width / 2, 75);
 <!-- TODO: The strings tutorial is not implemented in p5.js yet
 
 For more information, refer to the following tutorial from Dan Shiffman or check
-the [Procesing reference][10] typography functions.
+the [p5js reference][2] typography functions.
 
 <ul class="code-list">
   <li>
@@ -255,7 +285,7 @@ void draw(){
 </ul>
 
 The following example shows a slightly more complex example, which uses
-[`millis()`][12] together with the [`% (modulo)`][13] operator to generate a
+[`millis()`][12] together with the JavaScript [`%` (remainder)][13] operator to generate a
 more interesting visual result.
 
 <ul class="code-list">
@@ -414,19 +444,19 @@ but may be useful if you want to work with longer passages of text.
 
 ## Reference links
 
-1. [Processing Reference][10]
-2. [`PFont`][7]
-3. [`text()`][3]
-4. [`textSize()`][5]
-5. [`textAlign()`][6]
-6. [`loadFont()`][9]
-7. [`char`][1]
-8. [`String`][2]
-9. [`fill()`][4]
-10. [`println()`][8]
+1. [p5js Reference][1]
+2. [`String`][2]
+3. [`console.log()`][3]
+4. [`textFont()`][4]
+5. [`text()`][5]
+6. [`fill()`][6]
+7. [`textSize()`][7]
+8. [`textAlign()`][8]
+9. [`p5.Font`][9]
+10. [`loadFont()`][10]
 11. [`frameCount`][11]
 12. [`millis()`][12]
-13. [`% (modulo)`][13]
+13. [`%` (remainder)][13]
 14. [`year()`][14]
 15. [`month()`][15]
 16. [`day()`][16]
@@ -435,26 +465,24 @@ but may be useful if you want to work with longer passages of text.
 19. [`second()`][19]
 20. [`loadStrings()`][20]
 
-[1]: https://processing.org/reference/char.html
-[2]: https://processing.org/reference/String.html
-[3]: https://processing.org/reference/text_.html
-[4]: https://processing.org/reference/fill_.html
-[5]: https://processing.org/reference/textSize_.html
-[6]: https://processing.org/reference/textAlign_.html
-[7]: https://processing.org/reference/PFont.html
+[1]: https://p5js.org/reference
+[2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+[3]: https://developer.mozilla.org/en-US/docs/Web/API/Console/log
+[4]: https://p5js.org/reference/#/p5/textFont
+[5]: https://p5js.org/reference/#/p5/text
+[6]: https://p5js.org/reference/#/p5/fill
+[7]: https://p5js.org/reference/#/p5/textSize
+[8]: https://p5js.org/reference/#/p5/textAlign
+[9]: https://p5js.org/reference/#/p5.Font
+[10]: https://p5js.org/reference/#/p5/loadFont
+[11]: https://p5js.org/reference/#/p5/frameCount
+[12]: https://p5js.org/reference/#/p5/millis
+[13]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()
+[14]: https://p5js.org/reference/#/p5/year
+[15]: https://p5js.org/reference/#/p5/month
+[16]: https://p5js.org/reference/#/p5/day
+[17]: https://p5js.org/reference/#/p5/hour
+[18]: https://p5js.org/reference/#/p5/minute
+[19]: https://p5js.org/reference/#/p5/second
+[20]: https://p5js.org/reference/#/p5/loadStrings
 
-<!-- The following should be the reference for 'console.log' -->
-[8]: https://processing.org/reference/println_.html
-
-[9]: https://processing.org/reference/loadFont_.html
-[10]: https://processing.org/reference
-[11]: https://processing.org/reference/frameCount.html
-[12]: https://processing.org/reference/millis_.html
-[13]: https://processing.org/reference/modulo.html
-[14]: https://processing.org/reference/year_.html
-[15]: https://processing.org/reference/month_.html
-[16]: https://processing.org/reference/day_.html
-[17]: https://processing.org/reference/hour_.html
-[18]: https://processing.org/reference/minute_.html
-[19]: https://processing.org/reference/second_.html
-[20]: https://processing.org/reference/loadStrings_.html
