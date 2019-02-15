@@ -336,9 +336,9 @@ draws a digital clock with simple interaction.
 
 <ul class="code-list">
 
-{% include example_card.html title="Clock" thumb="images/clock-thumb.png" link="https://p5js.org/examples/input-clock.html" caption="Implements a dial clock." %}
+{% include example_card.html name="Clock" thumb="images/clock-thumb.png" link="https://p5js.org/examples/input-clock.html" caption="Implements a dial clock." %}
 
-{% include example_card.html title="clockexample" thumb="images/clock-example-thumb.png" link="https://editor.p5js.org/awarua/sketches/MtptDyg8w" caption="uses time to create a clock with text (by Indae Hwang and Jon McCormack, Monash Uni.)" %}
+{% include example_card.html name="clockexample" thumb="images/clock-example-thumb.png" link="https://editor.p5js.org/awarua/sketches/MtptDyg8w" caption="uses time to create a clock with text (by Indae Hwang and Jon McCormack, Monash Uni.)" %}
 
 </ul>
 
@@ -382,15 +382,15 @@ The examples below show a range of examples of this approach.
 
 <ul class="code-list">
 
-{% include captioned_card.html name="decay" example_dir="tutor-examples" link_to_web_version=true caption="Draws some text that's gradually decayed away." %}
+{% include example_card.html name="decay" thumb="images/decay-thumb.png" link="https://editor.p5js.org/awarua/sketches/KlqpuS-lU" caption="Draws some text that's gradually decayed away." %}
 
-{% include captioned_card.html name="day_night" example_dir="tutor-examples" link_to_web_version=true caption="Animates between two words" %}
+{% include example_card.html name="Day & Night" thumb="images/day-night-thumb.png" link="https://editor.p5js.org/awarua/sketches/yzP0yrzPm" caption="Animates between two words" %}
 
-{% include captioned_card.html name="shivers" example_dir="tutor-examples" link_to_web_version=true caption="Text is animated to look like it's shivering." %}
+{% include example_card.html name="Shivering" thumb="images/shivering-thumb.png" link="https://editor.p5js.org/awarua/sketches/rWcunRzJW" caption="Text is animated to look like it's shivering." %}
 
-{% include captioned_card.html name="avoidance" example_dir="tutor-examples" link_to_web_version=true caption="Text avoids the mouse." %}
+{% include example_card.html name="Avoidance" thumb="images/avoidance-thumb.png" link="https://editor.p5js.org/awarua/sketches/ncNWaEkTw" caption="Text avoids the mouse." %}
 
-{% include captioned_card.html title="Run Animation (Advanced)" name="run_animation" example_dir="tutor-examples" link_to_web_version=true caption="More advanced - example of using processing to animate text" %}
+{% include example_card.html name="Run Animation (advanced)" thumb="images/run-thumb.png" link="https://editor.p5js.org/awarua/sketches/686rYsJKr" caption="More advanced - example of using processing to animate text" %}
 
 </ul>
 
