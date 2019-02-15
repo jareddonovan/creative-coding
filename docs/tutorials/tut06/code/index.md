@@ -8,3 +8,5 @@ title: Examples
 * [Message_buffer](Message_buffer)
 * [Particle_text](Particle_text)
 * [Text_location_feedback](Text_location_feedback)
+* [Google_font_via_link](Google_font_via_link)
+* [Load_coiny_font](Load_coiny_font)

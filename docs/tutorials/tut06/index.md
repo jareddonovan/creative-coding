@@ -52,7 +52,7 @@ function. The listing below shows an example, along with output.
 <p class="info">
   <strong>Tip:</strong> Being able to draw text to the screen like this can be
   helpful when you need to debug your sketches. Rather than scroll through
-  output from [`console.log`][3] commands, you can draw your messages on the
+  output from <code>console.log</code> commands, you can draw your messages on the
   screen. In the following example the current location of the mouse displays
   next to the cursor.
 </p>
@@ -90,11 +90,17 @@ from a person and display it on the screen.
 
 </ul>
 
-### Changing fonts
+## Changing fonts
 
 P5js can display any font that your browser can show. By default, it uses a
-sans-serif font. You can change the font with the [`textFont()`][4] function in
-three different ways:
+sans-serif font. In the section below, you will learn three ways that you can
+change the font:
+
+1. Give a generic font name
+2. Give the name of a font that is installed on your browser
+3. Upload a font file to your sketch's data folder
+
+### 1. Giving a generic font name
 
 The first way is by giving a generic font name such as, `serif`, `sans-serif`,
 or `monospace` to the [`textFont()`][4] function. The example below shows this.
@@ -103,97 +109,96 @@ Notice that you can also set the size of the font with the second argument.
 <script type="text/p5" src="./js/change-font-1.js"
   data-autoplay data-height="380" data-preview-width="250"></script>
 
-The second way is by giving the name of a font that is installed on your
-browser. If you do this, it is a good idea to use a
+### 2. Using a font already installed on the browser
+
+The second way to change the font is by giving the name of a font that is
+installed on your browser. If you do this, it is a good idea to use a
 [common font](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts),
-that is widely installed on other people's browsers.
+that is widely installed on other people's browsers too.
 
 <script type="text/p5" src="./js/change-font-2.js"
   data-autoplay data-height="380" data-preview-width="250"></script>
 
-The third way is to add a font-file to your sketch and load it into a
-[`p5.Font`][9] object.
+### 3. Uploading a font file
 
-. The first way is to give it a string with the name of a 
-['web safe font'](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)
-that is installed on your browser.
-
-{% highlight java linenos %}
-textFont()
-{% endhighlight %}
-
-
-First, we need to declare a [`p5.Font`][9] object that will hold information about
-the font we want to display. Then we need to either create the font from one of
-the fonts installed on our computer or load it from file. The listing and sample
-output below shows how to create a font from one installed on the computer.
-
-{% highlight java linenos %}
-// PFont variable will hold font information
-PFont myFont;
-String message = "Menu Cliché";
-
-// Create a new font from one installed on the computer.
-// createFont requires the name of the font and the size in pixels.
-myFont = createFont("Papyrus", 24);
-
-// We also need to tell Processing to *use* the font with textFont function.
-textFont(myFont);
-
-// Message will be drawn in the font we've set.
-text(message, 10, 75);
-{% endhighlight %}
-
-![Example output of createFont sketch]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/createFont-screenshot.png)
-
-There's a potential problem with creating fonts in this way. If you run the sketch
-on a different computer (e.g., your marker's) where the font
-isn't installed, it'll not display properly. To get around this, you can 
-include a font file in the data folder of your sketch and load it into a 
-[`p5.Font`][9] variable.
-
-There're two main ways to achieve this. The first is to use Processing's built in
-'createFont' tool.
-
-From the 'Tools' menu, choose 'Create Font…'
-
-![Create Font Menu Item]({{site.baseurl}}{{page.url}}images/create-font-menu.png)
-
-A dialog will pop up. You can select the font you want to use and set
-options for it such as size. Set the options you want and click OK.
-
-![Create Font Dialog]({{site.baseurl}}{{page.url}}images/create-font-dialog.png)
-
-Once you click OK, a `.vlw` file will be created inside the 'data' folder
-of your sketch. Now you can use it in your sketch by loading it with the
-[`loadFont()`][10] function as shown in the following listing and output.
-
-{% highlight java linenos %}
-// PFont variable will hold font information
-PFont myFont;
-String message = "Avatar";
-
-size(150, 150);
-fill(0);
-
-// Create a new font from a font file in the data folder.
-// loadFont requires the name of the font.
-myFont = loadFont("Papyrus-48.vlw");
-
-// We again need to tell Processing to use the font.
-textFont(myFont);
-textAlign(CENTER);
-
-// Message will be drawn in the font we've set.
-text(message, width / 2, 75);
-{% endhighlight %}
-
-![Avatar used Papyrus]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/loadFont-screenshot.png)
+The third way to change the font is to add a font-file to your sketch and load
+it into a [`p5.Font`][9] object. This gives you many more fonts to choose from
+and ensures that the sketch will always display correctly on different
+computers. But it is a bit more complicated to set up.
 
 <p class="task">
-  <strong>Task:</strong> Try this now. Create a font using the Create Font
-  dialog, and then load it and display it in your sketch using the text display
-  functions described above.
+  <strong>Task:</strong> Try this now. Download a font using the instructions
+  below and then load it and display it in your sketch using the text display
+  functions.
+</p>
+
+First, you need to download a font file that you can use. There are a
+lot of websites where you can search for and download royalty-free font files.
+One good site is [google fonts](https://fonts.google.com).
+
+* Search for a font to use at [google fonts](https://fonts.google.com).
+* When find a font, save it to your computer using the download link as shown
+  in the diagram below.
+  
+![Diagram showing instructions for downloading google fonts: 1) Search for a font and click the 'add' icon to add it to your selection. 2) Click the black bar at the bottom and then click 'Download'](images/download-google-fonts.png)
+
+Once you've found a font and saved it your computer, you'll need to upload it to
+a `data` folder in your sketch as shown in the diagram below.
+
+![Instructions for uploading a font file to the sketch: 1) Find the font file you saved. 2) Add a project to your sketch called 'data'. 3) Click the dropdown menu and choose 'add file'. 4) Drag the font file onto the add file window.](images/uploading-fonts.png)
+
+Once you've added the font file to the sketch, you can load it into a
+[`p5.Font`][9] object that we can use in the sketch. The following code listing shows
+how to do this.
+
+{% highlight javascript linenos %}
+let font;
+
+function preload(){
+  font = loadFont("data/Coiny-Regular.ttf");
+}
+
+function setup() {
+  createCanvas(400, 400);
+  textFont(font);
+  textSize(50);
+  textAlign(LEFT, CENTER);
+}
+
+function draw() {
+  background(220);
+  let msg = "This message is written in a font called Coiny";
+  text(msg, 25, 25, width - 50, height - 50);
+}
+{% endhighlight %}
+
+First, we declare a [`p5.Font`][9] object that we call `font` that will be used
+to hold information about the font we want to display. 
+
+Next, we call the `loadFont()` function with the path to the font file we 
+uploaded. We put this inside the `preload()` function to make sure that the font
+is fully loaded before the sketch starts.
+
+The setup function sets the size of the canvas and some details about how the
+text should be displayed. Finally, the text is displayed in the `draw()`
+function, center-aligned in a text box.
+
+The example below is a live version of this code. 
+
+<ul class="code-list">
+
+{% include example_card.html name="Load Coiny Font" thumb="images/load-coiny-font-thumb.png" link="https://editor.p5js.org/awarua/sketches/PtsluK__k" caption="Loads the 'Coiny' font and uses it to display a message." %}
+
+</ul>
+
+<p class="info">
+  <strong>Tip:</strong>
+  If you already know a bit about fonts in HTML and CSS, you can also load fonts
+  into your sketch using the google fonts embed codes. If you are interested in
+  seeing how it's done, check 
+  <a href="https://editor.p5js.org/awarua/sketches/e3CHDMb-0"
+    >the Google font link sketch</a>.
+  But it is an advanced topic we won't cover in class.
 </p>
 
 <!-- TODO: The strings tutorial is not implemented in p5.js yet
@@ -226,7 +231,6 @@ the [p5js reference][2] typography functions.
 
 </ul>
 
-
 ## Working with time
 
 There're several ways that we can make our sketches change over time.
@@ -253,7 +257,7 @@ identical to the one above for [`frameCount`][11]. Note how the output sketch
 cycles much faster from white to black. This is because millis happen faster than
 frames!
 
-{% highlight java linenos %}
+{% highlight javascript linenos %}
 void setup(){
   size(150, 150);
 
