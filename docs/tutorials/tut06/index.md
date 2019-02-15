@@ -263,43 +263,47 @@ cycles much faster from white to black. This is because millis happen faster tha
 frames!
 
 {% highlight javascript linenos %}
-void setup(){
-  size(150, 150);
+function setup(){
+  createCanvas(200, 200);
 
   // Align text center both horizontally and vertically.
   textAlign(CENTER, CENTER);
   textSize(50);
 }
 
-void draw(){
+function draw(){
+  // Store the current milliseconds in variable 'ms'.
+  // We use floor to get rid of the decimal places. 
+  let ms = floor(millis());
+  
   // Calculate a colour for the background based on milliseconds.
   // Use the modulo operator to 'wrap around' at 255.
-  int bgColour = millis() % 255;
+  let bgColour = ms % 255;
   background(bgColour);
 
   // Calculate a fill opposite to the background.
-  int fillColour = 255 - bgColour;
+  let fillColour = 255 - bgColour;
   fill(fillColour);
 
   // Draw the millis at the center of the canvas.
   // NOTE: This number might be different from line 12 because some time has passed!
-  text(millis(), width / 2, 75);
+  text(ms, width / 2, height / 2);
 }
 {% endhighlight %}
 
 <ul class="code-list">
 
-{% include captioned_card.html name="millis" example_dir="tutor-examples" caption="Demonstrates how to use the millis() function." %}
+{% include example_card.html name="Millis" thumb="images/millis-thumb.png" link="https://editor.p5js.org/awarua/sketches/bicmUJig7" caption="Demonstrates how to use the millis() function." %}
 
 </ul>
 
 The following example shows a slightly more complex example, which uses
-[`millis()`][12] together with the JavaScript [`%` (remainder)][13] operator to generate a
-more interesting visual result.
+[`millis()`][12] together with the JavaScript [`%` (remainder)][13] operator to
+generate a more complex visual result.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="Milliseconds" name="Milliseconds" example_dir="online-examples" link="https://processing.org/examples/milliseconds.html" caption="Generates a pattern of vertical stripes based on the time elapsed." %}
+{% include example_card.html name="Milliseconds" thumb="images/milliseconds-thumb.png" link="https://editor.p5js.org/awarua/sketches/OWEAZW-4U" caption="Generates a pattern of vertical stripes based on the time elapsed." %}
 
 </ul>
 

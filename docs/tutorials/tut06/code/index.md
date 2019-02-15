@@ -10,3 +10,5 @@ title: Examples
 * [Text_location_feedback](Text_location_feedback)
 * [Google_font_via_link](Google_font_via_link)
 * [Load_coiny_font](Load_coiny_font)
+* [millis](millis)
+* [milliseconds](milliseconds)
