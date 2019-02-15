@@ -24,7 +24,7 @@
 
 - dir: tut07
   num: 7
-  enabled: false
+  enabled: true
 
 - dir: tut08
   num: 8
