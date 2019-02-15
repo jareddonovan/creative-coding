@@ -1,5 +1,5 @@
 function setup(){
-  createCanvas(150, 150);
+  createCanvas(200, 200);
   
   // Align text center both horizontally and vertically.
   textAlign(CENTER, CENTER);
@@ -17,5 +17,5 @@ function draw(){
   fill(fillColour);
   
   // Draw the frameCount at the center of the canvas. 
-  text(frameCount, width / 2, 75);
+  text(frameCount, width / 2, height / 2);
 }

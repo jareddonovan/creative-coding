@@ -248,7 +248,7 @@ frames shown so far. The following example demonstrates its use.
 
 <ul class="code-list">
 
-{% include example_card.html name="Frame counter" thumb="images/frameCount-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1fxbKslE" caption="Demonstrates how to use the frameCount variable." %}
+{% include example_card.html name="Frame counter" thumb="images/frame-counter-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1fxbKslE" caption="Demonstrates how to use the frameCount variable." %}
 
 </ul>
 
@@ -317,7 +317,7 @@ generate a more complex visual result.
 
 ### Telling time
 
-Beyond counting frames and milliseconds, Processing also gives us some time
+Beyond counting frames and milliseconds, p5js also gives us some time
 based functions to get information about the current time:
 
 * [`year()`][14] gives the current year.
@@ -336,9 +336,9 @@ draws a digital clock with simple interaction.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="Clock" name="Clock" example_dir="online-examples" link="https://processing.org/examples/clock.html" caption="Implements a dial clock." %}
+{% include example_card.html title="Clock" thumb="images/clock-thumb.png" link="https://p5js.org/examples/input-clock.html" caption="Implements a dial clock." %}
 
-{% include captioned_card.html name="clockexample" example_dir="tutor-examples" link_to_web_version=true caption="uses time to create a clock with text (by Indae Hwang and Jon McCormack, Monash Uni.)" %}
+{% include example_card.html title="clockexample" thumb="images/clock-example-thumb.png" link="https://editor.p5js.org/awarua/sketches/MtptDyg8w" caption="uses time to create a clock with text (by Indae Hwang and Jon McCormack, Monash Uni.)" %}
 
 </ul>
 
@@ -358,8 +358,7 @@ draws a digital clock with simple interaction.
   clock pictured below?
 </p>
 
-![Qlocktwo]({{site.baseurl}}{{page.url}}images/qwlocktwo-text-clock.jpg)
-[]()
+![Qlocktwo](images/qwlocktwo-text-clock.jpg)
 
 ## Typographic animations ##
 

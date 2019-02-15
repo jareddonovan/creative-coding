@@ -12,3 +12,4 @@ title: Examples
 * [Load_coiny_font](Load_coiny_font)
 * [millis](millis)
 * [milliseconds](milliseconds)
+* [Clockexample](Clockexample)
