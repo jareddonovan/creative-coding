@@ -8,3 +8,5 @@ title: Examples
 * [Click_divide](Click_divide)
 * [Face_looking_animation](Face_looking_animation)
 * [Face_looking_mouse](Face_looking_mouse)
+
+[&lt; Back to tutorial](../)
