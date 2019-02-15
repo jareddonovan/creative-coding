@@ -16,8 +16,7 @@ layout: tutorial
 ## Text as data in p5.js
 
 We've already seen some of the ways to use text
-as data in Processing. Along with the other data types we've
-covered, you should now be familiar with code such as
+as data in Processing. You should now be familiar with code such as
 the following:
 
 {% highlight javascript linenos %}
@@ -43,7 +42,7 @@ let consoleMsg = "Hello from the console!";
 console.log(consoleMsg);
 {% endhighlight %}
 
-You can also display strings on the canvas with the [`text()`][5]
+You can also draw strings on the canvas with the [`text()`][5]
 function. To change the colour of the displayed text, use the [`fill()`][6]
 function. The listing below shows an example, along with output.
 
@@ -114,7 +113,13 @@ Notice that you can also set the size of the font with the second argument.
 The second way to change the font is by giving the name of a font that is
 installed on your browser. If you do this, it is a good idea to use a
 [common font](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts),
-that is widely installed on other people's browsers too.
+that is widely installed on other people's browsers too. Some good choices are:
+
+* 'Arial'
+* 'Courier'
+* 'Georgia'
+* 'Times New Roman'
+* 'Verdana'
 
 <script type="text/p5" src="./js/change-font-2.js"
   data-autoplay data-height="380" data-preview-width="250"></script>
@@ -137,19 +142,19 @@ lot of websites where you can search for and download royalty-free font files.
 One good site is [google fonts](https://fonts.google.com).
 
 * Search for a font to use at [google fonts](https://fonts.google.com).
-* When find a font, save it to your computer using the download link as shown
-  in the diagram below.
+* When you find a font, save it to your computer using the download link, as
+  shown in the diagram below.
   
 ![Diagram showing instructions for downloading google fonts: 1) Search for a font and click the 'add' icon to add it to your selection. 2) Click the black bar at the bottom and then click 'Download'](images/download-google-fonts.png)
 
 Once you've found a font and saved it your computer, you'll need to upload it to
-a `data` folder in your sketch as shown in the diagram below.
+a `data` folder in your sketch. The diagram below shows how to do this.
 
 ![Instructions for uploading a font file to the sketch: 1) Find the font file you saved. 2) Add a project to your sketch called 'data'. 3) Click the dropdown menu and choose 'add file'. 4) Drag the font file onto the add file window.](images/uploading-fonts.png)
 
-Once you've added the font file to the sketch, you can load it into a
-[`p5.Font`][9] object that we can use in the sketch. The following code listing shows
-how to do this.
+With font file added to the sketch, you are now able to load it into a
+[`p5.Font`][9] object that can be displayed in the sketch. The following code 
+listing shows how to do this.
 
 {% highlight javascript linenos %}
 let font;
@@ -173,9 +178,9 @@ function draw() {
 {% endhighlight %}
 
 First, we declare a [`p5.Font`][9] object that we call `font` that will be used
-to hold information about the font we want to display. 
+to hold information about the font we want to display.
 
-Next, we call the `loadFont()` function with the path to the font file we 
+Next, we call the `loadFont()` function with the path to the font file we
 uploaded. We put this inside the `preload()` function to make sure that the font
 is fully loaded before the sketch starts.
 
@@ -183,7 +188,7 @@ The setup function sets the size of the canvas and some details about how the
 text should be displayed. Finally, the text is displayed in the `draw()`
 function, center-aligned in a text box.
 
-The example below is a live version of this code. 
+The example below is a live version of this code.
 
 <ul class="code-list">
 
@@ -198,7 +203,7 @@ The example below is a live version of this code.
   seeing how it's done, check 
   <a href="https://editor.p5js.org/awarua/sketches/e3CHDMb-0"
     >the Google font link sketch</a>.
-  But it is an advanced topic we won't cover in class.
+  But this is an advanced topic that we won't cover further in class.
 </p>
 
 <!-- TODO: The strings tutorial is not implemented in p5.js yet
