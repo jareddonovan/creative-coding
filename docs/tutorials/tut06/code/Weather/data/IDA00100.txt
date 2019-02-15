@@ -1,0 +1,9 @@
+location#state#issue_date#issue_time#product_code#forecast_date#max#forecast#
+Sydney#NSW#20180319#154537#IDN10064#20180320000000#27#Showers increasing.#
+Melbourne#VIC#20180319#155959#IDV10450#20180320000000#19#Early shower or two.#
+Brisbane#QLD#20180319#220056#IDQ10095#20180320000000#30#Partly cloudy.#
+Perth#WA#20180319#153746#IDW12300#20180320000000#34#Becoming cloudy.#
+Adelaide#SA#20180319#155950#IDS10034#20180320000000#23#Cloudy.#
+Hobart#TAS#20180319#155606#IDT65061#20180320000000#16#Shower or two.#
+Canberra#NSW#20180319#154537#IDN10035#20180320000000#24#Possible late shower.#
+Darwin#NT#20180319#154140#IDD10150#20180320000000#33#Shower or two. Possible storm.#

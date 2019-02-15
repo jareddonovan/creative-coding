@@ -18,5 +18,7 @@ title: Examples
 * [Shivering](Shivering)
 * [Avoidance](Avoidance)
 * [Run](Run)
+* [Weather](Weather)
+* [Dada_poem_generator](Dada_poem_generator)
 
 [&lt; Back to tutorial](../)

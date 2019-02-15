@@ -226,16 +226,6 @@ the [p5js reference][2] typography functions.
 
 -->
 
-### Getting the outline of text
-
-<ul class="code-list">
-
-  {% include example_card.html name="Text outline" thumb="images/text-outline-thumb.png" link="https://p5js.org/reference/#/p5.Font/textToPoints" caption="Gets the outline of some text and distorts it." %}
-
-  {% include example_card.html name="Particle text" thumb="images/particle-text-thumb.png" link="https://editor.p5js.org/awarua/full/ryBpNdjeN" caption="A message is formed from a swarm of particles." %}
-
-</ul>
-
 ## Working with time
 
 There're several ways that we can make our sketches change over time.
@@ -394,19 +384,50 @@ The examples below show a range of examples of this approach.
 
 </ul>
 
-## Loading text
+### Getting the outline of fonts
 
-The following two examples show how to load text into processing from a
-file or url using the [`loadStrings()`][20] function. This is an advanced topic,
+<ul class="code-list">
+
+  {% include example_card.html name="Text outline" thumb="images/text-outline-thumb.png" link="https://p5js.org/reference/#/p5.Font/textToPoints" caption="Gets the outline of some text and distorts it." %}
+
+  {% include example_card.html name="Particle text" thumb="images/particle-text-thumb.png" link="https://editor.p5js.org/awarua/full/ryBpNdjeN" caption="A message is formed from a swarm of particles." %}
+
+<!-- TODO: Port this to p5js?
+
+  <li>
+    <a class="title-link" target="_blank"
+      href="tutor-examples/zips/brisvegas.zip">
+      BrisVegas (Bonus - Advanced)
+    </a>
+    <iframe width="150" height="150" src="https://www.youtube.com/embed/EI32vcn6bh4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    An animated text for 'Brisvegas'. This example uses the geomerative library,
+    which is explained in the tutorial above.
+    <strong>Note:</strong> You will need to install the Geomerative library in
+    order to get this sketch to run. See tutorial 5 for instructions.<br>
+    <a target="_blank"
+      href="tutor-examples/zips/brisvegas.zip"
+      >(Download zip)</a>
+  </li>
+
+-->
+
+</ul>
+
+## Loading text files
+
+The following two examples show how to load text into p5js from a
+file using the [`loadStrings()`][20] function. This is an advanced topic,
 but may be useful if you want to work with longer passages of text.
 
 <ul class="code-list">
 
-{% include captioned_card.html name="weather" example_dir="tutor-examples" link_to_web_version=true caption="Advanced example, which shows using live data and manipulating Strings. The sketch loads a weather forecast text file from the Bureau of Meteorology and splits it to get data that's displayed on screen." %}
+{% include example_card.html name="Weather" thumb="images/weather-thumb.png" link="https://editor.p5js.org/awarua/sketches/lJCcmx2Ee" caption="Advanced example, which shows using live data and manipulating Strings. The sketch loads a weather forecast text file from the Bureau of Meteorology and splits it to get data that's displayed on screen." %}
 
-{% include captioned_card.html name="dada_poem_generator" example_dir="tutor-examples" caption="Another more advanced example, which shows how to randomly use strings from a larger text file to create a cutup poem." %}
+{% include example_card.html name="Dada poem generator" thumb="images/dada-poem-generator-thumb.png" link="https://editor.p5js.org/awarua/sketches/Cw_OF-1Lo" caption="Another more advanced example, which shows how to randomly use strings from a larger text file to create a cutup poem." %}
 
 </ul>
+
+<!-- TODO: The following tutorials haven't been ported to p5.js yet.
 
 ## Further tutorials
 
@@ -437,22 +458,7 @@ but may be useful if you want to work with longer passages of text.
     A tutorial on achieving more advanced font effects using the geomerative library.
   </li>
 
-  <li>
-    <a class="title-link" target="_blank"
-      href="tutor-examples/zips/brisvegas.zip">
-      BrisVegas (Bonus - Advanced)
-    </a>
-    <iframe width="150" height="150" src="https://www.youtube.com/embed/EI32vcn6bh4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    An animated text for 'Brisvegas'. This example uses the geomerative library,
-    which is explained in the tutorial above.
-    <strong>Note:</strong> You will need to install the Geomerative library in
-    order to get this sketch to run. See tutorial 5 for instructions.<br>
-    <a target="_blank"
-      href="tutor-examples/zips/brisvegas.zip"
-      >(Download zip)</a>
-  </li>
-
-</ul>
+  -->
 
 ## Reference links
 
