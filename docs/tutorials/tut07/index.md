@@ -38,8 +38,7 @@ Review the task sheet for Assignment 2:
 
 ![Picasso portrait (public domain)]({{site.baseurl}}{{page.url}}images/picasso.jpg)
 
-Don't wait for inspiration. It's like Pablo Picasso said: *"Inspiration
-exists, but it has to find you working".*
+*"Inspiration exists, but it has to find you working" – Pablo Picasso.*
 
 <p class="task">
   <strong>Task:</strong> (10 mins)
@@ -54,7 +53,7 @@ exists, but it has to find you working".*
 When you have come up with some concepts, discuss them with your neighbor.
 Your tutor will take a round of the class and list the ideas on the whiteboard.
 Then they will discuss with you how you might approach implementing the ideas
-in Processing.
+in p5js.
 
 ### Planning
 
@@ -62,7 +61,10 @@ To help with your process of planning out your program, you may find the
 following 'Anatomy of a Program' tutorial useful. It gives a good overview of
 the process of planning and designing a program and then moving into
 implementation. Thinking about how you actually approach programming as a
-problem solving process is an important skill to learn in DXB303.
+problem solving process is an important skill to learn in Creative Coding.
+Even though this tutorial is written for the Java version of Processing, it is
+still very relevant to p5js and most of the examples should be understandable to
+you.
 
 <ul class="code-list">
 
@@ -83,7 +85,7 @@ problem solving process is an important skill to learn in DXB303.
 
 ## Moving the Drawing Coordinates
 
-It is often necessary to be able to control how Processing's coordinate system
+It is often necessary to be able to control how p5js's coordinate system
 works. We will use the transformation functions for this:
 * [`translate()`][2] moves the `(0, 0)` point to the left, right, up or down.
 * [`rotate()`][3] rotates the x and y drawing axes
@@ -198,9 +200,9 @@ for (int i = 0; i < 3; i++){
 
 Often, when you use the transformation functions, you will find that it is
 useful to be able to save the state of the coordinate system so you can reset to
-it later. In Processing, we use the [`pushMatrix()`][5] and [`popMatrix()`][6]
-functions for this. The [`pushMatrix()`][5] function saves the current state of
-the transformations and the [`popMatrix()`][6] function resets to the last saved
+it later. In Processing, we use the [`push()`][5] and [`pop()`][6]
+functions for this. The [`push()`][5] function saves the current state of
+the transformations and the [`pop()`][6] function resets to the last saved
 state.
 
 The following code listing shows how these functions can be useful.
@@ -234,7 +236,7 @@ line(0, 0, 40, 0);
 {% endhighlight %}
 
 Below is a picture of the output that the code above will produce. Can you
-undestand what the calls to [`pushMatrix()`][5] and [`popMatrix()`][6] do? Try
+undestand what the calls to [`push()`][5] and [`pop()`][6] do? Try
 commenting out lines 12 and 18 above to see the effect on the output. (**Hint:**
 remember that the transformation functions are cumulative, i.e. they add on to
 each other).
@@ -303,28 +305,29 @@ tutorials below.
 
 </ul>
 
-
-## PShapes and Curves
+## Drawing Complex Shapes and Curves
 
 So far in DXB303, we have used the simple in-built functions, such as
 [`ellipse()`][7] for drawing shapes to the canvas. As you have seen, you can
 still achieve a lot with these functions, but eventually you will find that you
 need to draw something more complex than you can make with these. In this
 section, we will introduce two more powerful drawing techniques available to you
-in Processing: [`PShapes`][10] and curves.
+in p5js.
+
+<!--
 
 ### PShape
 
-A [`PShape`][10] is an object that for storing information about geometric
-shapes. We have actualy already seen [`PShape`][10] in
+A `PShape` is an object that for storing information about geometric
+shapes. We have actualy already seen `PShape` in
 {% include unit_link.html name="tut04" link_text="Tutorial 4," anchor="#working-with-svg-images" %}
 where we used it to load and display SVG vector images.
 
-In addition to loading a [`PShape`][10] from an external file, there are also
+In addition to loading a `PShape` from an external file, there are also
 a number of ways we can create one from scratch. One way is to use the
-[`createShape()`][11] function and give the name of a shape that we would like
+`createShape()` function and give the name of a shape that we would like
 to create, along with some arugments for the size and position of the shape. We
-then use the [`shape()`][14] function to draw the shape to the screen. Below
+then use the `shape()` function to draw the shape to the screen. Below
 is some example code and output that creates a simple rectangle shape.
 
 {% highlight javascript linenos %}
@@ -379,14 +382,16 @@ createShape(ARC, x, y, w, h, startAngle, endAngle);
 </ul>
 
 Of course, we could just use the functions we already have to draw these shapes.
-So why go to the trouble of creating a [`PShape`][10] object? One advantage is
+So why go to the trouble of creating a `PShape` object? One advantage is
 that this allows you to store all the visual properties associated with a shape
 together with the shape and access all that information through a single
 variable. As your sketches increase in complexity, this can make it easier to
 organise and manage the code that handles your drawing.
 
-Another situation where the [`PShape`][10] object comes in very handy is when
+Another situation where the `PShape` object comes in very handy is when
 you want to create custom shapes.
+
+-->
 
 ### Drawing a custom shape
 
@@ -437,80 +442,47 @@ endShape(CLOSE);
 ![Pine Tree output]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/fullsize/pine_tree-screenshot.png)
 
 Although this lets us draw the shape we want, it's still rather tedious to type
-out each time! A better way is to store all the information for drawing the
-shape in a special variable so we can reuse it. We can use a [`PShape`][10]
-object for this. When we want to draw the shape to the screen, we use the
-[`shape()`][14] function with our shape object as an argument.
+out each time! A better way is to make a function that can draw it for us. When
+we want to draw the shape to the screen, we can just call the function.
+
+One thing to change is make the vertices of the tree relative to the (0, 0) 
+position and pass in an x and y position that gets used to place position the
+tree on the canvas with [`translate()`][2]
 
 {% highlight javascript linenos %}
-// Declare a PShape variable to hold tree shape information
-PShape tree;
-
 //
 // Setup left out...
 //
 
-// We create the tree shape and then ask it to beginShape(), add vertices and
-// end shape.
-tree = createShape();
-tree.beginShape();
-tree.vertex(300, 70);
-//
-// Vertex definitions left out...
-//
-tree.endShape(CLOSE);
+function drawTree(x, y){
+  // We create the tree shape and then ask it to beginShape(), add vertices and
+  // end shape.
+  push();
+  translate(x, y);
 
-// Use the shape() to draw the shape to the screen as many times as we like.
-shape(tree);
-shape(tree);
-shape(tree);
-{% endhighlight %}
+  beginShape();
+  // Vertices of tree are defined relative to (0, 0) point
+  vertex(0, -140);
+  vertex(-40, -60);
+  vertex(-20, -60);
+  vertex(-80, 10);
+  vertex(-40, 10);
+  vertex(-110, 100);
+  vertex(-20, 100);
+  vertex(-20, 140);
+  vertex(20, 140);
+  vertex(20, 100);
+  vertex(110, 100);
+  vertex(40, 10);
+  vertex(80, 10);
+  vertex(20, -60);
+  vertex(40, -60);
+  endShape(CLOSE);
 
-One thing to note is that because the [`PShape`][10] records the position of the
-shape exactly as we define it, it will always be placed at the same position on
-the screen when we draw it. Not very useful if we want to draw a forest of
-trees!
+  pop();
+}
 
-To get around this, we can define the shape relative to the `(0, 0)` position
-and then use the [`translate()`][2] and [`rotate()`][3] functions to change
-where it gets drawn. The following simplified code listing and downloadable
-example demonstrates this.
-
-{% highlight javascript linenos %}
-// Variable declarations and setup omitted...
-
-tree = createShape();
-tree.beginShape();
-// Vertices of tree are defined relative to (0, 0) point
-tree.vertex(0, -140);
-tree.vertex(-40, -60);
-tree.vertex(-20, -60);
-tree.vertex(-80, 10);
-tree.vertex(-40, 10);
-tree.vertex(-110, 100);
-tree.vertex(-20, 100);
-tree.vertex(-20, 140);
-tree.vertex(20, 140);
-tree.vertex(20, 100);
-tree.vertex(110, 100);
-tree.vertex(40, 10);
-tree.vertex(80, 10);
-tree.vertex(20, -60);
-tree.vertex(40, -60);
-tree.endShape(CLOSE);
-
-// Translate to the position we want the shape to be drawn at.
-translate(mouseX, mouseY);
-
-// Use the shape() function to draw the shape to the screen.
-shape(tree);
-{% endhighlight %}
-
-<ul class="code-list">
-
-  {% include example_card.html name="pine_tree_pshape" thumb="" link="" caption="Stores shape information for drawing a pine tree. The user can click to 'stamp' this shape onto the canvas." %}
-
-</ul>
+<!--
 
 ### Adding textures to shapes
 
@@ -549,6 +521,8 @@ endShape(CLOSE);
 {% endhighlight %}
 
 ![PShape Texture output]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/fullsize/pshape_texture-screenshot.png)
+
+-->
 
 ### Tutor examples
 
@@ -649,50 +623,40 @@ curves, which we have not covered in the tutorial.
 
 ## Reference Links
 
-1. [Processing Reference][1]
+1. [p5js reference][1]
 2. [`translate()`][2]
 3. [`rotate()`][3]
 4. [`scale()`][4]
-5. [`pushMatrix()`][5]
-6. [`popMatrix()`][6]
+5. [`push()`][5]
+6. [`pop()`][6]
 7. [`ellipse()`][7]
 8. [`rect()`][8]
 9. [`quad()`][9]
-10. [`PShape`][10]
-11. [`createShape()`][11]
-12. [`setFill()`][12]
-13. [`setStroke()`][13]
-14. [`shape()`][14]
-15. [`beginShape()`][15]
-16. [`endShape()`][16]
-17. [`vertex()`][17]
-18. [`curveVertex()`][18]
-19. [`bezierVertex()`][19]
-20. [`PVector`][20]
-21. [`texture()`][21]
-22. [`tint()`][22]
-23. [`PImage`][23]
+10. [`beginShape()`][15]
+11. [`endShape()`][16]
+12. [`vertex()`][17]
+13. [`curveVertex()`][18]
+14. [`bezierVertex()`][19]
+15. [`p5.Vector`][20]
+16. [`texture()`][21]
+17. [`tint()`][22]
+18. [`p5.Image`][23]
 
-[1]: https://processing.org/reference
-[2]: https://processing.org/reference/translate_.html
-[3]: https://processing.org/reference/rotate_.html
-[4]: https://processing.org/reference/scale_.html
-[5]: https://processing.org/reference/pushMatrix_.html
-[6]: https://processing.org/reference/popMatrix_.html
-[7]: https://processing.org/reference/ellipse_.html
-[8]: https://processing.org/reference/rect_.html
-[9]: https://processing.org/reference/quad_.html
-[10]: https://processing.org/reference/PShape.html
-[11]: https://processing.org/reference/createShape_.html
-[12]: https://processing.org/reference/PShape_setFill_.html
-[13]: https://processing.org/reference/PShape_setStroke_.html
-[14]: https://processing.org/reference/shape_.html
-[15]: https://processing.org/reference/PShape_beginShape_.html
-[16]: https://processing.org/reference/PShape_endShape_.html
-[17]: https://processing.org/reference/vertex_.html
-[18]: https://processing.org/reference/curveVertex_.html
-[19]: https://processing.org/reference/bezierVertex_.html
-[20]: https://processing.org/reference/PVector.html
-[21]: https://processing.org/reference/texture_.html
-[22]: https://processing.org/reference/tint_.html
-[23]: https://processing.org/reference/PImage.html
+[1]: https://p5js.org/reference/
+[2]: https://p5js.org/reference/#/p5/translate
+[3]: https://p5js.org/reference/#/p5/rotate
+[4]: https://p5js.org/reference/#/p5/scale
+[5]: https://p5js.org/reference/#/p5/push
+[6]: https://p5js.org/reference/#/p5/pop
+[7]: https://p5js.org/reference/#/p5/ellipse
+[8]: https://p5js.org/reference/#/p5/rect
+[9]: https://p5js.org/reference/#/p5/quad
+[15]: https://p5js.org/reference/#/p5/beginShape
+[16]: https://p5js.org/reference/#/p5/endShape
+[17]: https://p5js.org/reference/#/p5/vertex
+[18]: https://p5js.org/reference/#/p5/curveVertex
+[19]: https://p5js.org/reference/#/p5/bezierVertex
+[20]: https://p5js.org/reference/#/p5.Vector
+[21]: https://p5js.org/reference/#/p5/texture
+[22]: https://p5js.org/reference/#/p5/tint
+[23]: https://p5js.org/reference/#/p5.Image

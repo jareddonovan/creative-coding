@@ -62,4 +62,6 @@ you might aim for in the 'Active Drawing' activity.
 
 {% include example_card.html name="draw_02" thumb="images/draw_02-screenshot.png" link="https://editor.p5js.org/awarua/sketches/SJdLDGHxE" caption="Second active drawing example" %}
 
+{% include example_card.html name="Cloud buster" thumb="images/cloud-buster-thumb.png" link="https://editor.p5js.org/awarua/sketches/JzFy2E0vZ" caption="Draw with clouds" %}
+
 </ul>

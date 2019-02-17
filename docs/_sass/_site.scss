@@ -146,6 +146,11 @@ ul.link-list li a:hover {
   background: #EEE; 
 }
 
+p.lead {
+  font-size: 130%;
+  line-break: 1.3em;
+}
+
 p.info, p.task, div.info, div.task {
   padding: 20px;
   border-radius: 4px;
