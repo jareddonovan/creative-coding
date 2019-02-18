@@ -289,26 +289,27 @@ functions.
 
 </ul>
 
-### Further tutorials
+### Refresher tutorial
 
-For a refresher on how the Processing coordinate system works with shapes, and
-for a more in-depth tutorial on how 2D transformations work, check the online
-tutorials below.
+For a refresher on how the Processing coordinate system works with shapes,
+check the online tutorial below.
 
 <ul class="code-list">
 
   <li>
     <a class="title-link" target="_blank"
-       href="https://processing.org/tutorials/drawing/"
+       href="https://p5js.org/learn/coordinate-system-and-shapes.html"
       >Tutorial: Coordinate System and Shapes</a>
     <a class="img-link" target="_blank"
-      href="https://processing.org/tutorials/drawing/"
+      href="https://p5js.org/learn/coordinate-system-and-shapes.html"
       ><img alt="Coordinate System and Shapes Tutorial"
             src="{{site.baseurl}}{{page.url}}images/drawing-tutorial.jpg">
     </a>
     An introductory tutorial on the Processing coordinate system and drawing.
     Check this out if you need a refresher. By Daniel Shiffman.
   </li>
+
+<!-- TODO, Transformations tutorial has not yet been updated
 
   <li>
     <a class="title-link" target="_blank"
@@ -323,18 +324,20 @@ tutorials below.
     in Processing.
   </li>
 
+-->
+
 </ul>
 
 ## Drawing Complex Shapes and Curves
 
-So far in DXB303, we have used the simple in-built functions, such as
-[`ellipse()`][7] for drawing shapes to the canvas. As you have seen, you can
-still achieve a lot with these functions, but eventually you will find that you
-need to draw something more complex than you can make with these. In this
-section, we will introduce two more powerful drawing techniques available to you
-in p5js.
+So far in these Creative Coding tutorias, we have used the simple in-built
+functions, such as [`ellipse()`][7] for drawing shapes to the canvas. As you
+have seen, you can still achieve a lot with these functions, but eventually you
+will find that you need to draw something more complex than you can make with
+these. In this section, we will introduce two more powerful drawing techniques
+available to you in p5js.
 
-<!--
+<!-- TODO: PShape is not implemented in p5js
 
 ### PShape
 
@@ -415,7 +418,7 @@ you want to create custom shapes.
 
 ### Drawing a custom shape
 
-The primitive drawing functions provided by Processing ([`ellipse()`][7],
+The primitive drawing functions provided by p5js ([`ellipse()`][7],
 [`rect()`][8], etc.) may not be able to draw everything that you want. Imagine
 you wanted to draw a pine tree. Rather than trying to cobble something together
 from the built in functions, a better way to draw something like this is by
@@ -424,7 +427,7 @@ shape's outline. It's a bit like a 'connect-the-dots' drawing.
 
 ![Connect the dots drawing of a tree]({{site.baseurl}}{{page.url}}images/tree-connect-dots-01.png)
 
-To do this in Processing, we start the shape with the [`beginShape()`][15]
+To do this in p5js, we start the shape with the [`beginShape()`][15]
 function, and then use the [`vertex()`][17] function to place each corner of the
 outline at an `x, y` position. Finally, we use the [`endShape()`][16] function to
 end the shape. We can pass an argument to this function depending on whether
@@ -433,41 +436,51 @@ we said that the drawing should be left `OPEN`, the final line segment from
 point 19 back to point 1 would not be drawn.
 
 {% highlight javascript linenos %}
-// Set size and colours.
-size(600, 400);
-background(29, 169, 242);
-noStroke();
-fill(4, 124, 81);
+function setup(){
+  // Set size and colours.
+  createCanvas(600, 400);
+  background(29, 169, 242);
+  noStroke();
+  fill(4, 124, 81);
+}
 
-// Draw a pine tree shape using the vertex() function.
-beginShape();
-vertex(300, 70);
-vertex(260, 150);
-vertex(280, 150);
-vertex(220, 230);
-vertex(260, 230);
-vertex(190, 310);
-vertex(280, 310);
-vertex(280, 350);
-vertex(320, 350);
-vertex(320, 310);
-vertex(410, 310);
-vertex(340, 230);
-vertex(380, 230);
-vertex(320, 150);
-vertex(340, 150);
-endShape(CLOSE);
+function draw(){
+  // Draw a pine tree shape using the vertex() function.
+  beginShape();
+  vertex(300, 70);
+  vertex(260, 150);
+  vertex(280, 150);
+  vertex(220, 230);
+  vertex(260, 230);
+  vertex(190, 310);
+  vertex(280, 310);
+  vertex(280, 350);
+  vertex(320, 350);
+  vertex(320, 310);
+  vertex(410, 310);
+  vertex(340, 230);
+  vertex(380, 230);
+  vertex(320, 150);
+  vertex(340, 150);
+  endShape(CLOSE);
+  
+  noLoop();
+}
 {% endhighlight %}
 
-![Pine Tree output]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/fullsize/pine_tree-screenshot.png)
+<ul class="code-list">
+
+  {% include example_card.html name="pine tree" thumb="images/pinetree-thumb.png" link="https://editor.p5js.org/awarua/sketches/GlTvrpxn5" caption="Draws a pine tree <code>beginShape()</code>, <code>endShape()</code> and <code>vertex()</code> functions" %}
+
+</ul>
 
 Although this lets us draw the shape we want, it's still rather tedious to type
 out each time! A better way is to make a function that can draw it for us. When
 we want to draw the shape to the screen, we can just call the function.
 
-One thing to change is make the vertices of the tree relative to the (0, 0) 
-position and pass in an x and y position that gets used to place position the
-tree on the canvas with [`translate()`][2]
+One thing to change is make the vertices of the tree relative to the `(0, 0)`
+position and provide arguments for the `x` and `y` position that gets used to
+place position the tree on the canvas with [`translate()`][2]
 
 {% highlight javascript linenos %}
 //
@@ -475,11 +488,11 @@ tree on the canvas with [`translate()`][2]
 //
 
 function drawTree(x, y){
-  // We create the tree shape and then ask it to beginShape(), add vertices and
-  // end shape.
+  // Save the transformation matrix and translate to the x, y position.
   push();
   translate(x, y);
 
+  // Draw the shape as a series of vertices.
   beginShape();
   // Vertices of tree are defined relative to (0, 0) point
   vertex(0, -140);
@@ -503,7 +516,16 @@ function drawTree(x, y){
 }
 {% endhighlight %}
 
-<!--
+The example below shows how a function like this could be used to allow the 
+user to 'stamp' a shape onto the canvas by clicking the mouse button. 
+
+<ul class="code-list">
+
+  {% include example_card.html name="pine tree" thumb="images/pinetree-function-thumb.png" link="https://editor.p5js.org/awarua/sketches/KPW68B_JW" caption="Allows the user to 'stamp' a pine tree shape onto the canvas by clicking the mouse" %}
+
+</ul>
+
+<!-- TODO: Textures are not able to be added to shapes in p5js
 
 ### Adding textures to shapes
 
@@ -545,6 +567,8 @@ endShape(CLOSE);
 
 -->
 
+<!-- TODO: These examples need textures, so won't port well to p5js
+
 ### Tutor examples
 
 <ul class="code-list">
@@ -554,11 +578,13 @@ endShape(CLOSE);
   {% include example_card.html name="pine_tree_pshape_texture" thumb="" link="" caption="A version of the pine tree 'stamp' sketch that loads a texture into the pine tree shape. Also demonstrates use of the <code>tint()</code> function with the texture." %}
 </ul>
 
+-->
+
 ### Drawing curves
 
 What if we wanted to draw a shape with a curved outline rather than one made up
 of straight line segments? We need a way to specify points on the outline of a
-curve. In Processing, we can define an outline made up of [`curveVertex()`][18]
+curve. In p5js, we can define an outline made up of [`curveVertex()`][18]
 or [`bezeirVertex()`][19] points and these will create a curved outline. These
 work in a similar way to the [`vertex()`][17] function demonstrated above. You
 use them as part of defining a shape with [`beginShape()`][15] and
@@ -567,31 +593,39 @@ use them as part of defining a shape with [`beginShape()`][15] and
 The [`curveVertex()`][18] function will create a series of spline points
 
 {% highlight javascript linenos %}
-size(600, 400);
+function setup(){
+  createCanvas(600, 400);
+}
 
-// Choose some interesting colours. Because fun.
-background(100, 255, 125);
-fill(255, 100, 212);
-stroke(110, 100, 255);
-strokeWeight(4);
+function draw(){
+  // Choose some interesting colours. Because fun.
+  background(100, 255, 125);
+  fill(255, 100, 212);
+  stroke(110, 100, 255);
+  strokeWeight(4);
 
-// Draw some curveVertex points from left to right across screen.
-// NOTE that the first and last points are repeated as control points.
-beginShape();
-curveVertex( 40,200);
-curveVertex( 40,200);
-curveVertex( 86, 52);
-curveVertex(200,379);
-curveVertex(236,143);
-curveVertex(267,256);
-curveVertex(365, 48);
-curveVertex(496,310);
-curveVertex(560,200);
-curveVertex(560,200);
-endShape(OPEN);
+  // Draw some curveVertex points from left to right across screen.
+  // NOTE that the first and last points are repeated as control points.
+  beginShape();
+  curveVertex( 40,200);
+  curveVertex( 40,200);
+  curveVertex( 86, 52);
+  curveVertex(200,379);
+  curveVertex(236,143);
+  curveVertex(267,256);
+  curveVertex(365, 48);
+  curveVertex(496,310);
+  curveVertex(560,200);
+  curveVertex(560,200);
+  endShape(OPEN);
+}
 {% endhighlight %}
 
-![wave_curve sketch output]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/fullsize/wave_curve-screenshot.png)
+<ul class="code-list">
+
+  {% include example_card.html name="wave curve" thumb="images/wave-curve-thumb.png" link="https://editor.p5js.org/awarua/sketches/zRQ938sff" caption="Draws a wavy curve using the `curveVertex()` function" %}
+
+</ul>
 
 ### Tutor examples
 
