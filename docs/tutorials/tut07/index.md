@@ -170,31 +170,43 @@ would be possible to draw this picture entirely using the [`quad()`][9]
 function, but it's much easier to think of drawing the sails with rectangles
 that are rotated around the center point.
 
-![Windmill output]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/fullsize/windmill_transform-screenshot.png)
-
 {% highlight javascript linenos %}
-color brown = color(170, 105, 0);
+let brown;
 
-size(300, 300);
-background(29, 169, 242);
+function setup(){
+  createCanvas(300, 300);
+  brown = color(170, 105, 0);
+}
 
-// Draw the background of the windmill.
-fill(brown);
-quad(130, 130, 170, 130, 220, 300, 80, 300);
+function draw(){
+  background(29, 169, 242);
 
-// Translate to the center of the screen and draw the sails
-translate(width / 2, height / 2);
-
-// Draw the three sails rotated around the center.
-for (int i = 0; i < 3; i++){
-  // Rotate before drawing
-  rotate(radians(120));
+  // Draw the background of the windmill.
   fill(brown);
-  rect(0, 0, 10, 120);
-  fill(255);
-  rect(10, 40, 40, 80);
+  quad(130, 130, 170, 130, 220, 300, 80, 300);
+
+  // Translate to the center of the screen and draw the sails
+  translate(width / 2, height / 2);
+
+  // Draw the three sails rotated around the center.
+  for (let i = 0; i < 3; i++){
+    // Rotate before drawing
+    rotate(radians(120));
+    fill(brown);
+    rect(0, 0, 10, 120);
+    fill(255);
+    rect(10, 40, 40, 80);
+  }
+  
+  noLoop();
 }
 {% endhighlight %}
+
+<ul class="code-list">
+
+  {% include example_card.html name="windmill" thumb="images/windmill-thumb.png" link="https://editor.p5js.org/awarua/sketches/395MxiySO" caption="Draws a windmill using transformation functions" %}
+
+</ul>
 
 ### Saving and restoring transformations
 
@@ -208,40 +220,48 @@ state.
 The following code listing shows how these functions can be useful.
 
 {% highlight javascript linenos %}
-size(150, 150);
+function setup(){
+  createCanvas(150, 150);
+}
 
-// Draw body and head of stick figure
-translate(100, 50);
-line(0, 25, 0, 60);
-ellipse(0, 15, 20, 20);
+function draw(){
+  // Draw body and head of stick figure
+  translate(100, 50);
+  line(0, 25, 0, 60);
+  ellipse(0, 15, 20, 20);
 
-// Draw Arms
-// Save and reset the drawing coordinates after drawing arms.
-// Try commenting out the pushMatrix() and popMatrix()
-// to see the effect on the drawing.
-pushMatrix();
-translate(0, 30);
-rotate(radians(60));
-line(0, 0, 30, 0);
-rotate(radians(60));
-line(0, 0, 30, 0);
-popMatrix();
+  // Draw Arms
+  // Save and reset the drawing coordinates after drawing arms.
+  // Try commenting out the pushMatrix() and popMatrix()
+  // to see the effect on the drawing.
+  push();
+  translate(0, 30);
+  rotate(radians(60));
+  line(0, 0, 30, 0);
+  rotate(radians(60));
+  line(0, 0, 30, 0);
+  pop();
 
-// Draw Legs
-translate(0, 60);
-rotate(radians(70));
-line(0, 0, 40, 0);
-rotate(radians(40));
-line(0, 0, 40, 0);
+  // Draw Legs
+  translate(0, 60);
+  rotate(radians(70));
+  line(0, 0, 40, 0);
+  rotate(radians(40));
+  line(0, 0, 40, 0);
+}
 {% endhighlight %}
 
 Below is a picture of the output that the code above will produce. Can you
-undestand what the calls to [`push()`][5] and [`pop()`][6] do? Try
-commenting out lines 12 and 18 above to see the effect on the output. (**Hint:**
+understand what the calls to [`push()`][5] and [`pop()`][6] do? Try
+commenting out lines 15 and 21 to see the effect on the output. (**Hint:**
 remember that the transformation functions are cumulative, i.e. they add on to
 each other).
 
-![Stick Figure output]({{site.baseurl}}{{page.url}}tutor-examples/thumbs/fullsize/stick_figure-screenshot.png)
+<ul class="code-list">
+
+  {% include example_card.html name="stick figure" thumb="images/stick-figure-thumb.png" link="https://editor.p5js.org/awarua/sketches/OwySvDH9i" caption="Draws a stick figure using transformation functions" %}
+
+</ul>
 
 <div class="task">
   <p>
@@ -259,13 +279,13 @@ functions.
 
 <ul class="code-list">
 
-  {% include example_card.html name="spider_transform" thumb="" link="" caption="Draws a spider using the <code>translate()</code> and <code>rotate()</code> functions." %}
+  {% include example_card.html name="spider_transform" thumb="images/spider-transform-thumb.png" link="https://editor.p5js.org/awarua/sketches/yqFYkm9sj" caption="Draws a spider using the <code>translate()</code> and <code>rotate()</code> functions." %}
 
-  {% include example_card.html name="house_translate" thumb="" link="" caption="Draws a three houses using the <code>translate()</code>, <code>rotate()</code>, and <code>scale()</code> functions. Also demonstrates <code>pushMatrix()</code> and <code>popMatrix()</code>." %}
+  {% include example_card.html name="house_translate" thumb="images/house-translate-thumb.png" link="https://editor.p5js.org/awarua/sketches/WM4oEo9lt" caption="Draws a three houses using the <code>translate()</code>, <code>rotate()</code>, and <code>scale()</code> functions. Also demonstrates <code>pushMatrix()</code> and <code>popMatrix()</code>." %}
 
-  {% include example_card.html name="horse_transform" thumb="" link="" caption="Draws a horse using the <code>translate()</code> and <code>rotate()</code> functions." %}
+  {% include example_card.html name="rainbow horse" thumb="images/rainbow-horse-thumb.png" link="https://editor.p5js.org/awarua/sketches/3Xv0GHos_" caption="Draws a horse using the <code>translate()</code> and <code>rotate()</code> functions." %}
 
-  {% include example_card.html name="draw_starfish" thumb="" link="" caption="Draws a starfish using the <code>translate()</code> and <code>rotate()</code> functions" %}
+  {% include example_card.html name="draw_starfish" thumb="images/starfish-thumb.png" link="https://editor.p5js.org/awarua/sketches/X6x2cZSdn" caption="Draws a starfish using the <code>translate()</code> and <code>rotate()</code> functions" %}
 
 </ul>
 
@@ -481,6 +501,7 @@ function drawTree(x, y){
 
   pop();
 }
+{% endhighlight %}
 
 <!--
 
