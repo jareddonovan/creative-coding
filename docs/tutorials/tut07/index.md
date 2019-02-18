@@ -631,42 +631,30 @@ function draw(){
 
 The first tutor example further demonstrates how to use the
 [`beginShape()`][15], [`vertex()`][17] and [`endShape()`][16] functions with a
-[`PShape`][10] object. The second one is a program you can use to generate code
-for drawing curves.
+[`p5.Vector`][20] object. The second one is a program you can use to generate
+code for drawing curves.
 
 <ul class="code-list">
 
-  {% include example_card.html name="draw_vertex" thumb="" link="" caption="Draws a polygon or star as a shape. Uses a <code>PVector</code> object to simplify figuring out positions of vectors." %}
+  {% include example_card.html name="draw_star" thumb="images/draw-star-thumb.png" link="https://editor.p5js.org/awarua/sketches/WDOmi1Ndh" caption="Draws a polygon or star as a shape. Uses a <code>p5.Vector</code> object to simplify figuring out positions of vectors." %}
 
-  {% include example_card.html name="curve_explorer" thumb="" link="" caption="A program that lets you draw a curve in Processing and then export the code it would take to draw that curve." %}
+  {% include example_card.html name="curve_explorer" thumb="images/curve-explorer-thumb.png" link="https://editor.p5js.org/awarua/full/hya3c3nliN" caption="A program that lets you draw a curve in p5js and then export the code it would take to draw that curve." %}
 
 </ul>
 
 ### Further Tutorials
 
-For a more in-depth tutorial on using [`PShape`][10], including drawing with curves,
-check the online tutorials below. The second tutorial also explains bezier
-curves, which we have not covered in the tutorial.
+The tutorial below also explains Bezier curves, which we have not covered in the
+tutorial.
 
 <ul class="code-list">
-  <li>
-    <a class="title-link" target="_blank"
-       href="https://processing.org/tutorials/pshape/"
-      >Tutorial: PShape</a>
-    <a class="img-link" target="_blank"
-      href="https://processing.org/tutorials/pshape/"
-      ><img alt="PShape Tutorial"
-            src="{{site.baseurl}}{{page.url}}images/pshape-tutorial.png">
-    </a>
-    A tutorial on using Processing's PShape object. By Daniel Shiffman.
-  </li>
 
   <li>
     <a class="title-link" target="_blank"
-       href="https://processing.org/tutorials/curves/"
+       href="http://p5js.org/learn/curves.html"
       >Tutorial: Curves</a>
     <a class="img-link" target="_blank"
-      href="https://processing.org/tutorials/curves/"
+      href="http://p5js.org/learn/curves.html"
       ><img alt="Curves Tutorial"
             src="{{site.baseurl}}{{page.url}}images/smooth_bezier.png">
     </a>

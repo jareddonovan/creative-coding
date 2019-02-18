@@ -11,5 +11,7 @@ title: Examples
 * [Pine_tree](Pine_tree)
 * [Pine_tree_function](Pine_tree_function)
 * [Wave_curve](Wave_curve)
+* [Draw_star](Draw_star)
+* [Curve_explorer](Curve_explorer)
 
 [&lt; Back to tutorial](../)
