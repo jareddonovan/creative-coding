@@ -1,0 +1,44 @@
+.qut-dropdown {			
+    display: inline;
+}
+
+.qutMoreTab {
+	display: inline-block;
+	background:transparent;
+}
+
+.qut-dropdown-content {
+    position: absolute;
+    background-color: #666;
+    max-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 1px 16px;
+    z-index: 1000;
+    color: #fff;
+    top: 50px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#qut-dropdown-list > li > a > span {
+	color: #fff;
+}
+
+#qut-dropdown-list > li > a {
+	width: 100%;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+}
+
+#qut-dropdown-list > li.active {
+	background-color: #114A81;
+}
+.qut-dropDown-li {
+	list-style:none;
+	padding: 5px 5px 5px 5px;
+	
+}
+.qut-dropDown-li:hover{
+	background: none repeat scroll 0 0 #114A81;
+}

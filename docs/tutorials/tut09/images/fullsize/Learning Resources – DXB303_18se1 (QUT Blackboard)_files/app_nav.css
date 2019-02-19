@@ -1,0 +1,1322 @@
+/* @group TOP FRAME
+----------------------------------------------- */
+
+/* @group TOP FRAME LAYOUT */
+
+/*Branding image container.*/
+
+/*Application tabs (top frame)*/
+
+table.bouncer {
+    width: 100%;
+}
+
+table.bouncer td {
+    padding:0;
+}
+
+.brandingImgWrap {
+    overflow:hidden;
+}
+
+/*Branding image is hidden when compact tabs are used*/
+.topTabs-compact .bannerImage, .topTabs-compact .brandingImgWrap {
+    display:none;
+}
+
+/*Regular tabs*/
+.topTabs {
+    position: relative;
+    overflow-y:hidden;
+    height: 86px;
+
+}
+
+/*Compact tabs*/
+.topTabs-compact {
+    position:relative;
+}
+
+/*Center aligned tabs*/
+.topTabs .tabWrapper-center .appTabs, .topTabs-compact .tabWrapper-center .appTabs {
+    margin: 0 auto;
+}
+
+/*Right aligned tabs.*/
+.topTabs .tabWrapper-right .appTabs, .topTabs-compact .tabWrapper-right .appTabs {
+    float: right;
+}
+
+#topFrame /*@branding - do not remove*/,
+    /*---*/
+.bgBanner {
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    color:#CCCCCC;
+}
+
+.brandingImgWrap {
+    height:50px;
+}
+
+.brandingImgWrap a {
+    display: inline-block;
+    position: absolute;
+}
+
+.brandingImgWrap a:focus {
+    outline-color: #CCC;
+}
+
+.bannerImage {
+    max-height: 35px;
+}
+
+.brandingImgWrap img[src*="header_institution"] {
+    left: 20px;
+    max-height: 60px;
+    position: absolute;
+    top: 0px;
+    z-index: 9001;
+}
+
+.brandingImgWrap img {
+    left: 20px;
+    max-height: 50px;
+    max-width: 140px;
+    position: absolute;
+    top: 7px;
+    z-index: 9001;
+}
+
+/*Branding image, hot spots and hot links are hidden when compact tabs are used*/
+.topTabs-compact .bannerImage, .topTabs-compact .brandingImgWrap, .topTabs-compact .hotItems {
+    display:none;
+}
+
+/*Nav*/
+.global-nav-bar-wrap {
+    background-color: #000;
+    width: 100%;
+    height: 0px;
+}
+
+/*Regular tabs*/
+.topTabs {
+    padding: 0;
+    background-color: #555; /*@pal*/
+    -moz-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
+    -webkit-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
+    box-shadow: 0 -6px 17px #333 inset; /*@pal*/
+
+
+}
+
+/*Compact tabs*/
+.topTabs-compact {
+    height: 52px;
+}
+
+/*Tab wrapper*/
+.tabWrapper-left, .tabWrapper-center, .tabWrapper-right {
+	width: auto; 
+    padding: 0px 28px;
+}
+
+/*Table that contains application tabs*/
+/*Regular tabs*/
+.appTabs {
+    width: auto;
+    position: relative;
+}
+
+.topTabs-compact .tabWrapper-left, .topTabs-compact .tabWrapper-center, .topTabs-compact .tabWrapper-right {
+    padding-top: 24px;
+}
+
+/* @end */
+
+/* @group APPLICATION TABS */
+
+/*Application tabs*/
+/*Regular tabs*/
+.appTabs a {
+    font-size:110%;
+    text-align:center;
+    display:block;
+    text-decoration:none;
+    padding: 10px 1.2em 19px;
+    color:#efefef;
+    color:rgba(255,255,255,0.9);
+    z-index:100;
+    white-space:nowrap;
+    position: relative;
+    border: 1px solid transparent;
+    border-width: 1px 1px 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    font-size: 1.1rem;
+}
+
+
+/*@branding - do not remove*/
+#topTab {
+    background: transparent;
+    color:#efefef;
+}
+
+.appTabs a span {
+    border-bottom: 1px dotted transparent;
+    padding-bottom: 1px;
+}
+
+.topTabs-compact .appTabs a span {
+    padding-bottom: 0;
+}
+
+
+.appTabs a:hover, .appTabs a:focus {
+    color:#fff;
+}
+
+.appTabs a:hover span, .appTabs a:focus span {
+    border: 0px !important;
+    color: #fff;
+
+}
+
+/*@branding - do not remove*/
+#topTabActive,
+.appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
+    color:#fff;
+    font-weight:bold;
+    text-shadow: 0 0 6px #000;
+    z-index:100;
+}
+
+.appTabs .active a  span, .appTabs .active a:hover span, .appTabs .active a:focus span {
+    border: 0;
+}
+
+.appTabs .active .hideoff,
+.appTabs .active a:hover .hideoff,
+.appTabs .active a:focus .hideoff,
+.toppTabs-compact .appTabs .active .hideoff,
+.toppTabs-compact .appTabs .active a:hover .hideoff,
+.toppTabs-compact .appTabs .active a:focus .hideoff {
+    bottom: 0;
+    border-left:0px solid transparent;
+    border-right:0px solid transparent;
+    border-top:0;
+    margin-left: -12px;
+    bottom: 0px;
+    line-height: 0;
+    left: 50%;
+    top: auto;
+    color: transparent;
+    font-size: 0;
+    z-index: 100;
+
+}
+
+.topTabs-compact .appTabs .active .hideoff,
+.topTabs-compact .appTabs .active a:hover .hideoff,
+.topTabs-compact .appTabs .active a:focus .hideoff {
+    border-width: 0 7px 7px;
+    margin-left: -7px;
+}
+
+
+
+
+.topTabs-compact .appTabs a,
+.topTabs-compact  .appTabs .active a:hover,
+.topTabs-compact  .appTabs .active a:focus {
+    font-size: 95%;
+    padding: 0.4em 1em .7em;
+}
+
+
+/*Rounding options*/
+.round1 a {
+    -moz-border-radius:3px 3px 0 0;
+    -webkit-border-radius:3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.round2 a {
+    -moz-border-radius:12px 12px 0 0;
+    -webkit-border-radius:12px 12px 0 0;
+    border-radius:12px 12px 0 0;
+}
+
+/* @end */
+
+
+/* @group TOP FRAME LINKS (HOME, HELP, LOGOUT)
+----------------------------------------------- */
+
+/*Top frame links*/
+
+.topGlobalLinks {
+    background-color: rgba(0,0,0, 0.15);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
+}
+
+.topGlobalLinks ul {
+    z-index: 1001
+}
+
+.topGlobalLinks  ul li {
+    color: #ccc;
+    display: inline-block;
+    margin: 0  0 0 -4px;
+}
+
+.topGlobalLinks ul li:first-child {
+    margin: 0;
+}
+
+.topGlobalLinks a {
+    display: inline-block;
+    color: #ccc;
+    text-align: left;
+    padding: 3px 5px;
+    text-indent: -10000px;
+    min-width: 18px;
+    overflow: hidden;
+    background: none!important;
+}
+
+.topGlobalLinks a .link-icon {
+    background-image: url(images/utilicons_sprite_rev.png);
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+}
+
+.topGlobalLinks .home .link-icon {
+    background-position: -129px 0
+}
+
+.topGlobalLinks .home:hover .link-icon,
+.topGlobalLinks .home:focus .link-icon {
+    background-position: -129px -16px
+}
+
+.topGlobalLinks .logout .link-icon {
+    display: none
+}
+
+.topGlobalLinks .logout {
+    text-indent: 0;
+    padding: 2px 9px;
+    width: auto!important;
+}
+
+.topGlobalLinks .help .link-icon {
+    background-position: -145px 1px
+}
+
+.topGlobalLinks .help:hover .link-icon,
+.topGlobalLinks .help:focus .link-icon  {
+    background-position: -145px 1px
+}
+
+.topGlobalLinks a:hover,
+.topGlobalLinks a:focus {
+    color: #eee;
+    background-color: rgba(0,0,0, 0.25)!important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025);
+}
+
+/* @end TOP FRAME LINKS*/
+
+/* @group TOP FRAME HOT ITEMS
+----------------------------------------------- */
+
+.hotItems {
+    position: relative;
+    margin-right: 3px;
+    width: 240px;
+    min-height: 28px;
+    color: #ddd;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.20);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
+}
+
+.hotSpots {
+    max-height: 46px;
+    overflow: auto;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 3px 3px 5px;
+}
+
+.hotSpots li {
+    display: inline-block;
+    display: inline\9;/*IE8*/
+    padding: 0 0 2px;
+}
+
+.hotSpots a {
+    background: transparent;
+    color: #ddd;
+    display: inline-block;
+    padding: 0 6px 0 0;
+}
+
+.hotSpots li:after {
+    content: "\2022";
+    color: #999999;
+    position: relative;
+    right: 1px;
+}
+
+.hotSpots li:last-child:after {
+    content: none
+}
+
+.hotSpots a:hover,
+.hotSpots a:focus {
+    color: #eee;
+}
+
+/* @end TOP FRAME HOT*/
+
+/* // GLOBAL NAV // */
+/* these styles override the icons set on the Customize Brand page. This is specific to the 2012 theme */
+.bottom-buttons-home a.home {
+    background: transparent
+    url('/images/ci/mybb/mybb_nav_bottombuttons_sprite.png ') no-repeat
+    50% 6px;
+}
+
+.bottom-buttons-help a.help {
+    background: transparent
+    url('/images/ci/mybb/mybb_nav_bottombuttons_sprite.png ') no-repeat
+    50% -13px;
+}
+
+.bottom-buttons-logout a.logout {
+    background: transparent
+    url('/images/ci/mybb/mybb_nav_bottombuttons_sprite.png ') no-repeat
+    50% -33px;
+}
+
+.global-nav-bar a.logout-link, .global-nav-bar a.logout-link:hover, .global-nav-bar a.logout-link:focus {
+    background-image: url('/images/ci/mybb/mybb_nav_logout.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+.global-nav-bar a.logout-link:hover, .global-nav-bar a.logout-link:focus {
+    background-position: 50% -22px;
+}
+/* // end GLOBAL NAV // */
+
+#quick_links_wrap {
+    width: 20px;
+    overflow: hidden;
+}
+
+#quick_links_wrap:hover {
+    width: 100px;
+    overflow: visible;
+    left: -10px;
+    background: transparent;
+}
+
+#quick_links_wrap a {
+    position: absolute;
+    right: 0px;
+}
+
+#globalNavPageNavArea{
+  background:#555;
+}
+
+/* @end TOP FRAME */
+/*All mobile and tablets*/
+@media only screen and (min-width:320px) and (max-width:1024px) {
+    .global-nav-bar-wrap { 
+        position: fixed;
+        height: 44px;
+        z-index: 9009;
+    }
+}
+/*Tablet Styles*/
+@media only screen and (min-width:668px) and (max-width:1024px) {
+    #globalNavPageNavArea {
+        height: auto; /* QUT change; take !important out */
+        margin-top: 44px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .topTabs { 
+        padding-top: 20px;
+    }
+
+    .brandingImgWrap {
+        height: 0px;
+    }
+}
+/*responsive nav styles form myBB and other similar pages that use app_nav.css but not 480.css*/
+@media only screen and (min-width:320px) and (max-width:667px) {
+    .brandingImgWrap {
+        position: fixed;
+        width: 71px;
+        top: -3px;
+        left: 0px;
+        height: 47px; /* QUT change; take !important out */
+        z-index: 2000;
+    }
+
+    .brandingImgWrap img[src*="header_institution"] {
+        height: 38px;
+        width: 38px;
+        margin-left: 4px;
+    }
+
+    .brandingImgWrap img {
+        display: none;
+    }
+    
+    .global-nav-bar-wrap { 
+        position: fixed;
+        height: 35px;
+        padding-top: 9px;
+    }
+
+    .mybb-shell .global-nav-bar {
+        padding-right: 10px;
+    }
+
+    /*global nav*/
+
+    .global-nav-bar-wrap { 
+        position: fixed;
+        height: 35px;
+        padding-top: 9px;
+    }
+
+    .nav-link {
+        width: 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+        color: transparent;
+        background: transparent;
+        height: 34px!important;
+    }
+
+    .global-nav-bar .logout-link {
+        width: 30px;
+    }
+
+    .global-nav-bar {
+        font-size: 13px;
+        height: 30px;
+    }
+
+    #global-nav .global-top-avatar {
+        left: 6px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .global-nav-bar.logout {
+        margin-left: 0;
+        height: 25px;
+        overflow: hidden;
+        margin-top:1px;
+    }
+
+    .nav-link {
+        box-sizing: border-box;
+        height: 25px !important;
+        background-color: transparent;
+        padding-right: 22px;
+    }
+
+
+    .nav-link .badge {
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+
+    .global-nav-bar .badge, 
+    .side-nav .menu-icon span.badge {
+        font-size: 11px;
+        height: 12px;
+        line-height: 12px;
+        margin-left: 0px;
+        padding: 4px 3px;
+        min-width: 12px;
+        height: auto;
+    }
+
+    body #globalNavPageNavArea {
+        height: auto; /* QUT change; !important taken out */
+        margin-top: 44px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .topTabs .tabWrapper-right .appTabs {
+    }
+
+    .appTabs td {
+        padding-bottom: 0 !important;
+    }
+
+    .flyout-menu {
+        top: 34px;
+    }
+
+    .mybb-shell .topTabs-compact {
+        height: 40px;
+    }
+
+    .mybb-shell .tabWrapper-right {
+        padding-top: 2px;
+    }
+}
+
+
+
+
+
+/* QUT ADDITIONS START */
+
+
+
+
+/*Regular tabs*/
+.topTabs {
+    padding: 0;
+    top: 0;
+    height: 49px !important;
+    background-color: #666 !important;
+   -moz-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
+    -webkit-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
+    box-shadow: 0 -6px 17px #333 inset; /*@pal*/
+}
+
+.bgBanner {
+    background-color: #555;
+}
+
+.brandingImgWrap {
+    height: 0px !important;
+    overflow:hidden;
+}
+
+.brandingImgWrap img[src*="header_institution"] {
+    left: 12px;
+}
+
+
+.bannerImage {
+    max-height: 35px;
+    display: none;
+}
+
+.brandingImgWrap img[src*="header_institution"] {
+    top: 56px;
+    display: none;
+}
+
+.brandingImgWrap img {
+    display: none;
+}
+
+/*Tab wrapper*/
+.tabWrapper-left, .tabWrapper-center, .tabWrapper-right {
+	padding: 1px 28px 1px 1px;
+   	background-color: #666 !important;
+   	height: 49px; 
+   	top: 0px !important;
+   	position: relative;
+   	z-index: 200; 
+   	overflow: hidden;
+}
+
+/*Regular tabs*/
+.appTabs a {
+    text-align:center;
+    display:block;
+    height: 49px;
+    text-decoration:none;
+    padding: 17px 1.5em 17px 1.5em;
+    color: #fff !important;
+    z-index:100;
+    white-space:nowrap;
+    position: static;
+    border: 1px solid transparent;
+    border-width: 1px 1px 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 0;
+    font-size: 1.0rem;
+    background: url(/branding/themes/qut-bb2016/__orig__/qut-images/navdivider.png) no-repeat scroll 0 0 rgba(0,0,0,0);
+}
+
+.appTabs a:hover, .appTabs a:focus {
+    color: #666;
+    background: none repeat scroll 0 0 #114A81;
+}
+
+#topTabActive,
+.appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
+    background-color: #114A81;
+}
+
+.global-nav-bar a.logout-link, .global-nav-bar a.logout-link:hover, .global-nav-bar a.logout-link:focus {
+    top: 14px;
+}
+
+ 
+#quick_links_wrap {
+    top:1px!important;
+    background-color: transparent !important;
+    width: 100%;
+    right: 20px !important;
+    z-index: 1011;
+}
+
+#quick_links_wrap a {
+    float: right;
+    font-size: 0 !important;
+    color: transparent !important;
+    padding-left: 0px;
+    background-position: 0px 3px;
+    outline: none;
+}
+
+.global-nav-bar a {
+    top: 11px;
+}
+
+.global-nav-bar a.logout-link, .global-nav-bar a.logout-link:hover, .global-nav-bar a.logout-link:focus {
+    top: 12px;
+}
+
+
+/* added by Ralph */
+#quick_links_wrap:hover, #quick_links_wrap.quick_link_wrap_focus {
+	left: 0px !important;
+	width: 100%;
+}
+
+/* added by Ralph */
+#quick_links_wrap a:hover {
+    background-color: #777; 
+}
+
+
+#globalNavPageNavArea{
+  	height: 300px;
+	background: transparent;
+    position: absolute;
+    top: 65px;
+    width: 100% !important;
+}
+
+/* added by Ralph */
+.global-nav-bar.logout {
+    margin-right: 10px !important;
+}
+
+
+/* Added by Ralph 29/09/2016) Overrides background color of my blackboard dropdown and logout button */
+.nav-link {
+	background: none;
+	padding-right: 62px;
+}
+
+/* Added by Ralph 29/09/2016) Overrides background hover color of my blackboard dropdown and logout button */
+.nav-link:focus {
+	background-color: transparent;
+}
+
+.nav-link:hover {
+    background-color: #777;
+}
+
+/* Added by Ralph 29/09/2016) */
+#global-nav-link a:focus {
+	outline: none;
+}
+/* Added by Ralph 29/09/2016) */
+.global-nav-bar {
+    margin: 10px;
+    font-size: 13px;
+}
+
+
+.global-nav-bar a {
+	top: 11px;
+}
+
+.appTabs .active a {
+	background-color: #114A81; 
+}
+
+.brandingImgWrap_custom {
+	position: absolute;
+	top: 13px;
+	height: 39px; 
+	max-height: 39px;
+	left: 15px;
+	width: 245px; 
+	max-width: 245px;
+	float: left;
+	z-index: 200;
+	background: url(/branding/themes/qut-bb2016/__orig__/qut-images/qut-blackboard-logo.png);
+	background-repeat: no-repeat;
+	background-size: 245px;
+}
+
+.brandingImgWrap_custom a {
+	position: absolute;
+	top: 0px;
+	height: 100% !important;
+	left: 0px;
+	width: 100% !important;
+	background-color: transparent; 
+}
+
+span.qut-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+	}
+
+div#qut-header-menu {
+    display: none;
+}
+
+#global-nav .global-top-avatar {
+	left: 6px;
+}
+ /* START mygrades tweaks as per Mars 24/11/2017 */
+ 
+ul#filter_by_mygrades {
+    line-height: 1.8;
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+
+a#filter_type_dynamic_mygrades {
+    white-space: nowrap;
+}
+
+ul#filter_by_mygrades li:nth-child(6)::before {
+    content: " ";
+}
+
+li.stream_filterlinks_divider {
+    vertical-align: middle!important;
+}
+
+/* END mygrades tweaks as per Mars 24/11/2017 */
+
+@media only screen and (max-width: 1024px) and (min-width: 668px){
+	#globalNavPageNavArea {
+	    margin-top: 0px; 
+	    overflow-y: hidden; 
+	    overflow-x: hidden;
+	}
+}
+
+
+/* Had to add this as the 480.css is not imported when viewing the my blackboard dashboard (Ralph 04/10/2016)    */
+@media only screen and (max-width:736px) {
+	.brandingImgWrap_custom {
+		position: absolute;
+		top: 19px;
+		height: 30px;
+		max-height: 30px;
+		left: 10px;
+		max-width: 175px;
+		width: 175px;
+		float: left;
+		z-index: 200;
+		background: url(/branding/themes/qut-bb2016/__orig__/qut-images/qut-blackboard-logo.png);
+		background-repeat: no-repeat;
+		background-size: 175px;
+	}
+
+	.brandingImgWrap_custom a {
+		position: absolute;
+		top: 0px;
+		height: 100% !important;
+		left: 0px;
+		width: 100% !important;
+		background-color: transparent; 
+	}
+	
+	.nav-link {
+		color: transparent;
+		width: 74px;
+		padding-right: 22px;
+		box-sizing: border-box;
+		height: 25px !important;
+		overflow: hidden;
+		padding-right: 53px;
+	}
+	
+	
+	.brandingImgWrap {
+		height: 0px;
+	}
+	
+ 
+ 	.brandingImgWrap img {
+		display: none;
+	}
+	
+	.topTabs {
+    	position: absolute;
+    	top: 0px;
+    	width: 100%;
+    	height: 49px !important;
+    	background-color: #666 !important;
+    }
+    
+    .global-nav-bar a {
+    	top: 11px;
+    }
+    
+    #globalNavPageNavArea {
+    	top: 65px;
+    	position: absolute;
+    	width: 100% !important;
+    	height: 300px;
+    }
+    
+    .global-nav-bar-wrap {
+    	position: absolute !important;
+    }
+    
+    #quick_links_wrap a {
+    	padding-left: 0px;
+    }
+    
+    #global-nav .global-top-avatar {
+    	left: 7px;
+    	width: 16px;
+    	height: 16px;
+    	top: 4px;
+	}	
+	
+	.iframe-wrap {
+		min-width:910px;
+	}
+    
+}
+
+@media only screen and (max-width: 667px) and (min-width: 320px) {
+	.global-nav-bar-wrap {
+    	padding-top: inherit !important;
+	}
+	
+	body #globalNavPageNavArea {
+    	margin-top: 0px;
+    	height: 300px;
+    	overflow-x: hidden;
+    }	
+    
+    .global-nav-bar.logout {
+	    margin-top: 1px;
+	    height: 35px;
+	    margin-top: 8px;
+	}
+	
+	.nav-link .badge {
+    	position: absolute; 
+    	top: 5px;
+    	right: 21px;
+    }
+    
+    #global-nav .global-top-avatar {
+	    width: 16px;
+	    height: 16px;
+	    top: 4px;
+	}
+    
+	
+}
+
+@media only screen and (min-width:500px) and (max-width:736px) {
+	.brandingImgWrap_custom {
+		position: absolute;
+		top: 13px;
+		height: 39px;
+		max-height: 39px;
+		left: 15px;
+		width: 245px;
+		max-width: 245px;
+		float: left;
+		z-index: 200;
+		background: url(/branding/themes/qut-bb2016/__orig__/qut-images/qut-blackboard-logo.png);
+		background-repeat: no-repeat;
+		background-size: 245px;
+	}
+}
+
+@media only screen and (max-width:370px) {
+
+   .brandingImgWrap img {
+        display: none; 
+    }
+    
+	.brandingImgWrap_custom {
+		position: absolute !important;
+		top: 19px !important;
+		height: 30px !important;
+		max-height: 30px;
+		max-width: 130px !important;
+		width: 130px !important;
+		float: left !important;
+		z-index: 200;
+		background: url(/branding/themes/qut-bb2016/__orig__/qut-images/qut-blackboard-logo-small.png) !important;
+		background-repeat: no-repeat !important;
+		background-size: 130px !important;
+		left: 10px;
+	}
+
+	.brandingImgWrap_custom a {
+		position: absolute;
+		top: 0px;
+		height: 100%;
+		left: 0px;
+		width: 100%;
+		background-color: transparent; 
+	}
+	
+	.global-nav-bar.logout {
+	    margin-top: 1px;
+	    height: 35px;
+	    margin-top: 8px;
+	}
+	
+	.nav-link {
+	    width: 71px;
+	    padding-right: 48px;
+	}
+	
+}
+
+/* mybb.css overrides START Ralph 29/11/2016 */
+
+.side-nav {
+	top:114px !important;
+}
+
+.iframe-wrap {
+	top: 110px !important;
+	border-right:none !important;
+	border: none !important;
+}
+
+
+.global-nav-bar-wrap{
+	background-color: #114A81;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    z-index: 999;
+}
+
+body.mybb-shell {
+	background: #333 repeat left top !important;
+}
+
+#outer_left_stream_mygrades_d .stream_item, #left_stream_mygrades .stream_item {
+	overflow: hidden !important;
+}
+
+.stream_dynamic_filters_content {
+	margin-top: 15px !important;
+	width: 99%;
+}
+
+.stream_dynamic_filters ul, .stream_dynamic_filters fieldset ul {
+	padding-left: 0px; 
+}
+
+#left_stream_alerts .stream_item {
+	overflow: hidden;
+}
+
+span.timestamp {
+    margin-top: 37px;
+}
+
+.stream_pages div.left_stream_wrapper {
+	padding: 13px 21px !important;
+}
+
+#openSettings_mygrades {
+	top: 23px;
+}
+
+.stream_list_filter {
+	width: 90% !important;
+}
+
+stream_list_filter>li {
+    margin-left: 0px !important;
+} 
+
+.stream_header {
+	line-height: 1.9 !important;
+	padding: 10px 0px 0px 17px;
+}
+
+#streamHeader_mygrades {
+    height: 152px;
+}
+
+
+@media only screen
+and (min-width:0px) and (max-width:736px) {
+	
+	body {
+		overflow: auto !important;
+		overflow-x: hidden !important;
+	}
+	
+		
+	.mybb-overview .stream_show_more_data .main-message {
+		font-size: 17px !important;
+	}
+	
+	div.stream_settings {
+		top: 54px !important;
+	}
+	
+	.stream-detail-page {
+    	padding: 20px 0px 0px 0px !important;
+	}
+	
+	.stream_left {
+    	margin-top: 6px !important;
+	}
+	
+	.stream_item {
+		border-bottom: 1px solid #ccc !important;
+    	overflow: hidden !important;
+	}
+	
+	#outer_left_stream_mygrades_d .stream_item, #left_stream_mygrades .stream_item {
+		border: none;
+		border-bottom: 1 px solid #ccc !important;
+		margin-left: 21px;
+    	width: 95%;
+	}
+		
+	.stream_page, .stream_page_left {
+		border-right: none !important;
+	}
+	
+	.stream_pages div.left_stream_wrapper {
+     	padding: 0px 15px 0px 0px !important;
+	}
+	
+	.stream_pages {
+		overflow: hidden;
+	}
+	
+	#streamHeader_mygrades {
+		height: 175px !important;
+		padding-left: 20px !important;
+		width: 100% !important;
+	}
+	
+	#streamHeader_stream, #streamHeader_mygrades, #streamHeader_mygrades_d {
+		height: 175px !important; 
+		margin-bottom: 13px !important;
+	} 
+	
+	#outer_left_stream_mygrades .stream_item .stream_datestamp {
+    	bottom: 20px !important;
+    	right: 16px !important;
+    	top:9px;
+	}
+	
+	.stream_item .stream_datestamp {
+		bottom: 20px !important;
+		right: 16px !important;
+    	top:9px !important;
+	}
+	
+	.active_stream_item {
+		background-color: rgba(0, 0, 0, .05) !important;
+	}
+	
+	.stream_datestamp:hover {
+		color: inherit;
+	}
+	
+	.mybb-div .side-nav {
+    	min-height: 250px !important;
+    	width: 52px;
+	}
+	
+	.stream-detail-page {
+		padding: 20px 7px 0px 7px !important;
+		overflow: hidden;
+	}
+	
+	.gradeTableNew .cell{
+		padding-right: 0px !important;
+	}
+	
+	.gradeTableNew .cell.grade {
+		width: initial !important;
+	}
+	
+	.gradeTableNew .row .cell.grade {
+    	font-size: 14px !important;
+    }
+	
+	.gradeTableNew .row {
+		width: 99% !important;
+	}
+	
+	.mybb.gradeTableNew #grades_wrapper {
+		margin-top: 60px !important;
+	}
+	
+	.detail-heading h2 {
+		font-size: 100% !important;
+	}
+	
+	.detail-heading {
+		width: 99% !important;
+		left: 3px !important;
+		border-bottom: none !important;
+		padding-bottom: 30px !important;
+	}
+	
+	.filterBarHorizontal {
+		width: inherit !important;
+		right: 18px !important;
+		border: 1px solid #ddd !important;
+	}
+	
+	.mybb.gradeTableNew .grades_header {
+		right: 20px !important;
+	}
+	
+	#streamDetail .receiptBarHorizontal {
+		position: absolute !important;
+		bottom: 0px !important;
+		right:auto;
+		padding-right: 10px;
+	}
+	
+	.submitted_item_row {
+		width: 99% !important;
+	}
+	
+	.receiptBarHorizontal{
+		background-color:transparent !important;
+	}
+	
+	.receiptBarHorizontal .count a {
+		margin-top: -2px !important;
+	}
+	
+	.show_close_stream_button:after {
+		background-color: #e7e7e7 !important;
+		line-height: 0.8 !important;
+	}
+	
+	#openSettings_mygrades .open_stream_settings {
+		right: 17px !important;
+	}
+	
+	.stream_dynamic_filters span, .stream_settings span {
+		right: 30px !important;
+	}
+	
+	.stream_list_filter {
+		margin-top: 5px !important;
+		width: 85% !important;
+	}
+	
+			
+	.stream_context_bottom {
+		margin-top: 100px !important;
+	}
+	
+	#openSettings_mygrades{
+		position: absolute !important;
+	}
+	
+	#settingsContainer_mygrades {
+       	overflow: hidden !important;
+    	left: 4px !important;
+    	top: 71px !important;
+	}
+	
+	.grade-value {
+    	font-size: 110% !important;
+    }
+    
+    #settingsContainer_alerts {
+    	top:54px !important;
+    }
+}	
+
+
+@media only screen
+and (min-width:737px) and (max-width:884px) {
+	.stream_dynamic_filters_content {
+		margin-top: 74px;
+	}
+	
+	#outer_left_stream_mygrades_d .stream_item, #left_stream_mygrades .stream_item {
+		margin-left: 7px;
+	}
+}	
+
+@media only screen
+and (max-width:440px) {
+	div.stream_settings {
+		width: 76% !important;
+		right: initial !important;
+	}
+}
+
+
+@media only screen
+and (max-width:400px) {
+	#outer_left_stream_mygrades_d .stream_item, #left_stream_mygrades .stream_item {
+		 width: 93%;
+	}
+}	
+
+/* mybb.css overrides END */
+
+
+/* QUT ADDITIONS END */

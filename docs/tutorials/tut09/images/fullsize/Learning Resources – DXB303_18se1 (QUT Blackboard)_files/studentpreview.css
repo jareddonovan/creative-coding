@@ -1,0 +1,124 @@
+/* studentpreview.css - master css file for the Student Preview B2 */
+
+#enterStudentPreviewForm{
+  display: inline-block;
+}
+
+.student-preview-mode {
+  height: auto;
+  margin-top: 44px;
+}
+
+/* student-preview-ribbon */
+.student-preview-ribbon {
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+  padding: 14px;
+  background: orange;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  box-shadow: 0px 0px 11px 5px rgba(0,0,0,.2),
+  			      0px 1px 4px 0px rgba(0,0,0,.3),
+  			      0 1px 0 rgba(255,255,255,.3) inset;
+  z-index: 1000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+.student-preview-ribbon span {
+  font-size: 110%;
+  font-weight: bold;
+  color: rgba(0,0,0,.7);
+}
+.student-preview-ribbon span strong {
+  color: #000;
+  font-size: 120%;
+}
+.student-preview-ribbon a {
+  float:right;
+ /*  position: absolute; */
+/*
+  right: 12px;
+  top: 12px;
+*/
+  margin-left:4px;
+  font-weight: normal;
+}
+
+/* student-preview-control */
+.student-preview-control {
+  border-right: 1px solid #ccc;
+  display: inline-block;
+  margin: -14px -4px -14px 0;
+  position: relative;
+  vertical-align: middle;
+}
+.student-preview-control a {
+  display: block;
+  line-height: 1;
+  overflow: hidden;
+  padding: 10px 8px;
+}
+.student-preview-control:hover,
+.student-preview-control:focus {
+  box-shadow: 0 0 24px rgba(0,0,0,0.15) inset;
+}
+.student-preview-control:hover .existing-preview-users,
+.student-preview-control:focus .existing-preview-users {
+  top: 46px;
+  left: 0;
+}
+.dirty a span {
+  background: url(images/student_preview_dirty.png) no-repeat scroll 0 0 transparent;
+}
+.clean a span {
+  background: url(images/student_preview.png) no-repeat scroll 0 0 transparent;
+}
+.student-preview-control a span {
+  display: inline-block;
+  height: 24px;
+  overflow: hidden;
+  width: 24px;
+}
+.student-preview-control:hover a span,
+.student-preview-control:focus a span,
+.student-preview-control a:hover span,
+.student-preview-control a:focus span {
+  background-position: 0 -22px;
+}
+
+.existing-preview-users {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  max-height: 300px;
+  overflow-x: auto;
+  z-index: 999999;
+  border-top-left-radius: 0;
+  min-width: 180px;
+}
+
+/*  light box related styles */
+.lb-container {
+  padding: 24px 30px;
+}
+div.lb-wrapper div.lb-header {
+  padding: 12px 30px;
+}
+div.lb-wrapper div.lb-header h2 {
+  font-weight: bold;
+}
+.lbAction img {
+  margin-top:0;
+}
+.stepHelp {
+  line-height: 1.4;
+  padding-left: 24px;
+}
+.controls {
+  text-align: right;
+  margin-top: 12px;
+}
+.description {
+  margin: 0 0 16px;
+}

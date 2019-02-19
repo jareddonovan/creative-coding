@@ -32,7 +32,7 @@
 
 - dir: tut09
   num: 9
-  enabled: false
+  enabled: true
 
 - dir: tut10
   num: 10
