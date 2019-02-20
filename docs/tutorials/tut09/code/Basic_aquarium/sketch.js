@@ -1,22 +1,22 @@
-color waterBlue, fishColor;
-float fishX = 0;
-float fishY = 0;
-float fishSpeed = 2;
-int dir = 1;
-int fishW = 50;
-int fishH = 15;
+let waterBlue, fishColor;
+let fishX = 0;
+let fishY = 0;
+let fishSpeed = 2;
+let dir = 1;
+let fishW = 50;
+let fishH = 15;
 
-void setup(){
-  size(800, 600);
-  waterBlue = color(#1772FF);
-  fishColor = color(#FFE517);
+function setup(){
+  createCanvas(800, 600);
+  waterBlue = color("#1772FF");
+  fishColor = color("#FFE517");
   background(waterBlue);
   fill(fishColor);
   smooth();
   noStroke();
 }
 
-void draw(){
+function draw(){
   background(waterBlue);
 
   // Figure out the new x, y position of the fish.
