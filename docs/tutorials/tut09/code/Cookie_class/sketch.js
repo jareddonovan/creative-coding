@@ -1,8 +1,8 @@
 // Simple demo of defining an object in a class.
-Cookie myCookie;
+let myCookie;
 
-void setup(){
-  size(600, 600);
+function setup(){
+  createCanvas(600, 600);
   
   // Create a new cookie with sweetness 10 and no icing.
   myCookie = new Cookie(10, false);
@@ -11,9 +11,9 @@ void setup(){
   myCookie.bake();
   
   // Print out the sweetness of the cookie.
-  println("Sweetness of the cookie is: " + myCookie.taste());
+  console.log("Sweetness of the cookie is: " + myCookie.taste());
 }
 
-void draw(){
+function draw(){
 
 }

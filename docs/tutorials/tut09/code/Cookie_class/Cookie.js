@@ -2,26 +2,22 @@
  * This class defines a 'Cookie' object. 
  * Doesn't do much, but in my imagination it is delicious.
  */
-class Cookie {
-  
-  // The class defines what data the objects need to store. 
-  int sweetness = 0;
-  boolean hasIcing = false;
-  boolean isBaked = false;
-  
+class Cookie {  
   // The constructor is a special function that creates a new object of the class.
-  Cookie(int sweetness, boolean icing){
+  constructor(sweetness, icing){
+    // The class defines what data the objects need to store. 
     this.sweetness = sweetness;
     this.hasIcing = icing;
+  	this.isBaked = false;    
   }
   
   // The class also defines functions that the objects can perform
-  void bake(){
+  bake(){
     this.isBaked = true;
   }
   
   // The functions of the class can also return values just like other functions
-  int taste(){
+  taste(){
     return this.sweetness; 
   }
   

@@ -6,13 +6,13 @@
  * 31/5/2016
  */
  
-Tortoise tortoise;
-ArrayList<EggChicken> eggChickens;
-int points;
+let tortoise;
+eggChickens = [];
+let points = 0;
  
-void setup(){
-  // Display the sketch full screen on display 1.
-  fullScreen(1);
+function setup(){
+  // Display the sketch full screen
+  createCanvas(windowWidth, windowHeight);
   
   // Setting rect mode to CENTER will make some of the drawing easier
   rectMode(CENTER);
@@ -23,14 +23,17 @@ void setup(){
   noStroke();
   
   tortoise = new Tortoise(width / 2, height / 2);
-  eggChickens = new ArrayList<EggChicken>();
+  
+  for (let i = 0; i < 10; i++){
+  	eggChickens.push(new EggChicken(random(100, width - 100), random(100, height - 100)));
+  }
 }
 
-void draw(){
+function draw(){
   background(204);
   
   // Draw the 'coop' and 'free' areas
-  pushMatrix();
+  push();
   translate(50, height / 2);
   fill(50);
   rect(0, 0, 100, height);
@@ -38,9 +41,9 @@ void draw(){
   fill(255);
   textSize(48);
   text("COOP", 0, 10);
-  popMatrix();
+  pop();
   
-  pushMatrix();
+  push();
   translate(width - 50, height / 2);
   fill(50);
   rect(0, 0, 100, height);
@@ -48,31 +51,32 @@ void draw(){
   fill(255);
   textSize(48);
   text("FREE", 0, 10);
-  popMatrix();
+  pop();
   
-  // Draw the points
-  fill(0);
-  text(points, width / 2, 50);
-  
-  
-  
-  tortoise.update();
-  tortoise.display();
-  
-  for (EggChicken eggChicken: eggChickens){
+  for (let eggChicken of eggChickens){
     eggChicken.update(tortoise);
     eggChicken.display();
   }
+
+  // Draw the tortoise
+	tortoise.update();
+  tortoise.display();
+  
+  // Draw the points
+  fill(0);
+  textSize(24);
+  text("POINTS: " + points, width / 2, 50);
+  
 }
 
 // When the mouse is clicked, drop a new egg at the specified location.
-void mouseClicked(){
-  eggChickens.add(new EggChicken(mouseX, mouseY));
+function mouseClicked(){
+  // eggChickens.push(new EggChicken(mouseX, mouseY));
 }
 
 // When the user presses 'w', 'a', 's', 'd' keys, change the direction of the
 // tortoise.
-void keyPressed(){
+function keyPressed(){
   if (key == 'w'){
     tortoise.up();
   }
@@ -84,8 +88,5 @@ void keyPressed(){
   }
   else if (key == 'd'){
     tortoise.right();
-  }
-  else if (key == ' '){
-    save("tortiose_chicken_herder-screenshot.png");
   }
 }
