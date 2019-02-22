@@ -173,7 +173,8 @@ function draw(){
 }
 {% endhighlight %}
 
-Click through to the following example to see a live version.
+Click through to the following example to see a live version that you can copy
+and edit.
 
 <ul class="code-list">
 
