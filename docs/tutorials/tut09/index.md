@@ -73,11 +73,16 @@ as a variable, with code like the following:
   let ball = {
     x: 75,
     y: 75,
-    size: 100,
-    color: "#0000FF",
+    size: 100
   }
 }
 {% endhighlight %}
+
+There is really no difference between these kinds of objects and the ones that
+we are going to be defining today. Object literals are a perfectly fine way to
+define objects, but they can be a bit cumbersome to manage if you want to create
+more than one instance of an object. That's why we will use class declarations
+in today's tutorial.
 
 ### Writing a class definition
 
