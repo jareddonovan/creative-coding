@@ -11,5 +11,8 @@ title: Examples
 * [Perlin_noise_1_demo](Perlin_noise_1d_demo)
 * [Perlin_noise_2_demo](Perlin_noise_2d_demo)
 * [Noise_animation](Noise_animation)
+* [Character_1](Character_1)
+* [Character_2](Character_2)
+* [Character_3](Character_3)
 
 [&lt; Back to tutorial](../)

@@ -44,7 +44,7 @@
 
 - dir: tut12
   num: 12
-  enabled: false
+  enabled: true
 
 - dir: tut13
   num: 13
