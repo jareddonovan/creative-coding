@@ -85,6 +85,10 @@ their concepts:
 
 ### Summarize results
 
+If you have any other feedback or observations, please bring them to the lecture
+next week and we will discuss them.
+
+<!-- TODO: Releas gosoapbox later.
 As a whole, the class should discuss what was found. Add any common observations
 or questions to the following [GoSoapBox page](https://app.gosoapbox.com) and we
 will address them in next week's lecture.
@@ -94,6 +98,8 @@ Use access code **dxb211-tut10** to join the poll.
 <a target="_blank" href="https://app.gosoapbox.com">
   <img style="border-width: 0px;" alt="GoSoapBox" src="{{site.baseurl}}{{page.url}}images/gosoapbox.png">
 </a>
+
+-->
 
 ### Planning ahead
 
