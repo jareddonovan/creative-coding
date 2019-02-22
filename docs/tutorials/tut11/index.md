@@ -88,8 +88,13 @@ tutor example shows this.
 <div class="task">
   <p><strong>Over to you:</strong> Use the `random()` or `randomGaussian()`
   function to animate the position of the eyes of the teddy bear.</p>
-  <img alt="Teddy bear" src="{{site.baseurl}}{{page.url}}images/character_2.png">
 </div>
+
+<ul class="code-list">
+
+  {% include example_card.html name="Scared teddy" thumb="images/character_2-thumb.png" link="https://editor.p5js.org/awarua/sketches/7APavnpcp" caption="Alter the code to animate the position of the eyes of the teddy bear." %}
+
+</ul>
 
 ## Understanding sin()
 
@@ -146,8 +151,13 @@ and see how it works.
 <div class="task">
   <p><strong>Over to you:</strong> Use the <code>sin()</code> function to animate
   the size of the hairless baby's mouth.</p>
-  <img alt="hairless baby" src="{{site.baseurl}}{{page.url}}images/character_1.png">
 </div>
+
+<ul class="code-list">
+
+  {% include example_card.html name="Hairless baby" thumb="images/character_1-thumb.png" link="https://editor.p5js.org/awarua/sketches/tdNiiCumA" caption="Alter the code to animate the size of the baby's mouth." %}
+
+</ul>
 
 ## Understanding noise()
 
@@ -233,6 +243,10 @@ functions. The following tutor example demonstrates this.
 <div class="task">
   <p><strong>Over to you:</strong> Use the <code>noise()</code> function to animate
   the vampire daisy.</p>
-  <img alt="vampire daisy" src="{{site.baseurl}}{{page.url}}images/character_3.png">
 </div>
 
+<ul class="code-list">
+
+  {% include example_card.html name="Vampire daisy" thumb="images/character_3-thumb.png" link="https://editor.p5js.org/awarua/sketches/Utlcbz63A" caption="Alter the code to animate the vampire daisy's petals." %}
+
+</ul>
