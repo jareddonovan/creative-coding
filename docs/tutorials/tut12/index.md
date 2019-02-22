@@ -12,9 +12,13 @@ layout: tutorial
 
 ### Advanced Topics
 
-Several students have requested support in understanding collision detection. If you are interested in this, you may find the following processing example useful. Also check the coding demo video on this topic on Blackboard:
+Several students have requested support in understanding collision detection. If you are interested in this, you may find the following p5js example useful. Also check the coding demo video on this topic on Blackboard:
 
-* [Circle Collision](https://processing.org/examples/circlecollision.html)
+<ul class="code-list">
+
+  {% include example_card.html name="Circle collision" thumb="images/circle-collision-thumb.png" link="https://editor.p5js.org/awarua/sketches/CqQMnGzcb" caption="Demonstrates a simple physics simulation that takes into account the mass of the objects." %}
+
+</ul>
 
 Also - for a more advanced introduction to a more full featured physics library that you can use in Processing, check out the following chapter from the Nature of Code book:
 
