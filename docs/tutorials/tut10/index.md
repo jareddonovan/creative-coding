@@ -97,8 +97,8 @@ Use access code **dxb211-tut10** to join the poll.
 
 ### Planning ahead
 
-We now at the half way mark of the assignment. Remember that the final weeks of
-the semester can often be very busy. You are not expected to have a completed
+We are now at the half way mark of the assignment. Remember that the final weeks
+of the semester can often be very busy. You are not expected to have a completed
 submission by now, but you should at least have made a start and ideally have a
 good idea of your concept.
 
