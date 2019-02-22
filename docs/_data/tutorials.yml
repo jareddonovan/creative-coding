@@ -40,7 +40,7 @@
 
 - dir: tut11
   num: 11
-  enabled: false
+  enabled: true
 
 - dir: tut12
   num: 12
