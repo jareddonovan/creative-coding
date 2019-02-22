@@ -1,154 +1,202 @@
 ---
-title: "Tutorial 9: Objects and Functions"
+title: "Tutorial 9: Class and Objects"
 tut_num: 9
 layout: tutorial
 ---
 
 <p class="lead">
-  In this week's class, we will introduce the concept of Object Oriented
-  programming. You will work through an example in class in which you
-  create some of your own objects and employ them in a simple interactive
-  Processing sketch.
+  As your sketches become more complex, you will find that you need a way to
+  keep your code organized. In this week's class, you will learn how to define
+  `classes` in your code that describe the different parts of your sketch. This
+  is the concept of Object Oriented programming. You will work through an
+  example in class in which you create some of your own objects and employ them
+  in a simple interactive sketch.
 </p>
 
-### Tutorial Overview
+### Tutorial overview
 
 1. Demonstration
-2. Activity - create an object of your own
+2. Activity - create a class of your own
 3. Assignment 2 - working time
 
 ## Demonstration
 
-In this demonstration, we are going to work through the process of creating an
-object and using it in a simple interactive sketch. You should follow along as
-your tutor works through the example to make sure you have a working version on
-your computer and understand how it works. We are going to build an 'aquarium'.
-The aquarium is going to have some 'fish' in it that can swim around.
+In this demonstration, we are going to work through the process of defining a
+class and using it to create objects in a simple sketch. You should follow along
+as your tutor works through the example to make sure you have a working version
+on your computer and understand how it works.
 
-For this, we are going to use something called an object. An object is a special
-kind of datatype that we define that can include both data of its own, and
-functions of its own to act on that data. We have already worked with a number
-of the built in objects that Processing provides, such as `Strings`, `PFonts`,
-and `PImages`, so this should already be familiar to you.
+We are going to build an 'aquarium'. The aquarium is going to have some 'fish'
+in it that can swim around. The fish in the sketch are going to be defined in
+our sketch by a `Fish` class. And we will use this class to create `Fish`
+objects.
 
-![An object can contain data and functions]({{site.baseurl}}{{page.url}}images/object.png)
+* **An object** is a special kind of datatype that can contain data of its
+  own (fields), and functions of its own (methods).
+* **A class** defines how an object should be created, what information it holds
+  and what methods it has.
 
-### Defining an Object
+We have already worked with a number of the built in objects that p5js and
+JavaScript provide, such as `Strings`, `p5.Fonts`, and `p5.Images`, so this
+should already be somewhat familiar to you.
+
+![An object can contain data (fields) and functions (methods)]({{site.baseurl}}{{page.url}}images/object.png)
+
+### Defining an object
 
 In order to create our own objects, we need to do a little bit of work. We need
 to describe all the parts that make up an object, including the kinds of data
-it needs to store, all the functions it can perform and what kind of
+it needs to store, all the methods it can perform and what kind of
 information it requires to be created. Together, this information forms the
 `class` definition of the object.
 
-One way to think about it is that the `class` is like a cookie cutter. It has
-all the information you need to create individual cookies.
+One way to understand the difference between classes and objects is to think
+about the difference between cookie cutters and cookies. A cookie cutter defines
+the overall shape of the cookie, but it is not the same thing *as* a cookie. In
+the same way, a class defines how individual objects will be created and behave,
+but it is not the same thing as an object.
 
 ![cookie cutter]({{site.baseurl}}{{page.url}}images/cookie-cutter.png)
 
-The class is different to the objects it creates though. The class is the
-definition, the object is the instantiation. To continue the analogy, if the
-class definition is like a cookie cutter, then the objects we create with it are
-like cookies. Delicious cookies.
+If class is the definition, the object is the *instantiation*. To continue the
+analogy, if the class definition is like a cookie cutter, then the objects we
+create with it are like cookies. Delicious, delicious cookies.
 
 ![cookies]({{site.baseurl}}{{page.url}}images/cookies.png)
 
-To keep your code organised, it's a good idea to put your class definition in
-a new tab. Create a new tab called 'Cookie' as shown below and save your sketch.
+### Object literals
 
-<iframe width="414" height="248" src="https://www.youtube.com/embed/iUgZYZ1hbTU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+You may have already seen that in JavaScript, you can define objects directly
+as a variable, with code like the following:
 
-If you open up the folder where the sketch is saved, you should now see that
-it has two files in it. One for your main sketch file and one for the 'Cookie'
-tab that you just created. Any other tabs that you create will also be saved
-as separate `.pde` files in your sketch folder.
+{% highlight javascript linenos %}
+  let ball = {
+    x: 75,
+    y: 75,
+    size: 100,
+    color: "#0000FF",
+  }
+}
+{% endhighlight %}
 
-![Cookie tab file]({{site.baseurl}}{{page.url}}images/cookie-demo-files.png)
+### Writing a class definition
 
-Switch back to your sketch, and paste the code below into the 'Cookie' tab. The
-`class` keyword tells Processing that we are defining a class. Whatever name you
-write after `class` (in this case `Cookie`) will be the name of the class.
-After this comes a block of code contained in curly brackets. Everything in this
-block of code is the definition of the class.
+<p class="tip">
+  In JavaScript, there are a several of different ways to define a class. If you
+  google for help on this topic, you'll discover many different approaches. In
+  this tutorial, we will concentrate on the method that we think is easiest for
+  new programmers to learn and manage, which is
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">ES6 class declarations</a>
+</p>
+
+To keep your code organized, it's a good idea to put your class definition in
+a new tab. Create a new file called 'Cookie.js' as shown below and link to your
+sketch.
+
+{% include youtube.html id="PcwNelvyUg8" %}
+
+Open the project folder on the left of the p5js editor and click into the new
+'Cookie.js' file. Paste the code below into the file and save the project.
 
 {% highlight javascript linenos %}
 /**
- * This class defines a 'Cookie' object.
+ * This class defines a 'Cookie' object. 
  * Doesn't do much, but in my imagination it is delicious.
  */
-class Cookie {
-
-  // The class defines what data the objects need to store.
-  int sweetness = 0;
-  boolean hasIcing = false;
-  boolean isBaked = false;
-
+class Cookie {  
   // The constructor is a special function that creates a new object.
-  // This constructor requires an integer and a boolean.
-  Cookie(int sweetness, boolean icing){
+  // This constructor takes two arguments: one for the sweetness
+  // and one for whether the cookie has icing or not.
+  constructor(sweetness, icing){
+    // The 'this' keyword refers to the newly created object.
+    // Here, we are storing some data inside the object.
     this.sweetness = sweetness;
     this.hasIcing = icing;
+    this.isBaked = false;
   }
-
-  // The class also defines functions that the objects can perform
-  // This function will change the state of the object from unbaked, to baked.
-  void bake(){
+  
+  // The class definition also specifies what functions objects have
+  bake(){
+    // Functions can reference data inside the object with 'this'
     this.isBaked = true;
   }
-
-  // Like other functions, the functions of the class can also return values
-  // This function returns the sweetness of the cookie as an integer.
-  int taste(){
+  
+  // The functions of the class can also return values.
+  // This function returns the sweetness of the cookie.
+  taste(){
     return this.sweetness;
   }
 }
 {% endhighlight %}
 
+The `class` keyword tells JavaScript that we are defining a class. Whatever name
+you write after `class` (in this case `Cookie`) will be the name of the class.
+After this comes a block of code contained in curly brackets. Everything in this
+block of code is the definition of the class.
+
 Now switch back to the main tab of your sketch. Paste in the following code to
-declare and initialize and use a cookie object in your sketch.
+declare and initialize and use a cookie object in your sketch. This code uses
+the class definition for cookies to create a new cookie object and display some
+information about it on the console and on the canvas.
 
 {% highlight javascript linenos %}
 // Simple demo of defining an object in a class.
-Cookie myCookie;
+let myCookie;
 
-void setup(){
-  size(600, 600);
-
+function setup(){
+  createCanvas(150, 150);
+  
   // Create a new cookie with sweetness 10 and no icing.
   myCookie = new Cookie(10, false);
 
+  // Use console.log to show some information about the cookie
+  console.log("Baked: " + myCookie.isBaked);
+  
   // Bake the cookie
-  myCookie.bake();
+  myCookie.bake();  
 
-  // Print out the sweetness of the cookie.
-  console.log("Sweetness of the cookie is: " + myCookie.taste());
+  // Now the cookie is baked
+  console.log("Baked: " + myCookie.isBaked);
 }
 
-void draw(){
+function draw(){
+  background(200);
 
+  // Display the sweetness of the cookie.
+  text("Sweetness of the cookie is: " + myCookie.taste(),
+    10, 10, 130, 130);
 }
 {% endhighlight %}
 
+Click through to the following example to see a live version.
+
+<ul class="code-list">
+
+  {% include example_card.html name="Cookie class" thumb="images/cookie-thumb.png" link="https://editor.p5js.org/awarua/sketches/x8UngPVpM" caption="Simple cookie class." %}
+
+</ul>
+
 <div class="task">
-  <p><strong>Activity:</strong> try the following to test your understanding</p>
+  <p><strong>Activity:</strong> using the 'cookie class' example above, try the
+  following to test your understanding</p>
   <ul>
     <li>
       Try adding a second cookie variable. Give it a different sweetness when
       you create it. Use `console.log()` to check that it is different.
     </li>
     <li>
-      Add a `display()` function to your Cookie class. Make this depend on
+      Add a `show()` function to your Cookie class. Make this depend on
       whether the cookie is baked or not, and how sweet it is. Make it so that
       different cookies are displayed differently on screen.
     </li>
   </ul>
 </div>
 
-Now you know how to create a new tab for your class definition, how to
-define a class with the `class` keyword, how to declare variables within your
-class, what a constructor function is, how to add other functions to your class
-and how to declare, instantiate and use objects from your main Processing
-sketch.
+Now you know how to create a new file for your class definition to keep your
+code organized, how to define a class with the `class` keyword, how to declare
+variables within your class, what a constructor function is, how to add other
+functions to your class and how to declare, instantiate and use objects from
+your main p5js sketch.
 
 ## Making an Aquarium
 
@@ -158,9 +206,11 @@ screen.
 
 ![Aquarium]({{site.baseurl}}{{page.url}}images/aquarium.png)
 
-First, we will need to define a class to create fishes. Create a new processing
-sketch and make a new tab for the Fish class. When you are first defining your
-class, you should ask yourself questions like:
+First, we will need to define a class to create fishes. Create a new p5js
+sketch, make a new file for the Fish class, and link it to your sketch in the
+`index.html` file.
+
+When you are first defining your class, you should ask yourself questions like:
 
 * What information will we need to store in the fish?
 * What information will we need to know in order to create a new fish?
@@ -171,23 +221,17 @@ need to supply the initial x and y position. We will choose a random starting
 velocity.
 
 {% highlight javascript linenos %}
-
 // The Fish class defines fish objects, that move around on the
 // screen and change direction when they bump into the walls.
 class Fish {
-  // Variables to record the x,y position and the x,y velocity.
-  float x;
-  float y;
-  float xVel;
-  float yVel;
-  
   // Constructor function for a new fish.
   // Requires x, y position where the fish is to be created.
-  Fish(float x, float y){
+  constructor(x, y){
+    // Record the x and y position inside 'this'
     this.x = x;
     this.y = y;
-  
-    // Pick a random velocity to begin with
+
+    // Pick a random starting velocity
     this.xVel = random(-1, 1);
     this.yVel = random(-1, 1);
   }
@@ -196,10 +240,10 @@ class Fish {
 }
 {% endhighlight %}
 
-### Add a display function
+### Add a 'show' function
 
 Next, we should think about how to display the fish on the canvas. The code
-listing below defines a display function that draws a triangle pointing in the
+listing below defines a 'show' function that draws a triangle pointing in the
 direction that the fish is heading. Note the use of the `push()`,
 `translate()`, and `rotate()` functions that were introduced in
 [Tutorial 7](../tut07).
@@ -207,20 +251,19 @@ direction that the fish is heading. Note the use of the `push()`,
 Copy and paste this into your `Fish` class **between the curly brackets**.
 
 {% highlight javascript linenos %}
-// Function to display the fish on the canvas.
-void display(){
-  // push an pop matrix to save / reset the coordinate system
-  push();
+  // Function to display the fish on the canvas.
+  show(){
+    // push matrix to save previous state
+    push();
 
-  // Translate to the x, y position of the fish.
-  translate(x, y);
+    // Translate to the x, y position of the fish.
+    translate(this.x, this.y);
 
-  // Draw a triangle to represent the fish
-  // (20, 0) = nose, (-10, -10) = top fin, (-10, 10) = bottom fin
-  triangle(20, 0, -10, -10, -10, 10);
+    // Draw a triangle to represent the fish
+    triangle(20, 0, -10, -10, -10, 10);
 
-  pop();
-}
+    pop();
+  }
 {% endhighlight %}
 
 <div class="task">
@@ -232,17 +275,19 @@ void display(){
     </li>
     <li>
       Could you find a way to adapt this code to make the fish point in the
-      direction it is travelling? (hint: see
+      direction it is travelling? (hint: try using the <code>atan2</code>
+      function in p5js)
+      <!-- see
       <a target="_blank" href="https://youtu.be/xCd6TPclLMU?t=952"
-        >demonstration video</a> accompanying last week's lecture).
+        >demonstration video</a> accompanying last week's lecture). -->
     </li>
   </ul>
 </div>
 
 ### Add an update function
 
-The final thing we need to do to complete our fish class is define another
-function to update the fish. The kind of questions you would ask yourself when
+Now we will add a second function to update the fish, so that it can move around
+as the sketch runs. The kind of questions you would ask yourself when
 defining a function like this are:
 
 * How do you want the fish change each time?
@@ -255,25 +300,25 @@ below into your Fish class **between the curly brackets** to add it do your
 class.
 
 {% highlight javascript linenos %}
-// Update the position of the fish depending on its velocity.
-void update(){
-  x += xVel;
-  y += yVel;
+  // Update the position of the fish depending on its velocity.
+  update(){
+    this.x += this.xVel;
+    this.y += this.yVel;
 
-  // Check whether the fish has gone off the left or right edges.
-  if (x < 0 || x > width){
-    // If it has, reverse direction and move back
-    xVel = -xVel;
-    x += xVel;
-  }
+    // Check whether the fish has gone off the left or right
+    if (this.x < 0 || this.x > width){
+      // If it has, reverse direction and move back
+      this.xVel = -this.xVel;
+      this.x += this.xVel;
+    }
 
-  // Check whether the fish has gone off the top or bottom edges.
-  if (y < 0 || y > height){
-    // If it has, reverse direction and move back
-    yVel = -yVel;
-    y += yVel;
+    // Check whether the fish has gone off the top or bottom
+    if (this.y < 0 || this.y > height){
+      // If it has, reverse direction and move back
+      this.yVel = -this.yVel;
+      this.y += this.yVel;
+    }
   }
-}
 {% endhighlight %}
 
 <div class="task">
@@ -298,20 +343,20 @@ The code below will declare and initialize a single fish variable and then
 update and display it each time `draw()` is called.
 
 {% highlight javascript linenos %}
-Fish myFish;
+let myFish;
 
-void setup(){
-  size(600, 400);
+function setup(){
+  createCanvas(600, 400);
 
   // Create a new fish in the center of the screen.
   myFish = new Fish(width / 2, height / 2);
 }
 
-void draw(){
+function draw(){
   background(204);
 
   myFish.update();
-  myFish.display();
+  myFish.show();
 }
 {% endhighlight %}
 
@@ -328,59 +373,34 @@ void draw(){
 ### Adding some interactivity
 
 We can make the sketch a little more interesting by adding some simple
-interactivity. The code below allows a user to press the 'f' key and add another
-fish at the current mouse position.
+interactivity. The code below allows a user to click the mouse to add a fish.
 
-We use an `ArrayList` to store fishes in the code below. An `ArrayList` is sort
-of like an array, but with one big difference! It can grow and shrink as objects
-are added or removed. This makes it much easier to work with scenarios like an
-aquarium where we don't know ahead of time exactly how many fish we are going to
-have.
-
-`ArrayLists` also let us loop over items in the list using a simpler syntax than
-the basic `for` loops we have used until now. Declaring an ArrayList is
-also bit different than how we would declare an Array. Check the Processing
-reference and the code below, or ask your tutor, to understand how these features
-work.
+We use an `Array` to store fishes in the code below. As new fishes are created,
+we just add them to the array. We don't need to have a separate variable to
+keep track of each one individually.
 
 {% highlight java linenos %}
-/**
- * Draws an aquarium into which the user can add fish by pressing the 'f' key.
- *
- * Jared Donovan 2018
- **/
+let fishes = [];
 
-// Declare an ArrayList of Fish to store the fishes.
-// An ArrayList is like an Array, but it can grow and shrink in size.
-// When we declare an ArrayList, we need to say what kind of object
-// is going to store. This is why we have written '<Fish>'.
-ArrayList<Fish> fishes;
+function setup(){
+  createCanvas(600, 400);
 
-void setup(){
-  size(600, 400);
-
-  // Initialize the new ArrayList of Fish.
-  fishes = new ArrayList<Fish>();
+  // Create a first fish in the center of the screen.
+  fishes.push(new Fish(width / 2, height / 2));
 }
 
-void draw(){
+function draw(){
   background(204);
 
-  // Iterate over the array of fishes, update and display each one.
-  // Another advantage of an ArrayList is that it allows for a nicer syntax
-  // for looping over the collection, as shown below.
-  for (Fish f : fishes){
-    f.update();
-    f.display();
+  // Loop over the array and update each fish. 
+  for (let f of fishes){
+  	f.update();
+  	f.show();
   }
 }
 
-// When the user presses the 'f' key, a new fish
-// should be added at the current mouse position.
-void keyReleased(){
-  if (key == 'f'){
-    fishes.add(new Fish(mouseX, mouseY));
-  }
+function mousePressed(){
+	fishes.push(new Fish(mouseX, mouseY));
 }
 {% endhighlight %}
 
@@ -389,7 +409,7 @@ sketch. The example below also has a complete example that you can download.
 
 <ul class="code-list">
 
-  {% include example_card.html name="aquarium_example_2" thumb="images/aquarium-example-2-thumb.png" link="https://editor.p5js.org/awarua/sketches/x8UngPVpM" caption="Finished example of the aquarium example." %}
+  {% include example_card.html name="aquarium_example_1" thumb="images/aquarium-example-1-thumb.png" link="https://editor.p5js.org/awarua/sketches/ZsWdIfrpp" caption="Finished version of the aquarium example." %}
 
 </ul>
 
@@ -403,11 +423,12 @@ starfish, submarine, seaweed):
 * Think about what information your object would need to store (fields)
 * Think about what information you would need to create a new object
   (constructor function)
-* Think about how it should be drawn to the canvas (display method)
-* Think about how it should move/change over time (update method)
+* Think about how it should be drawn to the canvas (show function)
+* Think about how it should move/change over time (update function)
 * Think about how it can be added to the aquarium through user input
+* Think about how it could be interacted with by the user
 
-You should spend 30minutes to an hour on this activity. At the end of the
+You should spend 30 minutes to an hour on this activity. At the end of the
 session we will pick one example to show to the class.
 
 <div class="task">
@@ -462,3 +483,9 @@ see the below online tutorial.
 </ul>
 
 -->
+
+## Reference links
+
+1. [`atan2`][1]
+
+[1]: https://p5js.org/reference/#/p5/atan2

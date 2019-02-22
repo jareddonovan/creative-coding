@@ -87,6 +87,7 @@ you.
 
 It is often necessary to be able to control how p5js's coordinate system
 works. We will use the transformation functions for this:
+
 * [`translate()`][2] moves the `(0, 0)` point to the left, right, up or down.
 * [`rotate()`][3] rotates the x and y drawing axes
 * [`scale()`][4] changes the scale of the drawing axes

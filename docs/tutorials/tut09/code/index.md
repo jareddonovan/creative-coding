@@ -2,6 +2,7 @@
 title: Examples
 ---
 
+* [Aquarium_Example_1](Aquarium_Example_1)
 * [Aquarium_Example_2](Aquarium_Example_2)
 * [Fishy_aquarium](Fishy_aquarium)
 * [Basic_aquarium](Basic_aquarium)
@@ -9,5 +10,6 @@ title: Examples
 * [Cookie_class](Cookie_class)
 * [Ripples](Ripples)
 * [Tortoise_chicken_herder](Tortoise_chicken_herder)
+* [Object_literal](Object_literal)
 
 [&lt; Back to tutorial](../)
