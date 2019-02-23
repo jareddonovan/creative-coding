@@ -144,7 +144,7 @@ you won't need to worry too much about how this works.
   through the index.html file now and find the links to the following
   files:
   * **p5js libraries** Near the top of the index.html page, you will see three lines
-    something like `<script src="http://cdn.cloudflare.com/p5js/p5dom.js">.
+    something like `<script src="https://cdn.cloudflare.com/p5js/p5dom.js"\>`.
     These are links to the three main parts of the p5dom library, which are
     the p5js main library, p5dom library, and p5sound library. If you don't
     need one of these, you can remove the link, but it doesn't hurt to leave
