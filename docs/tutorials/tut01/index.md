@@ -33,9 +33,21 @@ Make sure you click around and explore how it works!
 
 ## Sign up for an account on the p5js web editor
 
-* <https://editor.p5js.org/>
+The video below gives a quick introduction to the p5js web editor. It shows how
+to sign up for an account, some of the settings, the parts of the interface,
+how to run your sketches, and how to get a link that you can share with others.
 
-The editor should look something like the following picture
+{% include youtube.html id="KYHmZE9IbsU" %}
+
+<p class="task">
+  <strong>Try it now:</strong> Go to the online editor at 
+  <a href="https://editor.p5js.org">https://editor.p5js.org</a>,
+  sign up for an account, explore how the editor works and save your first
+  sketch
+</p>
+
+Once you are signed in, the editor should look something like the following
+picture (depending on what theme you've chosen).
 
 ![p5js web editor](./images/editor-p5js-parts.png)
 
