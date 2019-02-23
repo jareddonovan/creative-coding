@@ -16,106 +16,44 @@ layout: tutorial
 The following list of topics may be of help if you need to refer back to any
 of the topics we have covered in this semester's tutorials and lectures.
 
-<ul>
-  <li><strong>Tutorial 1:</strong> {% include unit_link.html
-      name="tut01"
-      link_text="Hello Processing"
-    %}
-    <ul>
-      <li>Introduction to drawing in Processing</li>
-      <li>Basic shapes</li>
-      <li>Basic mouse interaction</li>
-    </ul>
-  </li>
-  <li><strong>Tutorial 2:</strong> {% include unit_link.html
-      name="tut02"
-    link_text="Active Drawing"
-    %}
-    <ul>
-      <li>Coordinate system</li>
-      <li>Shapes</li>
-      <li>Drawing Examples</li>
-      <li>Mouse Input Examples</li>
-      <li>Colour Examples</li>
-    </ul>
-  </li>
-  <li><strong>Tutorial 3:</strong> {% include unit_link.html
-      name="tut03"
-    link_text="Making Patterns"
-    %}
-    <ul>
-      <li>Iteration</li>
-      <li>Conditionals</li>
-      <li>Logical Operators</li>
-      <li>Random Function</li>
-    </ul>
-  </li>
-  <li><strong>Tutorial 4:</strong> {% include unit_link.html
-      name="tut04"
-    link_text="Working with Bitmaps"
-    %}
-    <ul>
-      <li>Loading and Displaying Images</li>
-      <li>Animation with Bitmap Examples</li>
-      <li>Image Processing Examples</li>
-      <li>Working with SVG Images</li>
-    </ul>
-  </li>
-  <li><strong>Tutorial 5:</strong> {% include unit_link.html
-      name="tut05"
-    link_text="Sound and Image"
-    %}
-    <ul>
-      <li>Adding external libraries</li>
-      <li>Loading and playing a sound</li>
-      <li>Getting information from sounds</li>
-      <li>Creating and analysing sound</li>
-    </ul>
-  </li>
-  <li><strong>Tutorial 6:</strong> {% include unit_link.html
-      name="tut06"
-    link_text="Fonts, Text and Time"
-    %}
-    <ul>
-      <li>Text as data in Processing</li>
-      <li>Fonts</li>
-      <li>Working with time</li>
-      <li>Typographic animations</li>
-      <li>Loading text</li>
-    </ul>
-  </li>
-  <li><strong>Tutorial 7:</strong> {% include unit_link.html
-      name="tut07"
-    link_text="A2 Kick-off"
-    %}
-    <ul>
-      <li>Translation functions</li>
-      <li>Shapes and Curves</li>
-      <li>Applying shape and curve functions</li>
-    </ul>
-  </li>
-  <li><strong>Tutorial 9:</strong> {% include unit_link.html
-      name="tut09"
-    link_text="Objects and Functions"
-    %}
-  </li>
-  <li><strong>Tutorial 10:</strong> {% include unit_link.html
-      name="tut10"
-    link_text="Feedback Session"
-    %}
-  </li>
-  <li><strong>Tutorial 11:</strong> {% include unit_link.html
-      name="tut11"
-    link_text="Animating with Random, Sin, and Noise"
-    %}
-  </li>
-  <li><strong>Tutorial 12:</strong> {% include unit_link.html
-      name="tut12"
-    link_text="Advanced Topics"
-    %}
-  </li>
-</ul>
-
+* **Tutorial 1:** [Hello p5js](../tut01)
+  * Introduction to drawing in p5js
+  * Basic shapes
+  * Basic mouse interaction
+* **Tutorial 2:** [Active Drawing](../tut02)
+  * Coordinate system
+  * Shapes
+  * Drawing Examples
+  * Mouse Input Examples
+  * Colour Examples
+* **Tutorial 3:** [Making Patterns](../tut03)
+  * Iteration
+  * Conditionals
+  * Logical Operators
+  * Random Function
+* **Tutorial 4:** [Working with Images](../tut04)
+  * Loading and Displaying Images
+  * Animation with Bitmap Examples
+  * Image Processing Examples
+* **Tutorial 5:** [Sound and Image](../tut05)
+  * Adding external libraries
+  * Loading and playing a sound
+  * Getting information from sounds
+  * Creating and analyzing sound
+* **Tutorial 6:** [Fonts, Text and Time](../tut06)
+  * Text as data in p5js
+  * Fonts
+  * Working with time
+  * Typographic animations
+  * Loading text
+* **Tutorial 7:** [A2 Kick-off](../tut07)
+  * Translation functions
+  * Shapes and Curves
+  * Applying shape and curve functions
+* **Tutorial 9:** [Classes and Objects](../tut09)
+* **Tutorial 10:** [Feedback Session](../tut10)
+* **Tutorial 11:** [Animating with Random, Sin, and Noise](../tut11)
+* **Tutorial 12:** [Advanced Topics](../tut12)
 
 <!--
 
