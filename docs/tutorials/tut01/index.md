@@ -5,8 +5,10 @@ layout: tutorial
 ---
 
 <p class="lead">
-  The aim of this tutorial is to get you familiar with the p5js library.
-  You will also write your first programming 'sketch' with p5js.
+  Note: There are no in-person tutorials in week 1. This is an online activity
+  to familiarize yourself with p5js. The aim of this tutorial is to get you
+  familiar with the p5js library. You will also write your first programming
+  'sketch' with p5js.
 </p>
 
 ## P5js helps you do creative coding in JavaScript

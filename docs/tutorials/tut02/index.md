@@ -5,7 +5,7 @@ layout: tutorial
 ---
 
 <p class="lead">
-  This is the first week of tutorials. Please make sure sign up to a
+  This is the first week of in-person tutorials. Please make sure sign up to a
   tutorial class and that you attend the first tutorial. In this
   weeks' tutorial we'll make our first sketch in Processing. You'll learn
   how to draw images using code, and introduce foundational programming
