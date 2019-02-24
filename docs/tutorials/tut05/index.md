@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 5: Sound and Image"
+title: "Tutorial 5: Sound and Visualization"
 tut_num: 5
 layout: tutorial
 ---
