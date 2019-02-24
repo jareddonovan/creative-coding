@@ -1,0 +1,3 @@
+#!/bin/bash
+FILE=$1
+mogrify -resize '150x150^' -gravity center -crop 150x150+0+0 +repage -quality 100 -path ../ $FILE
