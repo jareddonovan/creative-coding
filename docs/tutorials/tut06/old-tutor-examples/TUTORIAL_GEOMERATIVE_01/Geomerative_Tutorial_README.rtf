@@ -1,0 +1,179 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Light;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16500\viewh14520\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs26 \cf0 \
+///////////////////////////////////////////////////////////////////////\
+--------- 
+\f1\b GEOMERATIVE
+\f0\b0  
+\f1\b TUTORIAL 
+\b0 -
+\f0 ------------\
+///////////////////////////////////////////////////////////////////////{\field{\*\fldinst{HYPERLINK "http://www.gnu.org/licenses/gpl.html"}}{\fldrslt \
+}} \
+ A beginners tutorial using the Geomerative Library\
+ developed by Ricard Marxer. \
+{\field{\*\fldinst{HYPERLINK "http://www.ricardmarxer.com/geomerative/"}}{\fldrslt  http://www.ricardmarxer.com/geomerative/\
+}} \
+ More info on these tutorial and workshops at :\
+{\field{\*\fldinst{HYPERLINK "http://www.freeartbureau.org/blog"}}{\fldrslt  www.freeartbureau.org/blog\
+}}\
+///////////////////////////////////////////////////////////////////////\
+\
+This is an introductory step by step tutorial for using the Geomerative Library. It includes basic information about the function of various \
+methods and classes within the library and should be of particular help to graphic designers and artists who wish to work with fonts and \
+text. All sketches provided have full comments explaining important aspects of the library. The tutorial sketches are also accompanied \
+by a separate folder which includes a selection of examples. These examples were developed during our workshops and present various\
+implementations of the library. \
+\
+Your feedback is essential. We would like to improve and add to this first edition of tutorials, so if you have suggestions, code examples \
+or would simply like to support us, please get in touch :{\field{\*\fldinst{HYPERLINK "mailto:%20info@freeartbureau.org"}}{\fldrslt  info@freeartbureau.org\
+}}\
+\
+///////////////////////////////////////////////////////////////////////\
+\
+
+\f1\b \ul Working with the Geomerative Library.\
+\
+
+\f0\b0 \ulnone You will find all the necessary files for this tutorial at the following address :\
+
+\fs30 \ul \
+
+\fs26 \ulnone \
+\ul 1). a_Geo_Font_01\
+\ulnone \
+Open up this first sketch which shows the most basic structure for displaying text with Geomerative. Note the need to first import the Geomerative library at the beginning of our program using import.geomerative.*; All libraries in Processing need to be imported. We then need to 'initialize' the Geomerative library which is done in setup by calling RG.init(this) \
+\
+In Processing, we use the PFont class to work with fonts. These are then called with the loadFont or createFont methods. You can read more about these methods {\field{\*\fldinst{HYPERLINK "http://processing.org/reference/createFont_.html"}}{\fldrslt here}}. With Geomerative however, we use the RFont class which is specific to the library and will handle all our loading and displaying of fonts amongst other things. Now, we can only use True Type font types with the library so that means all fonts ending in .ttf. It is important to place these in the folder named 'data' at the root of your sketch otherwise we will not be able to access the font. \
+\
+Once we have all these in place we can simply call our text using draw(). Try playing with different fonts and font sizes. Remember that Geomerative inherits many of Processing's inbuilt functions such as fill and stroke so that you can change the appearance of your text. \
+
+\i\fs24 \
+NB. Classes & Methods
+\i0 \
+\
+\pard\pardeftab720\sa220
+
+\f1\i\b \cf2 RFont
+\f0\i0\b0  is a reduced class variable for creating, holding and drawing text from TrueType Font files. It's a basic interpreter of TrueType fonts enabling to access any String in the form of a group of shapes. Enabling us in this way to acces their geometry.
+\fs26 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\ul 2). b_Geo_Font_02\ulnone \
+\
+In this sketch we introduce three important classes that will allow us to access data from our shape or font. In this case we will be accessing the vertex points on the outline of a font and using this information to draw small ellipses at each point. Note that there are a number of modes that give different possible approaches to accessing this data and therefore giving very different results. For the time being though, lets just stick with one mode. \
+\
+Note that there are three major steps in setting up this code. The first is to configure the segment length along our shape using the RCommand class. Next we group that information together with the RGroup class and finally we create an array of in which to access this information using the RPoint class. \
+\
+Try drawing with other shapes, play with size, color, fill and stroke and see how many variations you can create with this basic structure. \
+\
+
+\i\fs24 NB. Classes & Methods
+\i0 \
+\
+\pard\pardeftab720\sa220
+
+\f1\i\b \cf2 RCommand
+\f0\i0\b0  is a class that lets us configure certain behavious in relation to a font's outline data. We can configure how we will draw from these points. 
+\f1\i\b RCommand
+\f0\i0\b0  gives us a number of modes : ADAPTATIVE, UNIFORMLENGTH\'85.amongst others which each have a specific effect on how our outline data is retrieved. \
+
+\f1\i\b RGroup
+\i0\b0  
+\f0 is a class that groups geometric elements together and from which we can draw and transform them, such as Shapes, Polygons or Meshes.\
+
+\f1\i\b RPoint
+\f0\i0\b0  is a very simple class for creating, holding and drawing 2d points. It enables us to retrieve the basic data from any shape/font.\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs26 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \ul \ulc0 3). c_Geo_Font_02b_Vertex\ulnone \
+\
+This is just a variation of the above sketch using vertex to draw the outline. You could also use curveVertex if you want curves of course. You can play a little with the different MODES for beginShape() to get some varied forms. Try LINES, TRIANGLES, TRIANGLES_STRIP or QUAD_STRIP. Basically, once you have access to a shapes outline and its points, you can apply any shape you like to create an infinite number of combinations and varied forms. \
+\
+\
+\ul 4). d_Geo_Font_02c_Lines\ulnone \
+\
+Again this is a variation of the above basic skeleton. This time we are simply using the line function as a shape. Play with a number of combinations in the code as suggested to get a feel for the many different variations possible. You will need to experiment a little to get the right coordinates.  \
+\
+\
+\ul 5). e_Geo_Font_03_Keys\
+\
+\ulnone This is the final sketch in the tutorial in which we have added key input and pdf saving. Again, the idea is to play with different shape combinations and fonts to develop a more complex image. Once you have grasped the functioning of this basic structure you should look at some of the examples provided that develop a little further this basic structure.  \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 ///////////////////////////////////////////////////////////////////////\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \ul \ulc0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\b \cf0 Geomerative Examples\
+\
+
+\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0 \cf0 \ulnone 1). \ul TypoGeo_Motion_01\
+\ulnone \
+We move our ellipses along the x axis which gives a completely different form to our word. Try adding the value 'n' to both values for the diameter of our ellipse and see what happens. \
+ \
+ellipse(myPoints[i].x, myPoints[i].y, n, n);\ul \
+\
+\ulnone 2). \ul TypoGeo_Random\
+\ulnone \
+Here we have added a random value called jitter which is affecting our font's outline making jagged lines. Each time you press on the screen with the mouse a new random value is calculated therefore giving a different result. You can also export an image as a PDF by pressing CONTROL.\
+\
+3). \ul TypoGeo_Wiggle\
+\ulnone \
+Again here we have added a random value to play with the font's outline except this time we are creating a word in motion. We could use this as a basic sketch to develop a program in which sound is used to affect the outline. \
+\
+4). \ul TypoGeo_SoundIn\ulnone \
+\
+As above but using sound as a parameter to move the font's outline. \
+\
+\
+5). \ul TypoGeo_Deform\ulnone \
+\
+We have developed a class called fontAgent which is really basic but is a good start for developing more complex systems. In this dynamic example, you can interact with the word using the mouse and keyboard.\
+\
+6). \ul TypoGeo_Motion_02\ulnone \
+\
+In this example we have added a random algorithm so that the particles disintegrate slowly in one direction. \
+\
+7). TypoGeo_ExtraBright\
+\
+A mix of parameters that interact with your mouse position creating very different dynamic results. Play and save. Thanks to St\'e9phane Buellet for this fine piece developed during our Typos G\'e9n\'e9ratives workshop in Lure 2011. \
+\
+\
+8). \ul TypoGeo_ParticleSystem\ulnone \
+\
+An autonomous example showing greater complexity in our Pvector class and calling on an ArrayList to create an animated font. Thanks to Alex Le Guillou for this piece developed during the Processing Paris workshops 2011. \
+\
+\
+9). \ul TypoGeo_Rotate\ulnone \
+\
+Does what it says - we rotate our shapes on our outline and that's it.  \
+\
+\
+10). \ul TypoGeo_Merge\ulnone \
+\
+Nice sketch developed by one of our participants during the Typo G\'e9n\'e9rative workshop. There are two String values for this one and we merge between the two using a random algorithm. The transition is pretty good. \
+\
+///////////////////////////////////////////////////////////////////////\
+\
+ Licensed under GNU General Public License \
+ (GPL) version 3.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://www.gnu.org/licenses/gpl.html"}}{\fldrslt \cf0  http://www.gnu.org/licenses/gpl.html}}\
+\
+///////////////////////////////////////////////////////////////////////\
+\
+\
+\
+}
