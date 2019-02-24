@@ -1,7 +1,7 @@
 ---
 title: About
-add_to_nav: true
 permalink: /about/
+add_to_nav: true
 layout: page
 ---
 
