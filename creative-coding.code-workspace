@@ -1,9 +1,12 @@
 {
 	"folders": [
-		{
-			"path": "."
-		}
-	],
+    {
+      "path": "."
+    },
+    {
+      "path": "/Users/donovan2/Documents/teaching/dxb211"
+    }
+  ],
   "settings": {
     "markdownlint.config": {
       "MD002": false,
