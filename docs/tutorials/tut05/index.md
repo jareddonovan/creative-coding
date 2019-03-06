@@ -146,9 +146,9 @@ welcome to explore more complex examples if you're interested.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="Synthesize Sound" name="SynthesizeSound" example_dir="online-examples" do_not_link=true caption="SynthesizeSound is a sketch which creates a basic oscillator and   lets the user manipulate the parameters: Frequency, Amplitude and waveform." %}
+{ include captioned_card.html title="Synthesize Sound" name="SynthesizeSound" example_dir="online-examples" do_not_link=true caption="SynthesizeSound is a sketch which creates a basic oscillator and   lets the user manipulate the parameters: Frequency, Amplitude and waveform." }
 
-{% include captioned_card.html title="Analyse Sound" name="AnalyzeSound" example_dir="online-examples" do_not_link=true caption="FFT = Fast Fourier Transform - which converts a time domain signal into frequency domain.  In short, makes those EQ graphics showing different frequency bands." %}
+{ include captioned_card.html title="Analyse Sound" name="AnalyzeSound" example_dir="online-examples" do_not_link=true caption="FFT = Fast Fourier Transform - which converts a time domain signal into frequency domain.  In short, makes those EQ graphics showing different frequency bands." }
 
 </ul>
 
@@ -193,9 +193,9 @@ The following example is from the lecture
 
 <!-- TODO: I'm not sure it's worth porting the following to p5.js
 
-{% include captioned_card.html name="simple_audio_input" example_dir="tutor-examples" do_not_link=true caption="A sketch which draws the current volume from the audio input." %}
+{ include captioned_card.html name="simple_audio_input" example_dir="tutor-examples" do_not_link=true caption="A sketch which draws the current volume from the audio input." }
 
-{% include captioned_card.html name="beat_grid" example_dir="tutor-examples" do_not_link=true caption="Adapted from the beat detection above. Uses a song to generate a pleasing visual pattern. This shows how you can adapt the simple examples above to generate more complex and interesting visual outputs." %}
+{ include captioned_card.html name="beat_grid" example_dir="tutor-examples" do_not_link=true caption="Adapted from the beat detection above. Uses a song to generate a pleasing visual pattern. This shows how you can adapt the simple examples above to generate more complex and interesting visual outputs." }
 
 -->
 
@@ -211,7 +211,7 @@ The following example is from the lecture
   <li>
     <a class="title-link" target="_blank" href="https://processing.org/tutorials/sound/">Processing Sound Tutorial</a>
     <a class="img-link" target="_blank" href="https://processing.org/tutorials/sound/">
-      <img src="/bbcswebdav/courses/DXB303_18se1/tutorials/tut05/images/sound_tutorial.png">
+      <img src="{{ site.baseurl }}/tutorials/tut05/images/sound_tutorial.png">
     </a>
     A detailed tutorial on the use of sound in Processing.
   </li>

@@ -59,8 +59,8 @@ of the topics we have covered in this semester's tutorials and lectures.
 
 ## Survey
 
-Anonymous survey about DXB303 learning resources
-Please take 10 minutes and help us understand which learning resources in DXB303 were the most use to you this semester
+Anonymous survey about DXB211 learning resources
+Please take 10 minutes and help us understand which learning resources in DXB211 were the most use to you this semester
 
 <p><iframe width="760" height="500" src="https://docs.google.com/forms/d/1C5ozAanof3a0PDErbjoPNsTlC7tg11jhsqgjvO73Zvw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe></p>
 

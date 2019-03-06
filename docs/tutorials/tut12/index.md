@@ -43,8 +43,8 @@ demo, email [j.donovan@qut.edu.au](mailto:j.donovan@qut.edu.au) with your
 suggestions!
 
 <!-- TODO: Release survey later.
-## Survey on DXB303
+## Survey on DXB211
 
-The following survey is to gather information from you that we can use to improve DXB303 in future. Please take 5 minutes to answer the 4 questions in the survey. Your feedback is greatly appreciated!
+The following survey is to gather information from you that we can use to improve DXB211 in future. Please take 5 minutes to answer the 4 questions in the survey. Your feedback is greatly appreciated!
 
 -->

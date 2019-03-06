@@ -32,7 +32,7 @@ answer any questions you have. Make sure you understand all the different parts
 of the assignment, including the documentation.
 
 Review the task sheet for Assignment 2:
-* [Task Sheet]({{site.baseurl}}/assessment/a2-major-interactive-work/task-sheet-dxb303-a2.pdf)
+* [Task Sheet]({{site.baseurl}}/assessment/a2-major-interactive-work/task-sheet-dxb211-a2.pdf)
 
 ## A2 Concept Brainstorming and Planning
 

@@ -1,5 +1,5 @@
 /*
- * DXB303 Programming for Visual Designers
+ * DXB211 Programming for Visual Designers
  * Repetition - drawing a grid 
  * by Gavin Sade
  * Copyright (c) 2014 QUT

@@ -41,9 +41,9 @@ bitmap images stored in an array.
 
 <ul class="code-list">
 
-{% include captioned_card.html name="Sequential" example_dir="online-examples" link="https://processing.org/examples/sequential.html" caption="An animation tiled across the canvas." %}
+{  include captioned_card.html name="Sequential" example_dir="online-examples" link="https://processing.org/examples/sequential.html" caption="An animation tiled across the canvas."  }
 
-{% include captioned_card.html title="Animated Sprite" name="AnimatedSprite" example_dir="online-examples" link="https://processing.org/examples/animatedsprite.html" caption="A simple animation follows the mouse position." %}
+{  include captioned_card.html title="Animated Sprite" name="AnimatedSprite" example_dir="online-examples" link="https://processing.org/examples/animatedsprite.html" caption="A simple animation follows the mouse position."  }
 
 </ul>
 
@@ -59,21 +59,21 @@ inputs such as 3D position.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="Pixel Array" name="PixelArray" example_dir="online-examples" link="https://processing.org/examples/pixelarray.html" caption="Samples the color of every pixel in an image. Click and drag mouse to control sample point." %}
+{  include captioned_card.html title="Pixel Array" name="PixelArray" example_dir="online-examples" link="https://processing.org/examples/pixelarray.html" caption="Samples the color of every pixel in an image. Click and drag mouse to control sample point."  }
 
-{% include captioned_card.html name="Brightness" example_dir="online-examples" link="https://processing.org/examples/brightness.html" caption="Adjust brightness of pixels in the image according to how close to the mouse they are." %}
+{  include captioned_card.html name="Brightness" example_dir="online-examples" link="https://processing.org/examples/brightness.html" caption="Adjust brightness of pixels in the image according to how close to the mouse they are."  }
 
-{% include captioned_card.html name="Blur" example_dir="online-examples" link="https://processing.org/examples/blur.html" caption="Uses a low pass filter to blur an image." %}
+{  include captioned_card.html name="Blur" example_dir="online-examples" link="https://processing.org/examples/blur.html" caption="Uses a low pass filter to blur an image."  }
 
-{% include captioned_card.html title="Edge Detection (Advanced)" name="EdgeDetection" example_dir="online-examples" link="https://processing.org/examples/edgedetection.html"	caption="Uses a high-pass filter to sharpen an image." %}
+{  include captioned_card.html title="Edge Detection (Advanced)" name="EdgeDetection" example_dir="online-examples" link="https://processing.org/examples/edgedetection.html"	caption="Uses a high-pass filter to sharpen an image."  }
 
 -->
 
 <!-- TODO: The following examples are still on the processing site, but I can't find where they're linked...
 
-{% include captioned_card.html title="Zoom (Advanced 3D)" name="Zoom" example_dir="online-examples" link="https://processing.org/examples/zoom.html" caption="Displays a 3D image, where the heights of lines depend on colors from an image." %}
+{  include captioned_card.html title="Zoom (Advanced 3D)" name="Zoom" example_dir="online-examples" link="https://processing.org/examples/zoom.html" caption="Displays a 3D image, where the heights of lines depend on colors from an image."  }
 
-{% include captioned_card.html title="Explode (Advanced)" name="Explode" example_dir="online-examples" link="https://processing.org/examples/explode.html" caption="Mouse controls zoom level. Zoom amount depends on color of pixels in image." %}
+{  include captioned_card.html title="Explode (Advanced)" name="Explode" example_dir="online-examples" link="https://processing.org/examples/explode.html" caption="Mouse controls zoom level. Zoom amount depends on color of pixels in image."  }
 
 </ul>
 
@@ -91,13 +91,13 @@ like Illustrator or Inkscape to produce SVG images.
 
 <ul class="code-list">
 
-{% include captioned_card.html title="Load and Display SVG" name="LoadDisplaySVG" example_dir="online-examples" link="https://processing.org/examples/loaddisplaysvg.html" caption="Loads and displays an SVG image." %}
+{  include captioned_card.html title="Load and Display SVG" name="LoadDisplaySVG" example_dir="online-examples" link="https://processing.org/examples/loaddisplaysvg.html" caption="Loads and displays an SVG image."  }
 
-{% include captioned_card.html title="Disable Style" name="DisableStyle" example_dir="online-examples" link="https://processing.org/examples/disablestyle.html" caption="Shows how to disable the styles in an svg and restyle it." %}
+{  include captioned_card.html title="Disable Style" name="DisableStyle" example_dir="online-examples" link="https://processing.org/examples/disablestyle.html" caption="Shows how to disable the styles in an svg and restyle it."  }
 
-{% include captioned_card.html title="Scale Shape" name="ScaleShape" example_dir="online-examples" link="https://processing.org/examples/scaleshape.html" caption="Shows how to change the scale of an SVG image." %}
+{  include captioned_card.html title="Scale Shape" name="ScaleShape" example_dir="online-examples" link="https://processing.org/examples/scaleshape.html" caption="Shows how to change the scale of an SVG image."  }
 
-{% include captioned_card.html title="Get Child" name="GetChild" example_dir="online-examples" link="https://processing.org/examples/getchild.html" caption="Shows how to get a child part of an SVG image and style it differently." %}
+{  include captioned_card.html title="Get Child" name="GetChild" example_dir="online-examples" link="https://processing.org/examples/getchild.html" caption="Shows how to get a child part of an SVG image and style it differently."  }
 
 </ul>
 
@@ -136,13 +136,13 @@ You can also explore how these work yourself.
 
 <ul class="code-list">
 
-{% include captioned_card.html name="p1_mouse" example_dir="tutor-examples" caption="A student work exploring the pointillism example. This one follows the mouse." %}
+{  include captioned_card.html name="p1_mouse" example_dir="tutor-examples" caption="A student work exploring the pointillism example. This one follows the mouse."  }
 
-{% include captioned_card.html name="p2_large_to_small" example_dir="tutor-examples" caption="Another student work exploring the pointillism example. This one goes from large to small." %}
+{  include captioned_card.html name="p2_large_to_small" example_dir="tutor-examples" caption="Another student work exploring the pointillism example. This one goes from large to small."  }
 
-{% include captioned_card.html name="p3_random_directions" example_dir="tutor-examples" caption="A third example by the same student exploring the pointillism example. This one draws in random directions." %}
+{  include captioned_card.html name="p3_random_directions" example_dir="tutor-examples" caption="A third example by the same student exploring the pointillism example. This one draws in random directions."  }
 
-{% include captioned_card.html name="p4_multiple_painters" example_dir="tutor-examples" caption="A final example of a student's explorations of the pointillism example. This one draws in random directions with multiple 'brushes'" %}
+{  include captioned_card.html name="p4_multiple_painters" example_dir="tutor-examples" caption="A final example of a student's explorations of the pointillism example. This one draws in random directions with multiple 'brushes'"  }
 
 </ul>
 
@@ -154,11 +154,11 @@ You can also explore how these work yourself.
 
 <!-- TODO: Rework old examples from Gavin Sade.
 
-{% include captioned_card.html name="exquisiteCorpse" example_dir="tutor-examples" caption="Draws a random head, body, and tail. Change with 'a', 's', 'd' keys." %}
+{  include captioned_card.html name="exquisiteCorpse" example_dir="tutor-examples" caption="Draws a random head, body, and tail. Change with 'a', 's', 'd' keys."  }
 
-{% include captioned_card.html name="faceSlam" example_dir="tutor-examples" link_to_web_version=true caption="Let's mash up the faces of Brad and Angelina" %}
+{  include captioned_card.html name="faceSlam" example_dir="tutor-examples" link_to_web_version=true caption="Let's mash up the faces of Brad and Angelina"  }
 
-{% include captioned_card.html  name="painterly" example_dir="tutor-examples" caption="Another Brad / Ange mashup." %}
+{  include captioned_card.html  name="painterly" example_dir="tutor-examples" caption="Another Brad / Ange mashup."  }
 
 -->
 

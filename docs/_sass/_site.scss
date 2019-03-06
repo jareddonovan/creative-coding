@@ -22,7 +22,7 @@ div.unit-nav-label {
   margin-right: 8px;
 }
 
-ul.dxb303-nav-list {
+ul.dxb211-nav-list {
   height: auto;
   list-style: none;
   margin-left: 66px;
@@ -44,13 +44,13 @@ ul.dxb303-nav-list {
       border-radius: 20px;
     }
 
-    a.dxb303-disabled, a.dxb303-current-week.disabled {
+    a.dxb211-disabled, a.dxb211-current-week.disabled {
       background: $disabled;
       color: silver;
       cursor: not-allowed;
     }
 
-    a.dxb303-disabled:hover {
+    a.dxb211-disabled:hover {
       background: $disabled;
       color: silver;
     }
@@ -126,7 +126,7 @@ ul.code-list a:hover {
   color: #D6D; 
 }
 
-ul.code-list img, div.dxb303-content ul.code-list iframe {
+ul.code-list img, div.dxb211-content ul.code-list iframe {
   border: 1px solid silver;
   margin: 0 20px 10px 0;
   display: block;
