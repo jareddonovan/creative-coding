@@ -1,0 +1,48 @@
+/* Best */
+
+ul.example-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+
+  li {
+    background: white;
+    margin: 0;
+    display: block;
+    width: 400px;
+    height: auto;
+    border: 1px solid $grey-color-light;
+    margin: 20px;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 0.85rem;
+    line-height: 1.4rem; 
+  
+    code {
+      font-size: inherit; 
+    }
+  }
+
+  .title-link {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: black; 
+  }
+
+  a.img-link {
+    text-decoration: none; 
+  }
+
+  a:hover {
+    color: $brand-color; 
+  }
+
+  img, iframe {
+    border: 1px solid $grey-color-light;
+    margin: 0 20px 10px 0;
+    display: block;
+    float: left; 
+  }
+}

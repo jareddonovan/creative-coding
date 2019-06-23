@@ -5,15 +5,23 @@
 
   <body>
 
-    {% include header.html %}
+    {% include bb_header.html %}
 
     <div class="page-content">
       <div class="wrapper">
-        {{ content }}
+
+        <!-- ===== CUT HERE ======================================================== -->
+
+          <div class="dxb211-content">
+            {{ content }}
+          </div>
+
+        <!-- ===== END CUT ========================================================= -->
+        
       </div>
     </div>
 
-    {% include footer.html %}
+    {% include bb_footer.html %}
 
   </body>
 

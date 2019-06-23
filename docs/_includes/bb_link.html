@@ -1,0 +1,5 @@
+{% assign course_id = site.data.unit.bb_course_id %}
+{% assign content_id = site.data.tut_details[include.id].bb_content_id %}
+{% assign bb_link_base = "https://blackboard.qut.edu.au/webapps/blackboard/content/listContentEditable.jsp?content_id=" %}
+                         
+<a href="{{ bb_link_base}}{{ content_id }}&course_id={{ course_id }}">{{ include.text }}</a>

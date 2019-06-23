@@ -1,6 +1,6 @@
 ---
-title: "Tutorial 12: Assignment 2 Assistance"
-tut_num: 12
+title: "Tutorial 12: Advanced Topics"
+tut_id: tut12
 layout: tutorial
 ---
 <p class="lead">
@@ -16,9 +16,9 @@ Several students have requested support in understanding collision detection.
 If you are interested in this, you may find the following p5js example useful.
 Also check the coding demo video on this topic on Blackboard:
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Circle collision" thumb="images/circle-collision-thumb.png" link="https://editor.p5js.org/awarua/sketches/CqQMnGzcb" caption="Demonstrates a simple physics simulation that takes into account the mass of the objects." %}
+  {% include example_card.html name="Circle collision" thumb="images/circle-collision-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/CqQMnGzcb" caption="Demonstrates a simple physics simulation that takes into account the mass of the objects." %}
 
 </ul>
 

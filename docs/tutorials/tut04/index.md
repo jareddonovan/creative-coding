@@ -1,6 +1,6 @@
 ---
-title: "Tutorial 4: Working with Images"
-tut_num: 4
+title: "Tutorial 4: Recombination Effects"
+tut_id: tut04
 layout: tutorial
 ---
 
@@ -16,7 +16,7 @@ layout: tutorial
 
 The following examples show the basics of loading and displaying images.
 
-<ul class="code-list">
+<ul class="example-list">
 
 {% include example_card.html name="Load an image" thumb="images/load_display_image-screenshot.png" link="https://p5js.org/examples/image-load-and-display-image.html" caption="Loads and displays an image." %}
 
@@ -39,7 +39,7 @@ The following examples show the basics of loading and displaying images.
 The following examples show how to create animations with a series of
 bitmap images stored in an array.
 
-<ul class="code-list">
+<ul class="example-list">
 
 {  include captioned_card.html name="Sequential" example_dir="online-examples" link="https://processing.org/examples/sequential.html" caption="An animation tiled across the canvas."  }
 
@@ -57,7 +57,7 @@ The following examples all show how to work with the pixel data in an image.
 The more advanced examples show how you can do this to map pixel values to
 inputs such as 3D position.
 
-<ul class="code-list">
+<ul class="example-list">
 
 {  include captioned_card.html title="Pixel Array" name="PixelArray" example_dir="online-examples" link="https://processing.org/examples/pixelarray.html" caption="Samples the color of every pixel in an image. Click and drag mouse to control sample point."  }
 
@@ -89,7 +89,7 @@ graphic format. This means that they don't get pixelated when you zoom in on
 them. You can also manipulate the colors at run time. You can use a program
 like Illustrator or Inkscape to produce SVG images.
 
-<ul class="code-list">
+<ul class="example-list">
 
 {  include captioned_card.html title="Load and Display SVG" name="LoadDisplaySVG" example_dir="online-examples" link="https://processing.org/examples/loaddisplaysvg.html" caption="Loads and displays an SVG image."  }
 
@@ -110,23 +110,23 @@ You can also explore how these work yourself.
 
 ## Image chopping and shuffling
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Butterfly" thumb="images/butterfly-screenshot.png" link="https://editor.p5js.org/awarua/sketches/ryagE2_xN" caption="An example of cutting up and recombining an image for a magnification effect." %}
+{% include example_card.html name="Butterfly" thumb="images/butterfly-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/ryagE2_xN" caption="An example of cutting up and recombining an image for a magnification effect." %}
 
-{% include example_card.html name="Butterfly random" thumb="images/butterfly_random-screenshot.png" link="https://editor.p5js.org/awarua/sketches/r1t7Shdg4" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
+{% include example_card.html name="Butterfly random" thumb="images/butterfly_random-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/r1t7Shdg4" caption="Another example of cutting up and recombining an image. This one creates a semi-regular grid." %}
 
-<!-- {% include example_card.html name="Butterfly sort" thumb="images/butterfly_sort-screenshot.png" link="https://editor.p5js.org/awarua/sketches/AQUEnxA1u" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %} -->
+<!-- {% include example_card.html name="Butterfly sort" thumb="images/butterfly_sort-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/AQUEnxA1u" caption="This example uses the same source image as the butterfly examples above, but it reorders all the pixels in the image according to brightness." %} -->
 
 </ul>
 
 ## Animation examples
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Face looking animation" thumb="images/face_looking_animation-screenshot.png" link="https://editor.p5js.org/awarua/sketches/rJu_vnugE" caption="An animation of a face looking around." %}
+{% include example_card.html name="Face looking animation" thumb="images/face_looking_animation-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/rJu_vnugE" caption="An animation of a face looking around." %}
 
-{% include example_card.html name="Face looking mouse" thumb="images/face_looking_mouse-screenshot.png" link="https://editor.p5js.org/awarua/sketches/ryXLu3dxE" caption="A variation on the face looking example, where the face follows the mouse." %}
+{% include example_card.html name="Face looking mouse" thumb="images/face_looking_mouse-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/ryXLu3dxE" caption="A variation on the face looking example, where the face follows the mouse." %}
 
 </ul>
 
@@ -134,7 +134,7 @@ You can also explore how these work yourself.
 
 ## Pointillism variations
 
-<ul class="code-list">
+<ul class="example-list">
 
 {  include captioned_card.html name="p1_mouse" example_dir="tutor-examples" caption="A student work exploring the pointillism example. This one follows the mouse."  }
 
@@ -150,7 +150,7 @@ You can also explore how these work yourself.
 
 ## Advanced example
 
-<ul class="code-list">
+<ul class="example-list">
 
 <!-- TODO: Rework old examples from Gavin Sade.
 
@@ -162,7 +162,7 @@ You can also explore how these work yourself.
 
 -->
 
-{% include example_card.html name="Click divide" thumb="images/click_divide-screenshot.png" link="https://editor.p5js.org/awarua/sketches/BJps92OlE" caption="A more advanced example, which uses objects (we cover these later in the semester). Click and move the mouse to reveal a face." %}
+{% include example_card.html name="Click divide" thumb="images/click_divide-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/BJps92OlE" caption="A more advanced example, which uses objects (we cover these later in the semester). Click and move the mouse to reveal a face." %}
 
 </ul>
 
@@ -173,7 +173,7 @@ You can also explore how these work yourself.
 The following online tutorials go into more depth on how to work with pixel 
 data and also how to use two dimensional arrays.
 
-<ul class="code-list">
+<ul class="example-list">
 
   <li>
     <a class="title-link" target="_blank" href="https://processing.org/tutorials/pixels/">

@@ -1,0 +1,10 @@
+<div class="unit-nav">
+  <div class="unit-nav-label">Tutorials:</div>
+  <ul class="dxb211-nav-list">
+  {%- for tut in site.data.tuts -%}
+    <li>
+      {%- include tut_link.html tut_id=tut.id link_with_week=true -%}
+    </li>
+  {%- endfor -%}
+  </ul>
+</div>

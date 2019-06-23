@@ -1,0 +1,33 @@
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+pre.lineno {
+  color: $grey-color;
+  border-right: 1px solid $grey-color-light;
+  margin-bottom: 0;
+}
+
+td.code > pre {
+  margin-bottom: 0;
+}

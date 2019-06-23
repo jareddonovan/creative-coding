@@ -1,6 +1,6 @@
 ---
-title: "Tutorial 9: Class and Objects"
-tut_num: 9
+title: "Tutorial 9: Classes and Objects"
+tut_id: tut09
 layout: tutorial
 ---
 
@@ -176,9 +176,9 @@ function draw(){
 Click through to the following example to see a live version that you can copy
 and edit.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Cookie class" thumb="images/cookie-thumb.png" link="https://editor.p5js.org/awarua/sketches/x8UngPVpM" caption="Simple cookie class." %}
+  {% include example_card.html name="Cookie class" thumb="images/cookie-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/bf_6Za2BQ" caption="Simple cookie class." %}
 
 </ul>
 
@@ -413,9 +413,9 @@ function mousePressed(){
 You should now have a complete functioning version of the simple aquarium
 sketch. The example below also has a complete example that you can download.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="aquarium_example_1" thumb="images/aquarium-example-1-thumb.png" link="https://editor.p5js.org/awarua/sketches/ZsWdIfrpp" caption="Finished version of the aquarium example." %}
+  {% include example_card.html name="aquarium_example_1" thumb="images/aquarium-example-1-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/ZsWdIfrpp" caption="Finished version of the aquarium example." %}
 
 </ul>
 
@@ -473,7 +473,7 @@ session we will pick one example to show to the class.
 For a further tutorial on working with classes and objects in Processing,
 see the below online tutorial.
 
-<ul class="code-list">
+<ul class="example-list">
 
   <li>
     <a class="title-link" target="_blank"
@@ -489,6 +489,12 @@ see the below online tutorial.
 </ul>
 
 -->
+
+## Tutorial recording
+
+The following video is from Louis' Friday tutorial.
+
+{% include youtube.html id="IR9PyLk7yiE" %}
 
 ## Reference links
 

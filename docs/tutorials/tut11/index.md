@@ -1,6 +1,6 @@
 ---
-title: "Tutorial 11: Animating with Random, Sin, and Noise"
-tut_num: 11
+title: "Tutorial 11: Animation Dynamics"
+tut_id: tut11
 layout: tutorial
 ---
 
@@ -52,9 +52,9 @@ The following image is created by randomly choosing an x position to draw a line
 at each frame. Overtime, the lines are more or less evenly spread across the
 page.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Random demo" thumb="images/random_demo-screenshot.png" link="https://editor.p5js.org/awarua/sketches/lz-OGdUIx" caption="Demonstrates the random function." %}
+  {% include example_card.html name="Random demo" thumb="images/random_demo-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/lz-OGdUIx" caption="Demonstrates the random function." %}
 
 </ul>
 
@@ -68,9 +68,9 @@ The following picture shows how it works. In this sketch, the x position is
 calculated with `randomGausian()`. Notice how more lines are grouped around the
 middle of the picture?
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Random gaussian demo" thumb="images/random_gaussian_demo-screenshot.png" link="https://editor.p5js.org/awarua/sketches/5zU-_QqjT" caption="Demonstrates the randomGaussian function." %}
+  {% include example_card.html name="Random gaussian demo" thumb="images/random_gaussian_demo-screenshot.png" link="https://editor.p5js.org/creativecoding/sketches/5zU-_QqjT" caption="Demonstrates the randomGaussian function." %}
 
 </ul>
 
@@ -79,9 +79,9 @@ middle of the picture?
 We can use `random()` and `randomGaussian()` to create animations. The following
 tutor example shows this.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Simple random animation" thumb="images/simple-random-animation-thumb.png" link="https://editor.p5js.org/awarua/sketches/mQ69Q13e3" caption="Creates a simple animation of two circles using the <code>random()</code> and <code>randomGaussian()</code> functions." %}
+  {% include example_card.html name="Simple random animation" thumb="images/simple-random-animation-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/mQ69Q13e3" caption="Creates a simple animation of two circles using the <code>random()</code> and <code>randomGaussian()</code> functions." %}
 
 </ul>
 
@@ -90,9 +90,9 @@ tutor example shows this.
   function to animate the position of the eyes of the teddy bear.</p>
 </div>
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Scared teddy" thumb="images/character_2-thumb.png" link="https://editor.p5js.org/awarua/sketches/7APavnpcp" caption="Alter the code to animate the position of the eyes of the teddy bear." %}
+  {% include example_card.html name="Scared teddy" thumb="images/character_2-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/7APavnpcp" caption="Alter the code to animate the position of the eyes of the teddy bear." %}
 
 </ul>
 
@@ -142,9 +142,9 @@ One really useful thing that you can do with `sin` is use it to animate
 something on screen. The following tutor example demonstrates this. Download it
 and see how it works.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Red ball bounce" thumb="images/red-ball-bounce-thumb.png" link="https://editor.p5js.org/awarua/sketches/NTZEwfCzt" caption="Creates an animation of a bouncing ball using the <code>sin()</code> function." %}
+  {% include example_card.html name="Red ball bounce" thumb="images/red-ball-bounce-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/NTZEwfCzt" caption="Creates an animation of a bouncing ball using the <code>sin()</code> function." %}
 
 </ul>
 
@@ -153,9 +153,9 @@ and see how it works.
   the size of the hairless baby's mouth.</p>
 </div>
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Hairless baby" thumb="images/character_1-thumb.png" link="https://editor.p5js.org/awarua/sketches/tdNiiCumA" caption="Alter the code to animate the size of the baby's mouth." %}
+  {% include example_card.html name="Hairless baby" thumb="images/character_1-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/tdNiiCumA" caption="Alter the code to animate the size of the baby's mouth." %}
 
 </ul>
 
@@ -198,7 +198,7 @@ function setup(){
 }
 {% endhighlight %}
 
-![Perlin noise demo](images/perlin_noise_1d_demo-screenshot.png)
+![Perlin noise demo]({{site.baseurl}}{{page.url}}images/perlin_noise_1d_demo-screenshot.png)
 
 A cool thing about `noise()` is that we can also use it to sample a two or even
 three dimensional space of noise. This means that we can use it to generate
@@ -226,7 +226,7 @@ function setup() {
 }
 {% endhighlight %}
 
-![Perlin noise 2d demo](images/perlin_noise_2d_demo-screenshot.png)
+![Perlin noise 2d demo]({{site.baseurl}}{{page.url}}images/perlin_noise_2d_demo-screenshot.png)
 
 ### Using noise for animation
 
@@ -234,9 +234,9 @@ We can also use noise as the basis for animation in Processing. Often this leads
 to more natural looking movements than either the `sin()` or `random()`
 functions. The following tutor example demonstrates this.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Noise animation" thumb="images/noise-animation-thumb.png" link="https://editor.p5js.org/awarua/sketches/-0OwCDmTN" caption="Creates an animation of a circle using the <code>noise()</code> function." %}
+  {% include example_card.html name="Noise animation" thumb="images/noise-animation-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/-0OwCDmTN" caption="Creates an animation of a circle using the <code>noise()</code> function." %}
 
 </ul>
 
@@ -245,8 +245,14 @@ functions. The following tutor example demonstrates this.
   the vampire daisy.</p>
 </div>
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Vampire daisy" thumb="images/character_3-thumb.png" link="https://editor.p5js.org/awarua/sketches/Utlcbz63A" caption="Alter the code to animate the vampire daisy's petals." %}
+  {% include example_card.html name="Vampire daisy" thumb="images/character_3-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/Utlcbz63A" caption="Alter the code to animate the vampire daisy's petals." %}
 
 </ul>
+
+## Tutorial recording
+
+The following recording is from Louis' Friday tutorial. Thank you Louis!
+
+{% include youtube.html id="sjDW969LMtE" %}

@@ -1,6 +1,6 @@
 ---
 title: "Tutorial 10: Feedback Session"
-tut_num: 10
+tut_id: tut10
 layout: tutorial
 ---
 
@@ -108,7 +108,7 @@ of the semester can often be very busy. You are not expected to have a completed
 submission by now, but you should at least have made a start and ideally have a
 good idea of your concept.
 
-![assignment timeline](images/feedback-setup-03.png)
+![assignment timeline]({{site.baseurl}}{{page.url}}images/feedback-setup-03.png)
 
 Today's session should have given you some actionable feedback that you can use
 to help you complete the assignment. Spend some time thinking about how you are

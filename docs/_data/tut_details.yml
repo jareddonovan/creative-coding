@@ -1,0 +1,83 @@
+tut01:
+  week: 1
+  enabled: true
+  release_date: 2019-2-24
+  topic: "Hello Processing"
+  bb_content_id: "_7903379_1"
+
+tut02:
+  week: 2
+  enabled: true
+  release_date: 2019-3-3
+  topic: "Active Drawing" 
+  bb_content_id: "_7903387_1" 
+
+tut03:
+  week: 3
+  enabled: true
+  release_date: 2019-3-10
+  topic: "Making Patterns"
+  bb_content_id: "_7903396_1"
+
+tut04:
+  week: 4
+  enabled: true
+  release_date: 2019-3-17
+  topic: "Working with Bitmaps"
+  bb_content_id: "_7903406_1"
+
+tut05:
+  week: 5
+  enabled: true
+  release_date: 2019-3-24
+  topic: "Sound and Image"
+  bb_content_id: "_7903415_1"
+
+tut06:
+  week: 6
+  enabled: true
+  release_date: 2019-3-31
+  topic: "Fonts and Text"
+  bb_content_id: "_7903423_1"
+
+tut07:
+  week: 7
+  enabled: true
+  release_date: 2019-4-7
+  topic: "A2 Brainstorming"
+  bb_content_id: "_7903433_1"
+
+tut09:
+  week: 9
+  enabled: true
+  release_date: 2019-4-28
+  topic: "Vectors and Movement"
+  bb_content_id: "_7903447_1"
+
+tut10:
+  week: 10
+  enabled: true
+  release_date: 2019-5-5
+  topic: "Trigonometry, Randomness and Transforms"
+  bb_content_id: "_7903456_1"
+
+tut11:
+  week: 11
+  enabled: true
+  release_date: 2019-5-12
+  topic: "Objects and Functions"
+  bb_content_id: "_7903464_1"
+
+tut12:
+  week: 12
+  enabled: true
+  release_date: 2019-5-19
+  topic: "A2 Support"
+  bb_content_id: "_7903469_1"
+
+tut13:
+  week: 13
+  enabled: true
+  release_date: 2019-5-26
+  topic: "A2 Support"
+  bb_content_id: "_7903474_1"

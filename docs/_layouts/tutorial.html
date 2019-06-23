@@ -4,12 +4,12 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    {% include tutorial_list.html tut_num=page.tut_num %}    
+    {% include tut_nav.html %}
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
   <article class="post-content">
     {{ content }}
   </article>
-
+  <!-- <iframe style="display: none;" width="1" height="1" frameborder="0" marginheight="0" marginwidth="0" src="{{ site.baseurl }}/js_inject.html"></iframe> -->
 </div>

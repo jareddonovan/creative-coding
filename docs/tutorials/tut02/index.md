@@ -1,6 +1,6 @@
 ---
 title: "Tutorial 2: Active Drawing"
-tut_num: 2
+tut_id: tut02
 layout: tutorial
 ---
 
@@ -74,9 +74,9 @@ of these other drawing functions too.
 * [`triangle(x1, y1, x2, y2, x3, y3)`][triangle()]: Draws a triangle with corners at points
   (x1, y1), (x2, y2), and (x3, y3)
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Robot face" thumb="images/robot-face-thumb.png" link="https://editor.p5js.org/awarua/sketches/tp6cZUwy5" caption="A sketch that demonstrates drawing with all the shapes listed above" %}
+  {% include example_card.html name="Robot face" thumb="images/robot-face-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/tp6cZUwy5" caption="A sketch that demonstrates drawing with all the shapes listed above" %}
 
 </ul>
 
@@ -123,9 +123,9 @@ If you run this code, you should see a circle drawn in the center of the canvas.
 The circle should filled in with red, not white like before. This is because of
 the calls to [`fill()`][fill()] on lines 8, 11, and 14.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="RGB Circles" thumb="images/rgb-circles-thumb.png" link="https://editor.p5js.org/awarua/sketches/DuMQ5_X7Z" caption="Draws three circles in red, green and blue" %}
+  {% include example_card.html name="RGB Circles" thumb="images/rgb-circles-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/DuMQ5_X7Z" caption="Draws three circles in red, green and blue" %}
 
 </ul>
 
@@ -134,9 +134,9 @@ how it affects the colours of the three circles. Any number between **0...255**
 will work. You can also use the following sketch to experiment with different
 colors.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Color Sliders" thumb="images/color-sliders-thumb.png" link="https://editor.p5js.org/awarua/full/YREGIvcHB" caption="Allows the user to adjust the fill colour using sliders." %}
+  {% include example_card.html name="Color Sliders" thumb="images/color-sliders-thumb.png" link="https://editor.p5js.org/creativecoding/full/YREGIvcHB" caption="Allows the user to adjust the fill colour using sliders." %}
 
 </ul>
 
@@ -180,9 +180,9 @@ function draw(){
 }
 {% endhighlight %}
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="World's simplest drawing program" thumb="images/worlds-simplest-drawing-program-thumb.png" link="https://editor.p5js.org/awarua/sketches/FmfUiz72m" caption="The world's simplest drawing program." %}
+  {% include example_card.html name="World's simplest drawing program" thumb="images/worlds-simplest-drawing-program-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/FmfUiz72m" caption="The world's simplest drawing program." %}
 
 </ul>
 
@@ -224,7 +224,7 @@ drawing only draws when the mouse is pressed down.
 
 ### Further drawing examples
 
-<ul class="code-list">
+<ul class="example-list">
 
 {% include example_card.html name="Continuous lines" thumb="images/continuous-lines-thumb.png" link="https://p5js.org/examples/drawing-continous-lines.html" caption="Draws continuous lines." %}
 
@@ -255,13 +255,13 @@ tutorials including looping, arrays and randomness. You are welcome to
 experiment with these if you are a more advanced student, or come back to them
 once you've covered some of the material in upcoming tutorials.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="Less-simple drawing program" thumb="images/less-simple-drawing-thumb.png" link="https://editor.p5js.org/awarua/sketches/n22OTl93v" caption="A less-simple drawing program" %}
+  {% include example_card.html name="Less-simple drawing program" thumb="images/less-simple-drawing-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/n22OTl93v" caption="A less-simple drawing program" %}
 
-  {% include example_card.html name="Rainbow lighting" thumb="images/rainbow-lightning-thumb.png" link="https://editor.p5js.org/awarua/sketches/yieRwEMe0" caption="Draws colourful jagged vibrating lines" %}
+  {% include example_card.html name="Rainbow lighting" thumb="images/rainbow-lightning-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/yieRwEMe0" caption="Draws colourful jagged vibrating lines" %}
 
-  {% include example_card.html name="Cloud buster" thumb="images/cloud-buster-thumb.png" link="https://editor.p5js.org/awarua/present/JzFy2E0vZ" caption="Draw with clouds" %}
+  {% include example_card.html name="Cloud buster" thumb="images/cloud-buster-thumb.png" link="https://editor.p5js.org/creativecoding/present/JzFy2E0vZ" caption="Draw with clouds" %}
 
 </ul>
 

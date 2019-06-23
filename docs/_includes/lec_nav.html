@@ -1,0 +1,10 @@
+<div class="unit-nav">
+  <div class="unit-nav-label">Lectures:</div>
+  <ul class="dxb211-nav-list">
+  {%- for lec in site.data.lecs -%}
+    <li>
+      {%- include lec_link.html lec_id=lec.id link_with_week=true -%}
+    </li>
+  {%- endfor -%}
+  </ul>
+</div>

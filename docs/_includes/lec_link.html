@@ -1,0 +1,31 @@
+
+{%- assign lec_detail = site.data.lec_details[include.lec_id] -%}
+{%- assign text = include.lec_id -%}
+{%- assign course_id = site.data.unit.bb_course_id -%}
+{%- assign content_id = lec_detail.bb_content_id -%}
+{%- assign bb_link_base = "https://blackboard.qut.edu.au/webapps/blackboard/content/listContentEditable.jsp?content_id=" -%}
+{%- if include.text -%}
+	{%- assign text = include.text -%}
+{%- elsif include.link_with_week -%}
+	{%- assign text = lec_detail.week -%}
+{%- elsif include.link_with_long_name -%}
+  {%- assign text = "lecorial " | append: lec_detail.week | append: ": " | append: lec_detail.topic -%}
+{%- endif -%}
+{%- assign page_week = site.data.lec_details[page.lec_id].week -%}
+{%- if page_week == lec_detail.week -%}
+  <a class="dxb211-current-week dxb211-disabled"
+    target="_parent"
+    data-available-from="{{ lec_detail.release_date }}"
+    data-enabled="{{ lec_detail.enabled }}"
+		title="{{ lec_detail.topic }}"
+  	>{{ text }}</a>
+{%- else -%}
+  <a class="dxb211-disabled"
+    target="_parent"
+    data-available-from="{{ lec_detail.release_date }}"
+    data-enabled="{{ lec_detail.enabled }}"
+    data-local-link="{{site.baseurl}}/lectures/{{include.lec_id}}/index.html{{include.anchor}}"
+    href="{{ bb_link_base}}{{ content_id }}&course_id={{ course_id }}" 
+    title="{{ lec_detail.topic }}"
+  	>{{ text }}</a>
+{%- endif -%}

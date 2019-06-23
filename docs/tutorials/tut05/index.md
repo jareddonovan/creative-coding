@@ -1,6 +1,6 @@
 ---
-title: "Tutorial 5: Sound and Visualization"
-tut_num: 5
+title: "Tutorial 5: Musical Images"
+tut_id: tut05
 layout: tutorial
 ---
 
@@ -51,7 +51,7 @@ are working locally, you may need to add it by hand. This
 
 There example below shows how to load and play a sound.
 
-<ul class="code-list">
+<ul class="example-list">
 
 {% include example_card.html name="Load and play a sound" thumb="images/load-play-sound-screenshot.png" link="http://p5js.org/examples/sound-load-and-play-sound.html" caption="Loads and plays a sound file when the user clicks the mouse" %}
 
@@ -89,22 +89,22 @@ The following three sketches show how to measure sound information - either
 from microphone input, or from a sample playing. This is a great way to make
 interesting interactive works. Spend some time on these ones.
 
-<ul class="code-list">
+<ul class="example-list">
 
 {% include example_card.html name="Monitor audio input" thumb="images/audio-input-screenshot.png" link="https://p5js.org/reference/#/p5.AudioIn" caption="Uses microphone input to move an ellipse." %}
 
 {% include example_card.html name="Measure amplitude" thumb="images/measure-amplitude-thumb.png" link="https://p5js.org/examples/sound-measuring-amplitude.html" caption="Changes the size of an ellipse based on the volume of a looping audio file." %}
 
-{% include example_card.html name="Beat detection" thumb="images/beat-detection-thumb.png" link="https://editor.p5js.org/awarua/sketches/BkBnH1qlN" caption="Plays a file and tries to draw an ellipse on the beat." %}
+{% include example_card.html name="Beat detection" thumb="images/beat-detection-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/BkBnH1qlN" caption="Plays a file and tries to draw an ellipse on the beat." %}
 
-{% include example_card.html name="Draw waveform" thumb="images/draw-sound-waveform-thumb.png" link="https://editor.p5js.org/awarua/sketches/HJ1-WRFeV" caption="Plays a sound file and draws the waveform for the sound." %}
+{% include example_card.html name="Draw waveform" thumb="images/draw-sound-waveform-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/HJ1-WRFeV" caption="Plays a sound file and draws the waveform for the sound." %}
 
-{% include example_card.html name="FFT analysis" thumb="images/play-a-file-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1jGusKe4" caption="Plays a file and draws circles based on the frequencies of the sound." %}
+{% include example_card.html name="FFT analysis" thumb="images/play-a-file-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/B1jGusKe4" caption="Plays a file and draws circles based on the frequencies of the sound." %}
 
 <!-- TODO: I *think* it should be possible to achieve something similar in 
            p5.sound, but will need more time to figure it out...
 
-{% include example_card.html name="Frequency Energy beat detection" thumb="images/fft-beat-detection-thumb.png" link="https://editor.p5js.org/awarua/sketches/SyOwiJqxV" caption="Tries to identify beats at different frequencies in a sound file." %}
+{% include example_card.html name="Frequency Energy beat detection" thumb="images/fft-beat-detection-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/SyOwiJqxV" caption="Tries to identify beats at different frequencies in a sound file." %}
 
 -->
 
@@ -144,7 +144,7 @@ welcome to explore more complex examples if you're interested.
 
 <!-- TODO: Link to p5.sound functions for this
 
-<ul class="code-list">
+<ul class="example-list">
 
 { include captioned_card.html title="Synthesize Sound" name="SynthesizeSound" example_dir="online-examples" do_not_link=true caption="SynthesizeSound is a sketch which creates a basic oscillator and   lets the user manipulate the parameters: Frequency, Amplitude and waveform." }
 
@@ -189,7 +189,7 @@ the kinds of sketches you might make are:
 
 The following example is from the lecture
 
-<ul class="code-list">
+<ul class="example-list">
 
 <!-- TODO: I'm not sure it's worth porting the following to p5.js
 
@@ -199,7 +199,7 @@ The following example is from the lecture
 
 -->
 
-{% include example_card.html name="chirporchestra" thumb="images/chirporchestra-thumb.png" link="https://editor.p5js.org/awarua/sketches/HyRUMW9x4" caption="(Advanced) Example shown in the lecture of how you can create a basic grid sequencer in p5.js." %}
+{% include example_card.html name="chirporchestra" thumb="images/chirporchestra-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/HyRUMW9x4" caption="(Advanced) Example shown in the lecture of how you can create a basic grid sequencer in p5.js." %}
 
 </ul>
 
@@ -207,11 +207,11 @@ The following example is from the lecture
 
 ## Further tutorial
 
-<ul class="code-list">
+<ul class="example-list">
   <li>
     <a class="title-link" target="_blank" href="https://processing.org/tutorials/sound/">Processing Sound Tutorial</a>
     <a class="img-link" target="_blank" href="https://processing.org/tutorials/sound/">
-      <img src="{{ site.baseurl }}/tutorials/tut05/images/sound_tutorial.png">
+      <img src="/bbcswebdav/courses/DXB211_19se1/_site/tutorials/tut05/images/sound_tutorial.png">
     </a>
     A detailed tutorial on the use of sound in Processing.
   </li>

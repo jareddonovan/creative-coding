@@ -1,6 +1,6 @@
 ---
-title: "Tutorial 6: Fonts, Text and Time"
-tut_num: 6
+title: "Tutorial 6: Moveable Type"
+tut_id: tut06
 layout: tutorial
 ---
 
@@ -46,7 +46,7 @@ You can also draw strings on the canvas with the [`text()`][5]
 function. To change the colour of the displayed text, use the [`fill()`][6]
 function. The listing below shows an example, along with output.
 
-<script type="text/p5" src="./js/text-function.js" data-autoplay data-height="350"></script>
+<script type="text/p5" src="{{site.baseurl}}{{page.url}}js/text-function.js" data-autoplay data-height="350"></script>
 
 <p class="info">
   <strong>Tip:</strong> Being able to draw text to the screen like this can be
@@ -56,9 +56,9 @@ function. The listing below shows an example, along with output.
   next to the cursor.
 </p>
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Text location feedback" thumb="images/loctextfeedback-thumb.png" link="https://editor.p5js.org/awarua/sketches/By2gn8ol4" caption="Move text with mouse" %}
+{% include example_card.html name="Text location feedback" thumb="images/loctextfeedback-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/By2gn8ol4" caption="Move text with mouse" %}
 
 </ul>
 
@@ -71,9 +71,9 @@ alignment. For this, we use the [`textSize()`][7] and [`textAlign()`][8]
 functions. By default, text is left-aligned and 12px tall. The following
 example shows how to use these functions.
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Change text display" thumb="images/text_display-thumb.png" link="https://editor.p5js.org/awarua/sketches/Hyk2yPjeN" caption="Change alignment, size and position of text" %}
+{% include example_card.html name="Change text display" thumb="images/text_display-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/Hyk2yPjeN" caption="Change alignment, size and position of text" %}
 
 </ul>
 
@@ -81,11 +81,11 @@ Below are two further examples. The first one demonstrates changing the visual
 properties of text. The second one is a basic demo of how to take text input
 from a person and display it on the screen.
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Basic words" thumb="images/basic_words-thumb.png" link="https://editor.p5js.org/awarua/sketches/HyQFEPoeV" caption="Display words on the screen. Change visual properties" %}
+{% include example_card.html name="Basic words" thumb="images/basic_words-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/HyQFEPoeV" caption="Display words on the screen. Change visual properties" %}
 
-{% include example_card.html name="Message buffer" thumb="images/message_buffer-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1vCIDse4" caption="Reads keyboard input into a buffer, display text on screen" %}
+{% include example_card.html name="Message buffer" thumb="images/message_buffer-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/B1vCIDse4" caption="Reads keyboard input into a buffer, display text on screen" %}
 
 </ul>
 
@@ -105,7 +105,7 @@ The first way is by giving a generic font name such as, `serif`, `sans-serif`,
 or `monospace` to the [`textFont()`][4] function. The example below shows this.
 Notice that you can also set the size of the font with the second argument.
 
-<script type="text/p5" src="./js/change-font-1.js"
+<script type="text/p5" src="{{site.baseurl}}{{page.url}}js/change-font-1.js"
   data-autoplay data-height="380" data-preview-width="250"></script>
 
 ### 2. Using a font already installed on the browser
@@ -121,7 +121,7 @@ that is widely installed on other people's browsers too. Some good choices are:
 * 'Times New Roman'
 * 'Verdana'
 
-<script type="text/p5" src="./js/change-font-2.js"
+<script type="text/p5" src="{{site.baseurl}}{{page.url}}js/change-font-2.js"
   data-autoplay data-height="380" data-preview-width="250"></script>
 
 ### 3. Uploading a font file
@@ -145,12 +145,12 @@ One good site is [google fonts](https://fonts.google.com).
 * When you find a font, save it to your computer using the download link, as
   shown in the diagram below.
   
-![Diagram showing instructions for downloading google fonts: 1) Search for a font and click the 'add' icon to add it to your selection. 2) Click the black bar at the bottom and then click 'Download'](images/download-google-fonts.png)
+![Diagram showing instructions for downloading google fonts: 1) Search for a font and click the 'add' icon to add it to your selection. 2) Click the black bar at the bottom and then click 'Download']({{site.baseurl}}{{page.url}}images/download-google-fonts.png)
 
 Once you've found a font and saved it your computer, you'll need to upload it to
 a `data` folder in your sketch. The diagram below shows how to do this.
 
-![Instructions for uploading a font file to the sketch: 1) Find the font file you saved. 2) Add a project to your sketch called 'data'. 3) Click the dropdown menu and choose 'add file'. 4) Drag the font file onto the add file window.](images/uploading-fonts.png)
+![Instructions for uploading a font file to the sketch: 1) Find the font file you saved. 2) Add a project to your sketch called 'data'. 3) Click the dropdown menu and choose 'add file'. 4) Drag the font file onto the add file window.]({{site.baseurl}}{{page.url}}images/uploading-fonts.png)
 
 With font file added to the sketch, you are now able to load it into a
 [`p5.Font`][9] object that can be displayed in the sketch. The following code 
@@ -190,9 +190,9 @@ function, center-aligned in a text box.
 
 The example below is a live version of this code.
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Load Coiny Font" thumb="images/load-coiny-font-thumb.png" link="https://editor.p5js.org/awarua/sketches/PtsluK__k" caption="Loads the 'Coiny' font and uses it to display a message." %}
+{% include example_card.html name="Load Coiny Font" thumb="images/load-coiny-font-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/PtsluK__k" caption="Loads the 'Coiny' font and uses it to display a message." %}
 
 </ul>
 
@@ -201,7 +201,7 @@ The example below is a live version of this code.
   If you already know a bit about fonts in HTML and CSS, you can also load fonts
   into your sketch using the google fonts embed codes. If you are interested in
   seeing how it's done, check 
-  <a href="https://editor.p5js.org/awarua/sketches/e3CHDMb-0"
+  <a href="https://editor.p5js.org/creativecoding/sketches/e3CHDMb-0"
     >the Google font link sketch</a>.
   But this is an advanced topic that we won't cover further in class.
 </p>
@@ -211,7 +211,7 @@ The example below is a live version of this code.
 For more information, refer to the following tutorial from Dan Shiffman or check
 the [p5js reference][2] typography functions.
 
-<ul class="code-list">
+<ul class="example-list">
   <li>
     <a class="title-link" target="_blank" href="https://processing.org/tutorials/text/">Tutorial: Strings and Drawing Text</a>
     <a class="img-link" target="_blank" href="https://processing.org/tutorials/text/">
@@ -236,9 +236,9 @@ One way to respond to time is to use the [`frameCount`][11] variable
 that p5.js provides. This variable holds a counter of the number of
 frames shown so far. The following example demonstrates its use.
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Frame counter" thumb="images/frame-counter-thumb.png" link="https://editor.p5js.org/awarua/sketches/B1fxbKslE" caption="Demonstrates how to use the frameCount variable." %}
+{% include example_card.html name="Frame counter" thumb="images/frame-counter-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/B1fxbKslE" caption="Demonstrates how to use the frameCount variable." %}
 
 </ul>
 
@@ -281,9 +281,9 @@ function draw(){
 }
 {% endhighlight %}
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Millis" thumb="images/millis-thumb.png" link="https://editor.p5js.org/awarua/sketches/bicmUJig7" caption="Demonstrates how to use the millis() function." %}
+{% include example_card.html name="Millis" thumb="images/millis-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/bicmUJig7" caption="Demonstrates how to use the millis() function." %}
 
 </ul>
 
@@ -291,9 +291,9 @@ The following example shows a slightly more complex example, which uses
 [`millis()`][12] together with the JavaScript [`%` (remainder)][13] operator to
 generate a more complex visual result.
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Milliseconds" thumb="images/milliseconds-thumb.png" link="https://editor.p5js.org/awarua/sketches/OWEAZW-4U" caption="Generates a pattern of vertical stripes based on the time elapsed." %}
+{% include example_card.html name="Milliseconds" thumb="images/milliseconds-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/OWEAZW-4U" caption="Generates a pattern of vertical stripes based on the time elapsed." %}
 
 </ul>
 
@@ -324,11 +324,11 @@ these. The main thing to understand for this class is the use of the time
 functions. The second one, from Indae Hwang and Jon McCormack, from Monash Uni,
 draws a digital clock with simple interaction.
 
-<ul class="code-list">
+<ul class="example-list">
 
 {% include example_card.html name="Clock" thumb="images/clock-thumb.png" link="https://p5js.org/examples/input-clock.html" caption="Implements a dial clock." %}
 
-{% include example_card.html name="clockexample" thumb="images/clock-example-thumb.png" link="https://editor.p5js.org/awarua/sketches/MtptDyg8w" caption="uses time to create a clock with text (by Indae Hwang and Jon McCormack, Monash Uni.)" %}
+{% include example_card.html name="clockexample" thumb="images/clock-example-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/MtptDyg8w" caption="uses time to create a clock with text (by Indae Hwang and Jon McCormack, Monash Uni.)" %}
 
 </ul>
 
@@ -348,7 +348,7 @@ draws a digital clock with simple interaction.
   clock pictured below?
 </p>
 
-![Qlocktwo](images/qwlocktwo-text-clock.jpg)
+![Qlocktwo]({{site.baseurl}}{{page.url}}images/qwlocktwo-text-clock.jpg)
 
 ## Typographic animations ##
 
@@ -370,27 +370,27 @@ The examples below show a range of examples of this approach.
   up with an original creative response.
 </p>
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="decay" thumb="images/decay-thumb.png" link="https://editor.p5js.org/awarua/sketches/KlqpuS-lU" caption="Draws some text that's gradually decayed away." %}
+{% include example_card.html name="decay" thumb="images/decay-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/KlqpuS-lU" caption="Draws some text that's gradually decayed away." %}
 
-{% include example_card.html name="Day & Night" thumb="images/day-night-thumb.png" link="https://editor.p5js.org/awarua/sketches/yzP0yrzPm" caption="Animates between two words" %}
+{% include example_card.html name="Day & Night" thumb="images/day-night-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/yzP0yrzPm" caption="Animates between two words" %}
 
-{% include example_card.html name="Shivering" thumb="images/shivering-thumb.png" link="https://editor.p5js.org/awarua/sketches/rWcunRzJW" caption="Text is animated to look like it's shivering." %}
+{% include example_card.html name="Shivering" thumb="images/shivering-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/rWcunRzJW" caption="Text is animated to look like it's shivering." %}
 
-{% include example_card.html name="Avoidance" thumb="images/avoidance-thumb.png" link="https://editor.p5js.org/awarua/sketches/ncNWaEkTw" caption="Text avoids the mouse." %}
+{% include example_card.html name="Avoidance" thumb="images/avoidance-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/ncNWaEkTw" caption="Text avoids the mouse." %}
 
-{% include example_card.html name="Run Animation (advanced)" thumb="images/run-thumb.png" link="https://editor.p5js.org/awarua/sketches/686rYsJKr" caption="More advanced - example of using processing to animate text" %}
+{% include example_card.html name="Run Animation (advanced)" thumb="images/run-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/686rYsJKr" caption="More advanced - example of using processing to animate text" %}
 
 </ul>
 
 ### Getting the outline of fonts
 
-<ul class="code-list">
+<ul class="example-list">
 
   {% include example_card.html name="Text outline" thumb="images/text-outline-thumb.png" link="https://p5js.org/reference/#/p5.Font/textToPoints" caption="Gets the outline of some text and distorts it." %}
 
-  {% include example_card.html name="Particle text" thumb="images/particle-text-thumb.png" link="https://editor.p5js.org/awarua/full/ryBpNdjeN" caption="A message is formed from a swarm of particles." %}
+  {% include example_card.html name="Particle text" thumb="images/particle-text-thumb.png" link="https://editor.p5js.org/creativecoding/full/ryBpNdjeN" caption="A message is formed from a swarm of particles." %}
 
 <!-- TODO: Port this to p5js?
 
@@ -419,11 +419,11 @@ The following two examples show how to load text into p5js from a
 file using the [`loadStrings()`][20] function. This is an advanced topic,
 but may be useful if you want to work with longer passages of text.
 
-<ul class="code-list">
+<ul class="example-list">
 
-{% include example_card.html name="Weather" thumb="images/weather-thumb.png" link="https://editor.p5js.org/awarua/sketches/lJCcmx2Ee" caption="Advanced example, which shows using live data and manipulating Strings. The sketch loads a weather forecast text file from the Bureau of Meteorology and splits it to get data that's displayed on screen." %}
+{% include example_card.html name="Weather" thumb="images/weather-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/lJCcmx2Ee" caption="Advanced example, which shows using live data and manipulating Strings. The sketch loads a weather forecast text file from the Bureau of Meteorology and splits it to get data that's displayed on screen." %}
 
-{% include example_card.html name="Dada poem generator" thumb="images/dada-poem-generator-thumb.png" link="https://editor.p5js.org/awarua/sketches/Cw_OF-1Lo" caption="Another more advanced example, which shows how to randomly use strings from a larger text file to create a cutup poem." %}
+{% include example_card.html name="Dada poem generator" thumb="images/dada-poem-generator-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/Cw_OF-1Lo" caption="Another more advanced example, which shows how to randomly use strings from a larger text file to create a cutup poem." %}
 
 </ul>
 
@@ -436,7 +436,7 @@ but may be useful if you want to work with longer passages of text.
   with typography, text and fonts in Processing.
 </p>
 
-<ul class="code-list">
+<ul class="example-list">
   <li>
     <a class="title-link" target="_blank" href="https://processing.org/tutorials/typography/">Typography Tutorial</a>
     <a class="img-link" target="_blank" href="https://processing.org/tutorials/typography/">

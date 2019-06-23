@@ -1,6 +1,6 @@
 ---
 title: "Tutorial 7: A2 Kick-off"
-tut_num: 7
+tut_id: tut07
 layout: tutorial
 ---
 
@@ -32,7 +32,7 @@ answer any questions you have. Make sure you understand all the different parts
 of the assignment, including the documentation.
 
 Review the task sheet for Assignment 2:
-* [Task Sheet]({{site.baseurl}}/assessment/a2-major-interactive-work/task-sheet-dxb211-a2.pdf)
+* [Task Sheet]({{site.baseurl}}/assessment/a2-creative-coding-project/task-sheet-dxb211-a2.pdf)
 
 ## A2 Concept Brainstorming and Planning
 
@@ -66,7 +66,7 @@ Even though this tutorial is written for the Java version of Processing, it is
 still very relevant to p5js and most of the examples should be understandable to
 you.
 
-<ul class="code-list">
+<ul class="example-list">
 
   <li>
     <a class="title-link" target="_blank"
@@ -203,9 +203,9 @@ function draw(){
 }
 {% endhighlight %}
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="windmill" thumb="images/windmill-thumb.png" link="https://editor.p5js.org/awarua/sketches/395MxiySO" caption="Draws a windmill using transformation functions" %}
+  {% include example_card.html name="windmill" thumb="images/windmill-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/395MxiySO" caption="Draws a windmill using transformation functions" %}
 
 </ul>
 
@@ -258,9 +258,9 @@ commenting out lines 15 and 21 to see the effect on the output. (**Hint:**
 remember that the transformation functions are cumulative, i.e. they add on to
 each other).
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="stick figure" thumb="images/stick-figure-thumb.png" link="https://editor.p5js.org/awarua/sketches/OwySvDH9i" caption="Draws a stick figure using transformation functions" %}
+  {% include example_card.html name="stick figure" thumb="images/stick-figure-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/OwySvDH9i" caption="Draws a stick figure using transformation functions" %}
 
 </ul>
 
@@ -278,15 +278,15 @@ each other).
 These tutor examples further demonstrate the use of the transformation
 functions.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="spider_transform" thumb="images/spider-transform-thumb.png" link="https://editor.p5js.org/awarua/sketches/yqFYkm9sj" caption="Draws a spider using the <code>translate()</code> and <code>rotate()</code> functions." %}
+  {% include example_card.html name="spider_transform" thumb="images/spider-transform-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/yqFYkm9sj" caption="Draws a spider using the <code>translate()</code> and <code>rotate()</code> functions." %}
 
-  {% include example_card.html name="house_translate" thumb="images/house-translate-thumb.png" link="https://editor.p5js.org/awarua/sketches/WM4oEo9lt" caption="Draws a three houses using the <code>translate()</code>, <code>rotate()</code>, and <code>scale()</code> functions. Also demonstrates <code>pushMatrix()</code> and <code>popMatrix()</code>." %}
+  {% include example_card.html name="house_translate" thumb="images/house-translate-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/WM4oEo9lt" caption="Draws a three houses using the <code>translate()</code>, <code>rotate()</code>, and <code>scale()</code> functions. Also demonstrates <code>pushMatrix()</code> and <code>popMatrix()</code>." %}
 
-  {% include example_card.html name="rainbow horse" thumb="images/rainbow-horse-thumb.png" link="https://editor.p5js.org/awarua/sketches/3Xv0GHos_" caption="Draws a horse using the <code>translate()</code> and <code>rotate()</code> functions." %}
+  {% include example_card.html name="rainbow horse" thumb="images/rainbow-horse-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/3Xv0GHos_" caption="Draws a horse using the <code>translate()</code> and <code>rotate()</code> functions." %}
 
-  {% include example_card.html name="draw_starfish" thumb="images/starfish-thumb.png" link="https://editor.p5js.org/awarua/sketches/X6x2cZSdn" caption="Draws a starfish using the <code>translate()</code> and <code>rotate()</code> functions" %}
+  {% include example_card.html name="draw_starfish" thumb="images/starfish-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/X6x2cZSdn" caption="Draws a starfish using the <code>translate()</code> and <code>rotate()</code> functions" %}
 
 </ul>
 
@@ -295,7 +295,7 @@ functions.
 For a refresher on how the Processing coordinate system works with shapes,
 check the online tutorial below.
 
-<ul class="code-list">
+<ul class="example-list">
 
   <li>
     <a class="title-link" target="_blank"
@@ -399,7 +399,7 @@ createShape(QUAD, x1, y1, x2, y2, x3, y3, x4, y4);
 createShape(ARC, x, y, w, h, startAngle, endAngle);
 {% endhighlight %}
 
-<ul class="code-list">
+<ul class="example-list">
 
   {% include example_card.html name="pshape_primitives" thumb="" link="" caption="Draws a face using the <code>createShape()</code> function to draw a series of primitive shapes." %}
 
@@ -469,9 +469,9 @@ function draw(){
 }
 {% endhighlight %}
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="pine tree" thumb="images/pinetree-thumb.png" link="https://editor.p5js.org/awarua/sketches/GlTvrpxn5" caption="Draws a pine tree <code>beginShape()</code>, <code>endShape()</code> and <code>vertex()</code> functions" %}
+  {% include example_card.html name="pine tree" thumb="images/pinetree-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/GlTvrpxn5" caption="Draws a pine tree <code>beginShape()</code>, <code>endShape()</code> and <code>vertex()</code> functions" %}
 
 </ul>
 
@@ -520,9 +520,9 @@ function drawTree(x, y){
 The example below shows how a function like this could be used to allow the 
 user to 'stamp' a shape onto the canvas by clicking the mouse button. 
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="pine tree" thumb="images/pinetree-function-thumb.png" link="https://editor.p5js.org/awarua/sketches/KPW68B_JW" caption="Allows the user to 'stamp' a pine tree shape onto the canvas by clicking the mouse" %}
+  {% include example_card.html name="pine tree" thumb="images/pinetree-function-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/KPW68B_JW" caption="Allows the user to 'stamp' a pine tree shape onto the canvas by clicking the mouse" %}
 
 </ul>
 
@@ -572,7 +572,7 @@ endShape(CLOSE);
 
 ### Tutor examples
 
-<ul class="code-list">
+<ul class="example-list">
 
   {% include example_card.html name="cobblestones_texture" thumb="" link="" caption="Draws a textured shape. Drag the mouse to change the shape and create an interesting image." %}
 
@@ -622,9 +622,9 @@ function draw(){
 }
 {% endhighlight %}
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="wave curve" thumb="images/wave-curve-thumb.png" link="https://editor.p5js.org/awarua/sketches/zRQ938sff" caption="Draws a wavy curve using the `curveVertex()` function" %}
+  {% include example_card.html name="wave curve" thumb="images/wave-curve-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/zRQ938sff" caption="Draws a wavy curve using the `curveVertex()` function" %}
 
 </ul>
 
@@ -635,11 +635,11 @@ The first tutor example further demonstrates how to use the
 [`p5.Vector`][20] object. The second one is a program you can use to generate
 code for drawing curves.
 
-<ul class="code-list">
+<ul class="example-list">
 
-  {% include example_card.html name="draw_star" thumb="images/draw-star-thumb.png" link="https://editor.p5js.org/awarua/sketches/WDOmi1Ndh" caption="Draws a polygon or star as a shape. Uses a <code>p5.Vector</code> object to simplify figuring out positions of vectors." %}
+  {% include example_card.html name="draw_star" thumb="images/draw-star-thumb.png" link="https://editor.p5js.org/creativecoding/sketches/WDOmi1Ndh" caption="Draws a polygon or star as a shape. Uses a <code>p5.Vector</code> object to simplify figuring out positions of vectors." %}
 
-  {% include example_card.html name="curve_explorer" thumb="images/curve-explorer-thumb.png" link="https://editor.p5js.org/awarua/full/hya3c3nliN" caption="A program that lets you draw a curve in p5js and then export the code it would take to draw that curve." %}
+  {% include example_card.html name="curve_explorer" thumb="images/curve-explorer-thumb.png" link="https://editor.p5js.org/creativecoding/full/hya3c3nliN" caption="A program that lets you draw a curve in p5js and then export the code it would take to draw that curve." %}
 
 </ul>
 
@@ -648,7 +648,7 @@ code for drawing curves.
 The tutorial below also explains Bezier curves, which we have not covered in the
 tutorial.
 
-<ul class="code-list">
+<ul class="example-list">
 
   <li>
     <a class="title-link" target="_blank"
@@ -664,6 +664,30 @@ tutorial.
   </li>
 
 </ul>
+
+## Tutorial recording
+
+The following videos are recordings from Jared's Wednesday morning tutorial. Apologies for the webcam dropping in and out, I'm not sure what was going on there...
+
+In the first part of the tutorial, we went through the brief for assignment 2.
+
+{% include youtube.html id="rlXAkdxl10o" %}
+
+In the second part, I introduced the `push()`, `pop()`, `translate()`,
+`rotate()`, and `scale()` functions. Students then worked on using these to
+draw a flower.
+
+{% include youtube.html id="eDS-MthOHQ0" %}
+
+In the third part, I showed one way of solving the problem of drawing the flower
+using the translate and rotate functions.
+
+{% include youtube.html id="8BUp-NTSZAo" %}
+
+In the final part, I demonstrated the functions for drawing more complex shapes
+and used these to make a drawing program that draws a funny squiggly line.
+
+{% include youtube.html id="sq_KYPMTdOA" %}
 
 ## Reference Links
 

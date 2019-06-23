@@ -1,0 +1,60 @@
+@import "parts/syntax_highlighting";
+@import "parts/nav_list";
+@import "parts/video_container";
+@import "parts/example_list";
+@import "parts/feature_paras";
+
+/* Slide images */ 
+
+img.slide {
+  border: 1px solid $grey-color-light;
+}
+
+/* Fix for p5-widget iframes */
+
+iframe {
+  margin-bottom: 1em;
+}
+
+iframe.cc_youtube {
+  border: 1px solid $grey-color-light;
+}
+
+hr {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* new coding demos */
+
+h2.updated, h2.new, h3.new {
+  position: relative;
+}
+
+h2.updated::before, h2.new::before, h3.new::before {
+  content: "new";
+  background: $brand-color;
+  color: white;
+  display: block;
+  position: absolute;
+  left: -58px;
+  top: -2px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 1rem;
+  transform: rotate(-8deg);
+}
+
+h2.updated::before {
+  content: "updated";
+  background: $unitMapHeader;
+  width: 54px;
+  height: 54px;
+  border-radius: 27px;
+  line-height: 54px;
+  font-size: 0.8rem;
+  left: -60px;
+}

@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: rgb(51, 51, 255);
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20pt;
+  color: white;
+  word-break: break-all;
+  line-height: 0.8em;
+}
+canvas {
+  display: block;
+}

@@ -1,0 +1,76 @@
+lec01:
+  week: 1
+  enabled: true
+  release_date: 2019-2-24
+  topic: "Creative Coding Superpowers"
+  bb_content_id: "7903375_1"
+
+lec02:
+  week: 2
+  enabled: true
+  release_date: 2019-3-3
+  topic: "Generative Design" 
+  bb_content_id: "7903392_1"
+
+lec03:
+  week: 3
+  enabled: true
+  release_date: 2019-3-10
+  topic: "Pieces of Pictures"
+  bb_content_id: "7903401_1"
+
+lec04:
+  week: 4
+  enabled: true
+  release_date: 2019-3-17
+  topic: "Multiple Modalities"
+  bb_content_id: "7903411_1"
+
+lec05:
+  week: 5
+  enabled: true
+  release_date: 2019-3-24
+  topic: "Computational Texts"
+  bb_content_id: "7903419_1"
+
+lec06:
+  week: 6
+  enabled: true
+  release_date: 2019-3-31
+  topic: "Fixing Problems"
+  bb_content_id: "7903384_1"
+
+lec07:
+  week: 7
+  enabled: true
+  release_date: 2019-4-7
+  topic: "Objects and Functions"
+  bb_content_id: "7903438_1"
+
+lec09:
+  week: 9
+  enabled: true
+  release_date: 2019-4-28
+  topic: "Working with Movement"
+  bb_content_id: "7903443_1"
+
+lec10:
+  week: 10
+  enabled: true
+  release_date: 2019-5-5
+  topic: "Advanced Drawing"
+  bb_content_id: "7903452_1"
+
+lec11:
+  week: 11
+  enabled: false
+  release_date: 2019-5-12
+  topic: "Beyond the Canvas"
+  bb_content_id: "7964416_1"
+
+lec12:
+  week: 12
+  enabled: false
+  release_date: 2019-5-19
+  topic: "Where to next?"
+  bb_content_id: "7903461_1"

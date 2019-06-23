@@ -1,6 +1,6 @@
 ---
 title: "Tutorial 1: Hello p5.js"
-tut_num: 1
+tut_id: tut01
 layout: tutorial
 ---
 

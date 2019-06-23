@@ -1,6 +1,6 @@
 ---
 title: "Tutorial 13: A2 Support"
-tut_num: 13
+tut_id: tut13
 layout: tutorial
 ---
 <p class="lead">
