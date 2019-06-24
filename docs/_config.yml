@@ -1,9 +1,11 @@
 # Site settings
-title: Creative Coding
+title: "Creative Coding"
 email: jared@jareddonovan.com
 description: > # this means to ignore newlines until "baseurl:"
-  An Introduction to Programming for Designers
-baseurl: "/creative-coding" # the subpath of your site, e.g. /blog/
+  Teaching Site for DXB211 Creative Coding
+#baseurl: "/bbcswebdav/courses/DXB211_19se1/_site" # the subpath of your site, e.g. /blog/
+# For deploying to github, use:
+baseurl: "/creative-coding"
 url: "" # the base hostname & protocol for your site
 twitter_username: awarua
 github_username:  awarua
@@ -11,6 +13,9 @@ github_username:  awarua
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
+
+sass:
+    sass_dir: ./assets/css
 
 # plugins:
 #  - jekyll-feed

@@ -8,8 +8,8 @@ demonstrations of techniques you might find useful for completing the second
 assignment. I plan to produce one or two new videos per week until the end
 of the semester.
 
-If you have suggestions or requests for other topics you'd like
-me to cover, please post them on the [discussion forum](http://qut.to/v1yju).
+<!-- If you have suggestions or requests for other topics you'd like
+me to cover, please post them on the [discussion forum](http://qut.to/v1yju). -->
 
 ---
 
