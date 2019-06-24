@@ -3,8 +3,10 @@ title: "Coding examples"
 layout: page
 ---
 
-The coding examples on this page are designed to be simple
-demonstrations of techniques you might find useful for learning creative coding.
+<p class="lead">
+  The coding examples on this page are intended to be simple demonstrations of
+  techniques you might find useful for learning creative coding.
+</p>
 
 <!-- If you have suggestions or requests for other topics you'd like
 me to cover, please post them on the [discussion forum](http://qut.to/v1yju). -->
